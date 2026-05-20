@@ -28,6 +28,11 @@ class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMess
         self.webView.navigationDelegate = self
 
 #if os(iOS)
+        self.view.backgroundColor = .systemGroupedBackground
+        self.webView.isOpaque = false
+        self.webView.backgroundColor = .systemGroupedBackground
+        self.webView.scrollView.backgroundColor = .systemGroupedBackground
+        self.webView.scrollView.contentInsetAdjustmentBehavior = .never
         self.webView.scrollView.isScrollEnabled = false
 #endif
 

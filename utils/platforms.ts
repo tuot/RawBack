@@ -11,6 +11,7 @@ export interface RawFileInfo {
 }
 
 export interface PlatformSettings {
+  disabledPlatforms?: Platform[];
   selfHostedGitlabHosts?: string[];
   selfHostedGiteaHosts?: string[];
 }

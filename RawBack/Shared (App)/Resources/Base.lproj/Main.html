@@ -1,20 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
     <link rel="stylesheet" href="../Style.css">
     <script src="../Script.js" defer></script>
 </head>
 <body>
-    <img src="../Icon.png" width="128" height="128" alt="RawBack Icon">
-    <p class="platform-ios">You can turn on RawBack’s Safari extension in Settings.</p>
-    <p class="platform-mac state-unknown">You can turn on RawBack’s extension in Safari Extensions preferences.</p>
-    <p class="platform-mac state-on">RawBack’s extension is currently on. You can turn it off in Safari Extensions preferences.</p>
-    <p class="platform-mac state-off">RawBack’s extension is currently off. You can turn it on in Safari Extensions preferences.</p>
-    <button class="platform-mac open-preferences">Quit and Open Safari Extensions Preferences…</button>
+    <main class="container" aria-labelledby="app-title">
+        <header class="app-header">
+            <img src="../Icon.png" class="app-icon" alt="RawBack">
+            <h1 class="app-title" id="app-title">RawBack</h1>
+            <p class="app-subtitle" data-i18n="app-subtitle">Jump from raw files back to their repositories.</p>
+        </header>
+
+        <section class="steps-container" aria-label="Safari extension setup">
+            <article class="step-card" id="step-card-1">
+                <div class="step-icon-wrapper">
+                    <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                </div>
+                <div class="step-content">
+                    <h2 class="step-title" data-i18n="step-1-title">Open Safari settings</h2>
+                    <p class="step-desc platform-mac" data-i18n="step-1-desc-mac">Open Safari Extensions from the button below.</p>
+                    <p class="step-desc platform-ios" data-i18n="step-1-desc-ios">Open Settings and choose Safari.</p>
+                </div>
+            </article>
+
+            <article class="step-card" id="step-card-2">
+                <div class="step-icon-wrapper">
+                    <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M14 2a2 2 0 0 0-4 0v1H6a2 2 0 0 0-2 2v4h1a2 2 0 1 1 0 4H4v4a2 2 0 0 0 2 2h4v-1a2 2 0 1 1 4 0v1h4a2 2 0 0 0 2-2v-4h-1a2 2 0 1 1 0-4h1V5a2 2 0 0 0-2-2h-4V2z"></path>
+                    </svg>
+                </div>
+                <div class="step-content">
+                    <h2 class="step-title" data-i18n="step-2-title">Enable RawBack</h2>
+                    <p class="step-desc" data-i18n="step-2-desc">Find RawBack in the extension list and turn it on.</p>
+                </div>
+            </article>
+
+            <article class="step-card" id="step-card-3">
+                <div class="step-icon-wrapper">
+                    <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                </div>
+                <div class="step-content">
+                    <h2 class="step-title" data-i18n="step-3-title">Allow website access</h2>
+                    <p class="step-desc" data-i18n="step-3-desc">Allow RawBack to access GitHub, GitLab, and other supported sites.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="status-card platform-mac state-on">
+            <div class="status-indicator success"></div>
+            <div class="status-text">
+                <strong data-i18n="status-success-title">RawBack is enabled</strong>
+                <span class="status-subtext" data-i18n="status-success-desc">You can close this app and use RawBack in Safari.</span>
+            </div>
+        </section>
+
+        <section class="status-card platform-mac state-off">
+            <div class="status-indicator warning"></div>
+            <div class="status-text">
+                <strong data-i18n="status-warning-title">RawBack is not enabled</strong>
+                <span class="status-subtext" data-i18n="status-warning-desc">Follow the steps above to enable the Safari extension.</span>
+            </div>
+        </section>
+
+        <section class="status-card platform-mac state-unknown">
+            <div class="status-indicator neutral"></div>
+            <div class="status-text">
+                <strong data-i18n="status-unknown-title">Check Safari extension settings</strong>
+                <span class="status-subtext" data-i18n="status-unknown-desc">Open Safari settings to confirm RawBack is enabled.</span>
+            </div>
+        </section>
+
+        <footer class="app-footer">
+            <button class="platform-mac open-preferences primary-button" type="button" data-i18n="btn-open-settings">Quit and Open Safari Settings...</button>
+            <p class="platform-ios ios-instruction" data-i18n="ios-instruction">You can manage RawBack from Settings > Safari > Extensions.</p>
+        </footer>
+    </main>
 </body>
 </html>

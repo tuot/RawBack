@@ -16,7 +16,7 @@
     "zip": "wxt zip",
     "zip:firefox": "wxt zip -b firefox",
     "compile": "tsc --noEmit",
-    "test": "node_modules/.pnpm/esbuild@0.27.7/node_modules/esbuild/bin/esbuild tests/parsers.test.ts --bundle --platform=node --format=esm --outfile=.tmp/parsers.test.mjs && node .tmp/parsers.test.mjs && node_modules/.pnpm/esbuild@0.27.7/node_modules/esbuild/bin/esbuild tests/banner.test.ts --bundle --platform=node --format=esm --outfile=.tmp/banner.test.mjs && node .tmp/banner.test.mjs && node_modules/.pnpm/esbuild@0.27.7/node_modules/esbuild/bin/esbuild tests/navigationMessages.test.ts --bundle --platform=node --format=esm --outfile=.tmp/navigationMessages.test.mjs && node .tmp/navigationMessages.test.mjs",
+    "test": "node_modules/.pnpm/esbuild@0.27.7/node_modules/esbuild/bin/esbuild tests/parsers.test.ts --bundle --platform=node --format=esm --outfile=.tmp/parsers.test.mjs && node .tmp/parsers.test.mjs && node_modules/.pnpm/esbuild@0.27.7/node_modules/esbuild/bin/esbuild tests/banner.test.ts --bundle --platform=node --format=esm --outfile=.tmp/banner.test.mjs && node .tmp/banner.test.mjs && node_modules/.pnpm/esbuild@0.27.7/node_modules/esbuild/bin/esbuild tests/navigationMessages.test.ts --bundle --platform=node --format=esm --outfile=.tmp/navigationMessages.test.mjs && node .tmp/navigationMessages.test.mjs && node_modules/.pnpm/esbuild@0.27.7/node_modules/esbuild/bin/esbuild tests/onboardingApp.test.ts --bundle --platform=node --format=esm --outfile=.tmp/onboardingApp.test.mjs && node .tmp/onboardingApp.test.mjs",
     "postinstall": "wxt prepare"
   },
   "devDependencies": {
