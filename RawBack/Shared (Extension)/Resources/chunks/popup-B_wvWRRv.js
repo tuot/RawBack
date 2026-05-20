@@ -1,0 +1,100 @@
+(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var e=globalThis.browser?.runtime?.id?globalThis.browser:globalThis.chrome,t=[`raw.githubusercontent.com`],n=[`gitlab.com`],r=[`gitea.com`,`codeberg.org`],i=[{id:`github`,label:`GitHub`,host:`raw.githubusercontent.com`},{id:`gitlab`,label:`GitLab`,host:`gitlab.com`},{id:`gitea`,label:`Gitea`,host:`gitea.com`}];function a(e,t={}){let n;try{n=new URL(e)}catch{return null}let r=o(n)??s(n,t)??c(n,t);return!r||t.disabledPlatforms?.includes(r.platform)?null:r}function o(e){if(!new Set(t).has(e.hostname))return null;let n=l(e.pathname);if(n.length<4)return null;let[r,i,a,...o]=n;if(!r||!i||!a||o.length===0)return null;let s=o.join(`/`),c=`${e.protocol}//github.com/${u([r,i])}`;return{platform:`github`,user:r,repo:i,branch:a,filePath:s,repoUrl:c,fileUrl:`${c}/blob/${u([a,s])}`}}function s(e,t){if(!new Set([...n,...t.selfHostedGitlabHosts??[]]).has(e.hostname))return null;let r=l(e.pathname),i=d(r);if(i<2)return null;let a=r.slice(0,i),o=a.at(-1),s=a.slice(0,-1).join(`/`),c=f(r.slice(i+2));if(!s||!o||!c)return null;let p=u(a),m=`${e.protocol}//${e.host}/${p}`;return{platform:`gitlab`,user:s,repo:o,branch:c.branch,filePath:c.filePath,repoUrl:m,fileUrl:`${m}/-/blob/${u([c.branch,c.filePath])}`}}function c(e,t){if(!new Set([...r,...t.selfHostedGiteaHosts??[]]).has(e.hostname))return null;let n=l(e.pathname);if(n.length<5||n[2]!==`raw`)return null;let[i,a,,o,...s]=n;if(!o||s.length===0)return null;let c=f(s);if(!i||!a||!c)return null;let d=`${e.protocol}//${e.host}/${u([i,a])}`;return{platform:`gitea`,user:i,repo:a,branch:c.branch,filePath:c.filePath,repoUrl:d,fileUrl:`${d}/src/${o}/${u([c.branch,c.filePath])}`}}function l(e){return e.split(`/`).filter(Boolean).map(e=>decodeURIComponent(e))}function u(e){return e.flatMap(e=>e.split(`/`)).map(e=>encodeURIComponent(e)).join(`/`)}function d(e){for(let t=0;t<e.length-1;t+=1)if(e[t]===`-`&&e[t+1]===`raw`)return t;return-1}function f(e){if(e.length<2)return null;let t=p(e),n=e.slice(0,t),r=e.slice(t);return n.length===0||r.length===0?null:{branch:n.join(`/`),filePath:r.join(`/`)}}function p(e){let t=new Set([`bugfix`,`chore`,`develop`,`feature`,`fix`,`hotfix`,`release`]);return e.length>=3&&t.has(e[0])?2:1}var m={enabled:!0,theme:`system`,disabledHosts:[],dismissedFiles:[],language:`auto`,disabledPlatforms:[],selfHostedGitlabHosts:[],selfHostedGiteaHosts:[]},h=null;async function g(){return h||(h=y(await e.storage.sync.get(m)),h)}async function _(t){let n=y({...await g(),...t});return await e.storage.sync.set(n),h=n,n}async function v(e){await _({dismissedFiles:[e,...(await g()).dismissedFiles.filter(t=>t!==e)].slice(0,200)})}function y(e){return{enabled:typeof e.enabled==`boolean`?e.enabled:m.enabled,theme:S(e.theme)?e.theme:m.theme,disabledHosts:b(e.disabledHosts),dismissedFiles:b(e.dismissedFiles).slice(0,200),language:C(e.language)?e.language:m.language,disabledPlatforms:x(e.disabledPlatforms),selfHostedGitlabHosts:b(e.selfHostedGitlabHosts).map(e=>e.trim()).filter(Boolean),selfHostedGiteaHosts:b(e.selfHostedGiteaHosts).map(e=>e.trim()).filter(Boolean)}}function b(e){return Array.isArray(e)?e.filter(e=>typeof e==`string`):[]}function x(e){let t=new Set([`github`,`gitlab`,`gitea`]);return b(e).filter(e=>t.has(e))}function S(e){return e===`system`||e===`light`||e===`dark`}function C(e){return typeof e==`string`&&[`auto`,`en`,`zh_CN`,`ja`,`ko`,`es`,`fr`,`de`,`ru`].includes(e)}var w={en:{extensionDescription:`Jump from raw Git hosting files back to their repository pages.`,bannerAriaLabel:`RawBack repository navigation`,openRepositoryFileAriaLabel:`View this file in the repository`,openInRepository:`View in repository`,dismissThisFile:`Hide this file`,hiddenFiles:`Hidden files`,hiddenFilesEmpty:`No permanently hidden files.`,restore:`Restore`,restored:`Restored`,enabled:`Enabled`,disabled:`Disabled`,currentPage:`Current page`,rawPage:`Raw file detected`,notRawPage:`This page is not a raw file.`,openRepository:`Open repository`,appearance:`Appearance`,theme:`Theme`,themeSystem:`System`,themeLight:`Light`,themeDark:`Dark`,platforms:`Platforms`,language:`Language`,languageAuto:`Auto`,languageEnglish:`English`,languageChinese:`Chinese`,languageJapanese:`Japanese`,languageKorean:`Korean`,languageSpanish:`Spanish`,languageFrench:`French`,languageGerman:`German`,languageRussian:`Russian`,customDomains:`Custom Domains`,customDomainsHint:`Enter domain or URL`,add:`Add`,invalidDomain:`Invalid domain or URL`,save:`Save`,settingsSaved:`Saved`},zh_CN:{extensionDescription:`从 Git raw 文件页面一键回到对应仓库页面。`,bannerAriaLabel:`RawBack 仓库导航`,openRepositoryFileAriaLabel:`在仓库中查看当前文件`,openInRepository:`在仓库中查看`,dismissThisFile:`隐藏此文件`,hiddenFiles:`已隐藏文件`,hiddenFilesEmpty:`没有永久隐藏的文件。`,restore:`恢复`,restored:`已恢复`,enabled:`已启用`,disabled:`已禁用`,currentPage:`当前页面`,rawPage:`已识别 raw 文件`,notRawPage:`当前页面不是 raw 文件。`,openRepository:`打开仓库`,appearance:`外观`,theme:`主题`,themeSystem:`跟随系统`,themeLight:`亮色`,themeDark:`暗色`,platforms:`平台管理`,language:`语言`,languageAuto:`跟随系统`,languageEnglish:`English`,languageChinese:`中文`,languageJapanese:`日本語`,languageKorean:`한국어`,languageSpanish:`Español`,languageFrench:`Français`,languageGerman:`Deutsch`,languageRussian:`Русский`,customDomains:`自定义私有域名`,customDomainsHint:`输入域名或包含该域名的URL`,add:`添加`,invalidDomain:`无效的域名或URL`,save:`保存`,settingsSaved:`已保存`},ja:{extensionDescription:`Gitホスティングのrawファイルからリポジトリページに戻ります。`,bannerAriaLabel:`RawBackリポジトリナビゲーション`,openRepositoryFileAriaLabel:`リポジトリでこのファイルを表示`,openInRepository:`リポジトリで表示`,dismissThisFile:`このファイルを隠す`,hiddenFiles:`非表示ファイル`,hiddenFilesEmpty:`完全に非表示のファイルはありません。`,restore:`復元`,restored:`復元しました`,enabled:`有効`,disabled:`無効`,currentPage:`現在のページ`,rawPage:`Rawファイルを検出`,notRawPage:`このページはRawファイルではありません。`,openRepository:`リポジトリを開く`,appearance:`外観`,theme:`テーマ`,themeSystem:`システム`,themeLight:`ライト`,themeDark:`ダーク`,platforms:`プラットフォーム`,language:`言語`,languageAuto:`自動`,languageEnglish:`English`,languageChinese:`中文`,languageJapanese:`日本語`,languageKorean:`한국어`,languageSpanish:`Español`,languageFrench:`Français`,languageGerman:`Deutsch`,languageRussian:`Русский`,customDomains:`カスタムドメイン`,customDomainsHint:`ドメインまたはURLを入力`,add:`追加`,invalidDomain:`無効なドメインまたはURL`,save:`保存`,settingsSaved:`保存しました`},ko:{extensionDescription:`Git 호스팅 raw 파일에서 저장소 페이지로 돌아갑니다.`,bannerAriaLabel:`RawBack 저장소 탐색`,openRepositoryFileAriaLabel:`저장소에서 이 파일 보기`,openInRepository:`저장소에서 보기`,dismissThisFile:`이 파일 숨기기`,hiddenFiles:`숨긴 파일`,hiddenFilesEmpty:`숨긴 파일이 없습니다.`,restore:`복원`,restored:`복원됨`,enabled:`활성화됨`,disabled:`비활성화됨`,currentPage:`현재 페이지`,rawPage:`Raw 파일 감지됨`,notRawPage:`이 페이지는 Raw 파일이 아닙니다.`,openRepository:`저장소 열기`,appearance:`모양`,theme:`테마`,themeSystem:`시스템`,themeLight:`라이트`,themeDark:`다크`,platforms:`플랫폼`,language:`언어`,languageAuto:`자동`,languageEnglish:`English`,languageChinese:`中文`,languageJapanese:`日本語`,languageKorean:`한국어`,languageSpanish:`Español`,languageFrench:`Français`,languageGerman:`Deutsch`,languageRussian:`Русский`,customDomains:`사용자 지정 도메인`,customDomainsHint:`도메인 또는 URL 입력`,add:`추가`,invalidDomain:`잘못된 도메인 또는 URL`,save:`저장`,settingsSaved:`저장됨`},es:{extensionDescription:`Vuelve de los archivos raw a las páginas de su repositorio.`,bannerAriaLabel:`Navegación del repositorio RawBack`,openRepositoryFileAriaLabel:`Ver este archivo en el repositorio`,openInRepository:`Ver en el repositorio`,dismissThisFile:`Ocultar este archivo`,hiddenFiles:`Archivos ocultos`,hiddenFilesEmpty:`No hay archivos ocultos.`,restore:`Restaurar`,restored:`Restaurado`,enabled:`Activado`,disabled:`Desactivado`,currentPage:`Página actual`,rawPage:`Archivo raw detectado`,notRawPage:`Esta página no es un archivo raw.`,openRepository:`Abrir repositorio`,appearance:`Apariencia`,theme:`Tema`,themeSystem:`Sistema`,themeLight:`Claro`,themeDark:`Oscuro`,platforms:`Plataformas`,language:`Idioma`,languageAuto:`Automático`,languageEnglish:`English`,languageChinese:`中文`,languageJapanese:`日本語`,languageKorean:`한국어`,languageSpanish:`Español`,languageFrench:`Français`,languageGerman:`Deutsch`,languageRussian:`Русский`,customDomains:`Dominios personalizados`,customDomainsHint:`Introduce un dominio o URL`,add:`Añadir`,invalidDomain:`Dominio o URL no válido`,save:`Guardar`,settingsSaved:`Guardado`},fr:{extensionDescription:`Revenez des fichiers raw aux pages de leur dépôt.`,bannerAriaLabel:`Navigation du dépôt RawBack`,openRepositoryFileAriaLabel:`Voir ce fichier dans le dépôt`,openInRepository:`Voir dans le dépôt`,dismissThisFile:`Masquer ce fichier`,hiddenFiles:`Fichiers masqués`,hiddenFilesEmpty:`Aucun fichier masqué.`,restore:`Restaurer`,restored:`Restauré`,enabled:`Activé`,disabled:`Désactivé`,currentPage:`Page actuelle`,rawPage:`Fichier raw détecté`,notRawPage:`Cette page n'est pas un fichier raw.`,openRepository:`Ouvrir le dépôt`,appearance:`Apparence`,theme:`Thème`,themeSystem:`Système`,themeLight:`Clair`,themeDark:`Sombre`,platforms:`Plateformes`,language:`Langue`,languageAuto:`Auto`,languageEnglish:`English`,languageChinese:`中文`,languageJapanese:`日本語`,languageKorean:`한국어`,languageSpanish:`Español`,languageFrench:`Français`,languageGerman:`Deutsch`,languageRussian:`Русский`,customDomains:`Domaines personnalisés`,customDomainsHint:`Entrez un domaine ou une URL`,add:`Ajouter`,invalidDomain:`Domaine ou URL invalide`,save:`Enregistrer`,settingsSaved:`Enregistré`},de:{extensionDescription:`Springen Sie von Raw-Dateien zurück zu ihren Repository-Seiten.`,bannerAriaLabel:`RawBack-Repository-Navigation`,openRepositoryFileAriaLabel:`Diese Datei im Repository anzeigen`,openInRepository:`Im Repository anzeigen`,dismissThisFile:`Diese Datei ausblenden`,hiddenFiles:`Ausgeblendete Dateien`,hiddenFilesEmpty:`Keine ausgeblendeten Dateien.`,restore:`Wiederherstellen`,restored:`Wiederhergestellt`,enabled:`Aktiviert`,disabled:`Deaktiviert`,currentPage:`Aktuelle Seite`,rawPage:`Raw-Datei erkannt`,notRawPage:`Diese Seite ist keine Raw-Datei.`,openRepository:`Repository öffnen`,appearance:`Erscheinungsbild`,theme:`Design`,themeSystem:`System`,themeLight:`Hell`,themeDark:`Dunkel`,platforms:`Plattformen`,language:`Sprache`,languageAuto:`Auto`,languageEnglish:`English`,languageChinese:`中文`,languageJapanese:`日本語`,languageKorean:`한국어`,languageSpanish:`Español`,languageFrench:`Français`,languageGerman:`Deutsch`,languageRussian:`Русский`,customDomains:`Benutzerdefinierte Domains`,customDomainsHint:`Domain oder URL eingeben`,add:`Hinzufügen`,invalidDomain:`Ungültige Domain oder URL`,save:`Speichern`,settingsSaved:`Gespeichert`},ru:{extensionDescription:`Возврат от raw-файлов к страницам их репозитория.`,bannerAriaLabel:`Навигация по репозиторию RawBack`,openRepositoryFileAriaLabel:`Посмотреть этот файл в репозитории`,openInRepository:`Посмотреть в репозитории`,dismissThisFile:`Скрыть этот файл`,hiddenFiles:`Скрытые файлы`,hiddenFilesEmpty:`Нет скрытых файлов.`,restore:`Восстановить`,restored:`Восстановлено`,enabled:`Включено`,disabled:`Отключено`,currentPage:`Текущая страница`,rawPage:`Обнаружен raw-файл`,notRawPage:`Эта страница не является raw-файлом.`,openRepository:`Открыть репозиторий`,appearance:`Внешний вид`,theme:`Тема`,themeSystem:`Системная`,themeLight:`Светлая`,themeDark:`Темная`,platforms:`Платформы`,language:`Язык`,languageAuto:`Авто`,languageEnglish:`English`,languageChinese:`中文`,languageJapanese:`日本語`,languageKorean:`한국어`,languageSpanish:`Español`,languageFrench:`Français`,languageGerman:`Deutsch`,languageRussian:`Русский`,customDomains:`Свои домены`,customDomainsHint:`Введите домен или URL`,add:`Добавить`,invalidDomain:`Недопустимый домен или URL`,save:`Сохранить`,settingsSaved:`Сохранено`}};function T(t,n=`auto`){return n===`auto`?e.i18n.getMessage(t)||w.en[t]:w[n][t]}var E=document.querySelector(`#app`);if(!E)throw Error(`Popup root is missing`);var D=E,O=await g(),k=await z();A();function A(e=``){let t=k?a(k,{disabledPlatforms:O.disabledPlatforms,selfHostedGitlabHosts:O.selfHostedGitlabHosts,selfHostedGiteaHosts:O.selfHostedGiteaHosts}):null;D.innerHTML=`
+    <section class="header">
+      <div>
+        <h1>RawBack</h1>
+        <p>${O.enabled?B(T(`enabled`,O.language)):B(T(`disabled`,O.language))}</p>
+      </div>
+      <label class="switch">
+        <input id="enabled" type="checkbox" ${O.enabled?`checked`:``} />
+        <span></span>
+      </label>
+    </section>
+
+    <section class="panel">
+      <h2>${B(T(`currentPage`,O.language))}</h2>
+      ${t?M(t):`<p class="muted">${B(T(`notRawPage`,O.language))}</p>`}
+    </section>
+
+    <section class="panel">
+      <h2>${B(T(`appearance`,O.language))}</h2>
+      <label class="field">
+        <span>${B(T(`theme`,O.language))}</span>
+        <select id="theme">
+          ${R(`system`,T(`themeSystem`,O.language),O.theme)}
+          ${R(`light`,T(`themeLight`,O.language),O.theme)}
+          ${R(`dark`,T(`themeDark`,O.language),O.theme)}
+        </select>
+      </label>
+      <label class="field">
+        <span>${B(T(`language`,O.language))}</span>
+        <select id="language">
+          ${R(`auto`,T(`languageAuto`,O.language),O.language)}
+          ${R(`zh_CN`,T(`languageChinese`,O.language),O.language)}
+          ${R(`en`,T(`languageEnglish`,O.language),O.language)}
+          ${R(`ja`,T(`languageJapanese`,O.language),O.language)}
+          ${R(`ko`,T(`languageKorean`,O.language),O.language)}
+          ${R(`es`,T(`languageSpanish`,O.language),O.language)}
+          ${R(`fr`,T(`languageFrench`,O.language),O.language)}
+          ${R(`de`,T(`languageGerman`,O.language),O.language)}
+          ${R(`ru`,T(`languageRussian`,O.language),O.language)}
+        </select>
+      </label>
+    </section>
+
+    <section class="panel">
+      <h2>${B(T(`platforms`,O.language))}</h2>
+      <div class="platforms">
+        ${i.map(e=>N(e.id,e.label)).join(``)}
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>${B(T(`hiddenFiles`,O.language))}</h2>
+      ${P()}
+    </section>
+
+    <section class="panel">
+      <h2>${B(T(`customDomains`,O.language))}</h2>
+      <div class="hidden-files" style="margin-bottom: 8px;">
+        ${O.selfHostedGitlabHosts.map(e=>F(e,`GitLab`)).join(``)}
+        ${O.selfHostedGiteaHosts.map(e=>F(e,`Gitea`)).join(``)}
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <select id="new-domain-platform" style="flex: 0 0 auto; min-height: 34px;">
+          <option value="gitlab">GitLab</option>
+          <option value="gitea">Gitea</option>
+        </select>
+        <input type="text" id="new-domain-input" placeholder="${V(T(`customDomainsHint`,O.language))}" style="flex: 1; min-width: 0; padding: 4px 8px; border: 1px solid #bcccdc; border-radius: 6px; font-size: 13px;" autocomplete="off" spellcheck="false" />
+        <button id="add-domain-btn" type="button">${B(T(`add`,O.language))}</button>
+      </div>
+      ${e?`<p class="saved">${B(e)}</p>`:``}
+    </section>
+  `,j()}function j(){D.querySelector(`#enabled`)?.addEventListener(`change`,async e=>{O=await _({enabled:e.currentTarget.checked}),A()}),D.querySelector(`#theme`)?.addEventListener(`change`,async e=>{O=await _({theme:e.currentTarget.value}),A()}),D.querySelector(`#language`)?.addEventListener(`change`,async e=>{O=await _({language:e.currentTarget.value}),A()}),D.querySelectorAll(`input[data-platform]`).forEach(e=>{e.addEventListener(`change`,async()=>{O=await _({disabledPlatforms:i.map(e=>e.id).filter(e=>!D.querySelector(`input[data-platform="${e}"]`)?.checked)}),A()})}),D.querySelector(`#add-domain-btn`)?.addEventListener(`click`,async()=>{let e=D.querySelector(`#new-domain-platform`)?.value,t=I(D.querySelector(`#new-domain-input`)?.value??``);t&&(e===`gitlab`&&!O.selfHostedGitlabHosts.includes(t)?O=await _({selfHostedGitlabHosts:[...O.selfHostedGitlabHosts,t]}):e===`gitea`&&!O.selfHostedGiteaHosts.includes(t)&&(O=await _({selfHostedGiteaHosts:[...O.selfHostedGiteaHosts,t]})),A(T(`settingsSaved`,O.language)))}),D.querySelectorAll(`button[data-delete-gitlab]`).forEach(e=>{e.addEventListener(`click`,async()=>{let t=e.dataset.deleteGitlab;t&&(O=await _({selfHostedGitlabHosts:O.selfHostedGitlabHosts.filter(e=>e!==t)}),A())})}),D.querySelectorAll(`button[data-delete-gitea]`).forEach(e=>{e.addEventListener(`click`,async()=>{let t=e.dataset.deleteGitea;t&&(O=await _({selfHostedGiteaHosts:O.selfHostedGiteaHosts.filter(e=>e!==t)}),A())})}),D.querySelectorAll(`button[data-restore-file]`).forEach(e=>{e.addEventListener(`click`,async()=>{let t=e.dataset.restoreFile;t&&(O=await _({dismissedFiles:O.dismissedFiles.filter(e=>e!==t)}),A(T(`restored`,O.language)))})}),D.querySelector(`button[data-open-repo]`)?.addEventListener(`click`,async t=>{let n=t.currentTarget.dataset.openRepo;n&&(await e.tabs.create({url:n}),window.close())}),D.querySelector(`button[data-dismiss-file]`)?.addEventListener(`click`,async e=>{let t=e.currentTarget.dataset.dismissFile;t&&(await v(t),O=await g(),A(T(`settingsSaved`,O.language)))})}function M(e){let t=O.dismissedFiles.includes(e.fileUrl);return`
+    <div class="repo">
+      <strong>${B(e.user)} / ${B(e.repo)}</strong>
+      <span>${B(e.filePath)}</span>
+    </div>
+    <div class="page-actions">
+      <button class="primary" type="button" data-open-repo="${V(e.fileUrl)}">${B(T(`openRepository`,O.language))}</button>
+      ${t?``:`<button class="ghost danger-text" type="button" data-dismiss-file="${V(e.fileUrl)}">${B(T(`dismissThisFile`,O.language))}</button>`}
+    </div>
+  `}function N(e,t){let n=!O.disabledPlatforms.includes(e);return`
+    <label class="platform">
+      <span>${B(t)}</span>
+      <input type="checkbox" data-platform="${e}" ${n?`checked`:``} />
+    </label>
+  `}function P(){return O.dismissedFiles.length===0?`<p class="muted">${B(T(`hiddenFilesEmpty`,O.language))}</p>`:`
+    <div class="hidden-files">
+      ${O.dismissedFiles.map(e=>`
+        <div class="hidden-file">
+          <span title="${V(e)}">${B(L(e))}</span>
+          <button type="button" class="ghost" data-restore-file="${V(e)}">${B(T(`restore`,O.language))}</button>
+        </div>
+      `).join(``)}
+    </div>
+  `}function F(e,t){let n=t===`GitLab`?`data-delete-gitlab`:`data-delete-gitea`;return`
+    <div class="hidden-file">
+      <span title="${V(e)}">${B(e)} <span style="opacity: 0.5; font-size: 11px">(${t})</span></span>
+      <button type="button" class="ghost" style="padding: 2px 6px; min-height: 24px; font-size: 12px" ${n}="${V(e)}">✕</button>
+    </div>
+  `}function I(e){let t=e.trim();if(!t)return``;try{return new URL(t.includes(`://`)?t:`https://${t}`).hostname}catch{return t}}function L(e){try{let t=new URL(e);return`${t.hostname}${t.pathname}`}catch{return e}}function R(e,t,n){return`<option value="${V(e)}" ${e===n?`selected`:``}>${B(t)}</option>`}async function z(){let[t]=await e.tabs.query({active:!0,currentWindow:!0});return t?.url??null}function B(e){return e.replace(/[&<>"']/g,e=>({"&":`&amp;`,"<":`&lt;`,">":`&gt;`,'"':`&quot;`,"'":`&#39;`})[e])}function V(e){return B(e)}

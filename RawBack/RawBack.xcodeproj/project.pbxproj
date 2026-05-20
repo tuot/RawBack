@@ -1,0 +1,1025 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB7CC5E02FBD58AF0022406A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CC5DF2FBD58AF0022406A /* AppDelegate.swift */; };
+		DB7CC5E22FBD58AF0022406A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CC5E12FBD58AF0022406A /* SceneDelegate.swift */; };
+		DB7CC5E52FBD58AF0022406A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5E32FBD58AF0022406A /* LaunchScreen.storyboard */; };
+		DB7CC5E82FBD58AF0022406A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5E62FBD58AF0022406A /* Main.storyboard */; };
+		DB7CC5F12FBD58AF0022406A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CC5F02FBD58AF0022406A /* AppDelegate.swift */; };
+		DB7CC5F42FBD58AF0022406A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5F22FBD58AF0022406A /* Main.storyboard */; };
+		DB7CC5FB2FBD58AF0022406A /* RawBack Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DB7CC5FA2FBD58AF0022406A /* RawBack Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DB7CC6052FBD58AF0022406A /* RawBack Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DB7CC6042FBD58AF0022406A /* RawBack Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DB7CC60A2FBD58AF0022406A /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5CF2FBD58AE0022406A /* Main.html */; };
+		DB7CC60B2FBD58AF0022406A /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5CF2FBD58AE0022406A /* Main.html */; };
+		DB7CC60C2FBD58AF0022406A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5D12FBD58AE0022406A /* Icon.png */; };
+		DB7CC60D2FBD58AF0022406A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5D12FBD58AE0022406A /* Icon.png */; };
+		DB7CC60E2FBD58AF0022406A /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5D22FBD58AE0022406A /* Style.css */; };
+		DB7CC60F2FBD58AF0022406A /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5D22FBD58AE0022406A /* Style.css */; };
+		DB7CC6102FBD58AF0022406A /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5D32FBD58AE0022406A /* Script.js */; };
+		DB7CC6112FBD58AF0022406A /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5D32FBD58AE0022406A /* Script.js */; };
+		DB7CC6122FBD58AF0022406A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CC5D42FBD58AE0022406A /* ViewController.swift */; };
+		DB7CC6132FBD58AF0022406A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CC5D42FBD58AE0022406A /* ViewController.swift */; };
+		DB7CC6142FBD58AF0022406A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5D52FBD58AF0022406A /* Assets.xcassets */; };
+		DB7CC6152FBD58AF0022406A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5D52FBD58AF0022406A /* Assets.xcassets */; };
+		DB7CC6162FBD58AF0022406A /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CC5D72FBD58AF0022406A /* SafariWebExtensionHandler.swift */; };
+		DB7CC6172FBD58AF0022406A /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CC5D72FBD58AF0022406A /* SafariWebExtensionHandler.swift */; };
+		DB7CC6332FBD58AF0022406A /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6292FBD58AF0022406A /* background.js */; };
+		DB7CC6342FBD58AF0022406A /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62A2FBD58AF0022406A /* popup.html */; };
+		DB7CC6352FBD58AF0022406A /* chunks in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62B2FBD58AF0022406A /* chunks */; };
+		DB7CC6362FBD58AF0022406A /* content-scripts in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62C2FBD58AF0022406A /* content-scripts */; };
+		DB7CC6372FBD58AF0022406A /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62D2FBD58AF0022406A /* manifest.json */; };
+		DB7CC6382FBD58AF0022406A /* rules in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62E2FBD58AF0022406A /* rules */; };
+		DB7CC6392FBD58AF0022406A /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62F2FBD58AF0022406A /* _locales */; };
+		DB7CC63A2FBD58AF0022406A /* icon in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6302FBD58AF0022406A /* icon */; };
+		DB7CC63B2FBD58AF0022406A /* assets in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6312FBD58AF0022406A /* assets */; };
+		DB7CC63C2FBD58AF0022406A /* r.png in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6322FBD58AF0022406A /* r.png */; };
+		DB7CC63D2FBD58AF0022406A /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6292FBD58AF0022406A /* background.js */; };
+		DB7CC63E2FBD58AF0022406A /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62A2FBD58AF0022406A /* popup.html */; };
+		DB7CC63F2FBD58AF0022406A /* chunks in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62B2FBD58AF0022406A /* chunks */; };
+		DB7CC6402FBD58AF0022406A /* content-scripts in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62C2FBD58AF0022406A /* content-scripts */; };
+		DB7CC6412FBD58AF0022406A /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62D2FBD58AF0022406A /* manifest.json */; };
+		DB7CC6422FBD58AF0022406A /* rules in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62E2FBD58AF0022406A /* rules */; };
+		DB7CC6432FBD58AF0022406A /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62F2FBD58AF0022406A /* _locales */; };
+		DB7CC6442FBD58AF0022406A /* icon in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6302FBD58AF0022406A /* icon */; };
+		DB7CC6452FBD58AF0022406A /* assets in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6312FBD58AF0022406A /* assets */; };
+		DB7CC6462FBD58AF0022406A /* r.png in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6322FBD58AF0022406A /* r.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB7CC5FC2FBD58AF0022406A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB7CC5C92FBD58AE0022406A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB7CC5F92FBD58AF0022406A;
+			remoteInfo = "RawBack Extension (iOS)";
+		};
+		DB7CC6062FBD58AF0022406A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB7CC5C92FBD58AE0022406A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB7CC6032FBD58AF0022406A;
+			remoteInfo = "RawBack Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DB7CC61D2FBD58AF0022406A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DB7CC5FB2FBD58AF0022406A /* RawBack Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB7CC6242FBD58AF0022406A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DB7CC6052FBD58AF0022406A /* RawBack Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DB7CC5D02FBD58AE0022406A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		DB7CC5D12FBD58AE0022406A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		DB7CC5D22FBD58AE0022406A /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		DB7CC5D32FBD58AE0022406A /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		DB7CC5D42FBD58AE0022406A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DB7CC5D52FBD58AF0022406A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB7CC5D72FBD58AF0022406A /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		DB7CC5DC2FBD58AF0022406A /* RawBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RawBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB7CC5DF2FBD58AF0022406A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB7CC5E12FBD58AF0022406A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DB7CC5E42FBD58AF0022406A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB7CC5E72FBD58AF0022406A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB7CC5E92FBD58AF0022406A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB7CC5EE2FBD58AF0022406A /* RawBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RawBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB7CC5F02FBD58AF0022406A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB7CC5F32FBD58AF0022406A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB7CC5F52FBD58AF0022406A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB7CC5FA2FBD58AF0022406A /* RawBack Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "RawBack Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB7CC5FF2FBD58AF0022406A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB7CC6042FBD58AF0022406A /* RawBack Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "RawBack Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB7CC6092FBD58AF0022406A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB7CC6292FBD58AF0022406A /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = Resources/background.js; sourceTree = "<group>"; };
+		DB7CC62A2FBD58AF0022406A /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = Resources/popup.html; sourceTree = "<group>"; };
+		DB7CC62B2FBD58AF0022406A /* chunks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = chunks; path = Resources/chunks; sourceTree = "<group>"; };
+		DB7CC62C2FBD58AF0022406A /* content-scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "content-scripts"; path = "Resources/content-scripts"; sourceTree = "<group>"; };
+		DB7CC62D2FBD58AF0022406A /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
+		DB7CC62E2FBD58AF0022406A /* rules */ = {isa = PBXFileReference; lastKnownFileType = folder; name = rules; path = Resources/rules; sourceTree = "<group>"; };
+		DB7CC62F2FBD58AF0022406A /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; name = _locales; path = Resources/_locales; sourceTree = "<group>"; };
+		DB7CC6302FBD58AF0022406A /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icon; path = Resources/icon; sourceTree = "<group>"; };
+		DB7CC6312FBD58AF0022406A /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = Resources/assets; sourceTree = "<group>"; };
+		DB7CC6322FBD58AF0022406A /* r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = r.png; path = Resources/r.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB7CC5D92FBD58AF0022406A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB7CC5EB2FBD58AF0022406A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB7CC5F72FBD58AF0022406A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB7CC6012FBD58AF0022406A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB7CC5C82FBD58AE0022406A = {
+			isa = PBXGroup;
+			children = (
+				DB7CC5CD2FBD58AE0022406A /* Shared (App) */,
+				DB7CC5D62FBD58AF0022406A /* Shared (Extension) */,
+				DB7CC5DE2FBD58AF0022406A /* iOS (App) */,
+				DB7CC5EF2FBD58AF0022406A /* macOS (App) */,
+				DB7CC5FE2FBD58AF0022406A /* iOS (Extension) */,
+				DB7CC6082FBD58AF0022406A /* macOS (Extension) */,
+				DB7CC5DD2FBD58AF0022406A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB7CC5CD2FBD58AE0022406A /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				DB7CC5D42FBD58AE0022406A /* ViewController.swift */,
+				DB7CC5D52FBD58AF0022406A /* Assets.xcassets */,
+				DB7CC5CE2FBD58AE0022406A /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		DB7CC5CE2FBD58AE0022406A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DB7CC5CF2FBD58AE0022406A /* Main.html */,
+				DB7CC5D12FBD58AE0022406A /* Icon.png */,
+				DB7CC5D22FBD58AE0022406A /* Style.css */,
+				DB7CC5D32FBD58AE0022406A /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DB7CC5D62FBD58AF0022406A /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				DB7CC6282FBD58AF0022406A /* Resources */,
+				DB7CC5D72FBD58AF0022406A /* SafariWebExtensionHandler.swift */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		DB7CC5DD2FBD58AF0022406A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB7CC5DC2FBD58AF0022406A /* RawBack.app */,
+				DB7CC5EE2FBD58AF0022406A /* RawBack.app */,
+				DB7CC5FA2FBD58AF0022406A /* RawBack Extension.appex */,
+				DB7CC6042FBD58AF0022406A /* RawBack Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB7CC5DE2FBD58AF0022406A /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				DB7CC5DF2FBD58AF0022406A /* AppDelegate.swift */,
+				DB7CC5E12FBD58AF0022406A /* SceneDelegate.swift */,
+				DB7CC5E32FBD58AF0022406A /* LaunchScreen.storyboard */,
+				DB7CC5E62FBD58AF0022406A /* Main.storyboard */,
+				DB7CC5E92FBD58AF0022406A /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		DB7CC5EF2FBD58AF0022406A /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				DB7CC5F02FBD58AF0022406A /* AppDelegate.swift */,
+				DB7CC5F22FBD58AF0022406A /* Main.storyboard */,
+				DB7CC5F52FBD58AF0022406A /* Info.plist */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		DB7CC5FE2FBD58AF0022406A /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				DB7CC5FF2FBD58AF0022406A /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		DB7CC6082FBD58AF0022406A /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				DB7CC6092FBD58AF0022406A /* Info.plist */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		DB7CC6282FBD58AF0022406A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DB7CC6292FBD58AF0022406A /* background.js */,
+				DB7CC62A2FBD58AF0022406A /* popup.html */,
+				DB7CC62B2FBD58AF0022406A /* chunks */,
+				DB7CC62C2FBD58AF0022406A /* content-scripts */,
+				DB7CC62D2FBD58AF0022406A /* manifest.json */,
+				DB7CC62E2FBD58AF0022406A /* rules */,
+				DB7CC62F2FBD58AF0022406A /* _locales */,
+				DB7CC6302FBD58AF0022406A /* icon */,
+				DB7CC6312FBD58AF0022406A /* assets */,
+				DB7CC6322FBD58AF0022406A /* r.png */,
+			);
+			name = Resources;
+			path = "Shared (Extension)";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB7CC5DB2FBD58AF0022406A /* RawBack (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB7CC61E2FBD58AF0022406A /* Build configuration list for PBXNativeTarget "RawBack (iOS)" */;
+			buildPhases = (
+				DB7CC5D82FBD58AF0022406A /* Sources */,
+				DB7CC5D92FBD58AF0022406A /* Frameworks */,
+				DB7CC5DA2FBD58AF0022406A /* Resources */,
+				DB7CC61D2FBD58AF0022406A /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB7CC5FD2FBD58AF0022406A /* PBXTargetDependency */,
+			);
+			name = "RawBack (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "RawBack (iOS)";
+			productReference = DB7CC5DC2FBD58AF0022406A /* RawBack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB7CC5ED2FBD58AF0022406A /* RawBack (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB7CC6252FBD58AF0022406A /* Build configuration list for PBXNativeTarget "RawBack (macOS)" */;
+			buildPhases = (
+				DB7CC5EA2FBD58AF0022406A /* Sources */,
+				DB7CC5EB2FBD58AF0022406A /* Frameworks */,
+				DB7CC5EC2FBD58AF0022406A /* Resources */,
+				DB7CC6242FBD58AF0022406A /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB7CC6072FBD58AF0022406A /* PBXTargetDependency */,
+			);
+			name = "RawBack (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "RawBack (macOS)";
+			productReference = DB7CC5EE2FBD58AF0022406A /* RawBack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB7CC5F92FBD58AF0022406A /* RawBack Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB7CC61A2FBD58AF0022406A /* Build configuration list for PBXNativeTarget "RawBack Extension (iOS)" */;
+			buildPhases = (
+				DB7CC5F62FBD58AF0022406A /* Sources */,
+				DB7CC5F72FBD58AF0022406A /* Frameworks */,
+				DB7CC5F82FBD58AF0022406A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RawBack Extension (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "RawBack Extension (iOS)";
+			productReference = DB7CC5FA2FBD58AF0022406A /* RawBack Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		DB7CC6032FBD58AF0022406A /* RawBack Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB7CC6212FBD58AF0022406A /* Build configuration list for PBXNativeTarget "RawBack Extension (macOS)" */;
+			buildPhases = (
+				DB7CC6002FBD58AF0022406A /* Sources */,
+				DB7CC6012FBD58AF0022406A /* Frameworks */,
+				DB7CC6022FBD58AF0022406A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RawBack Extension (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "RawBack Extension (macOS)";
+			productReference = DB7CC6042FBD58AF0022406A /* RawBack Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB7CC5C92FBD58AE0022406A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2640;
+				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					DB7CC5DB2FBD58AF0022406A = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+					DB7CC5ED2FBD58AF0022406A = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+					DB7CC5F92FBD58AF0022406A = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+					DB7CC6032FBD58AF0022406A = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+				};
+			};
+			buildConfigurationList = DB7CC5CC2FBD58AE0022406A /* Build configuration list for PBXProject "RawBack" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB7CC5C82FBD58AE0022406A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DB7CC5DD2FBD58AF0022406A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB7CC5DB2FBD58AF0022406A /* RawBack (iOS) */,
+				DB7CC5ED2FBD58AF0022406A /* RawBack (macOS) */,
+				DB7CC5F92FBD58AF0022406A /* RawBack Extension (iOS) */,
+				DB7CC6032FBD58AF0022406A /* RawBack Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB7CC5DA2FBD58AF0022406A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB7CC60C2FBD58AF0022406A /* Icon.png in Resources */,
+				DB7CC5E52FBD58AF0022406A /* LaunchScreen.storyboard in Resources */,
+				DB7CC60A2FBD58AF0022406A /* Main.html in Resources */,
+				DB7CC6102FBD58AF0022406A /* Script.js in Resources */,
+				DB7CC6142FBD58AF0022406A /* Assets.xcassets in Resources */,
+				DB7CC5E82FBD58AF0022406A /* Main.storyboard in Resources */,
+				DB7CC60E2FBD58AF0022406A /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB7CC5EC2FBD58AF0022406A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB7CC60D2FBD58AF0022406A /* Icon.png in Resources */,
+				DB7CC60F2FBD58AF0022406A /* Style.css in Resources */,
+				DB7CC5F42FBD58AF0022406A /* Main.storyboard in Resources */,
+				DB7CC6112FBD58AF0022406A /* Script.js in Resources */,
+				DB7CC6152FBD58AF0022406A /* Assets.xcassets in Resources */,
+				DB7CC60B2FBD58AF0022406A /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB7CC5F82FBD58AF0022406A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB7CC6422FBD58AF0022406A /* rules in Resources */,
+				DB7CC63F2FBD58AF0022406A /* chunks in Resources */,
+				DB7CC63D2FBD58AF0022406A /* background.js in Resources */,
+				DB7CC6452FBD58AF0022406A /* assets in Resources */,
+				DB7CC6462FBD58AF0022406A /* r.png in Resources */,
+				DB7CC6412FBD58AF0022406A /* manifest.json in Resources */,
+				DB7CC63E2FBD58AF0022406A /* popup.html in Resources */,
+				DB7CC6442FBD58AF0022406A /* icon in Resources */,
+				DB7CC6432FBD58AF0022406A /* _locales in Resources */,
+				DB7CC6402FBD58AF0022406A /* content-scripts in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB7CC6022FBD58AF0022406A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB7CC6382FBD58AF0022406A /* rules in Resources */,
+				DB7CC6352FBD58AF0022406A /* chunks in Resources */,
+				DB7CC6332FBD58AF0022406A /* background.js in Resources */,
+				DB7CC63B2FBD58AF0022406A /* assets in Resources */,
+				DB7CC63C2FBD58AF0022406A /* r.png in Resources */,
+				DB7CC6372FBD58AF0022406A /* manifest.json in Resources */,
+				DB7CC6342FBD58AF0022406A /* popup.html in Resources */,
+				DB7CC63A2FBD58AF0022406A /* icon in Resources */,
+				DB7CC6392FBD58AF0022406A /* _locales in Resources */,
+				DB7CC6362FBD58AF0022406A /* content-scripts in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB7CC5D82FBD58AF0022406A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB7CC6122FBD58AF0022406A /* ViewController.swift in Sources */,
+				DB7CC5E02FBD58AF0022406A /* AppDelegate.swift in Sources */,
+				DB7CC5E22FBD58AF0022406A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB7CC5EA2FBD58AF0022406A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB7CC6132FBD58AF0022406A /* ViewController.swift in Sources */,
+				DB7CC5F12FBD58AF0022406A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB7CC5F62FBD58AF0022406A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB7CC6162FBD58AF0022406A /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB7CC6002FBD58AF0022406A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB7CC6172FBD58AF0022406A /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB7CC5FD2FBD58AF0022406A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB7CC5F92FBD58AF0022406A /* RawBack Extension (iOS) */;
+			targetProxy = DB7CC5FC2FBD58AF0022406A /* PBXContainerItemProxy */;
+		};
+		DB7CC6072FBD58AF0022406A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB7CC6032FBD58AF0022406A /* RawBack Extension (macOS) */;
+			targetProxy = DB7CC6062FBD58AF0022406A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB7CC5CF2FBD58AE0022406A /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB7CC5D02FBD58AE0022406A /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		DB7CC5E32FBD58AF0022406A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB7CC5E42FBD58AF0022406A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DB7CC5E62FBD58AF0022406A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB7CC5E72FBD58AF0022406A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DB7CC5F22FBD58AF0022406A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB7CC5F32FBD58AF0022406A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB7CC6182FBD58AF0022406A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB7CC6192FBD58AF0022406A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		DB7CC61B2FBD58AF0022406A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9FM4CW4W4Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "RawBack Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttqqcc.rawback.Extension;
+				PRODUCT_NAME = "RawBack Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB7CC61C2FBD58AF0022406A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9FM4CW4W4Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "RawBack Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttqqcc.rawback.Extension;
+				PRODUCT_NAME = "RawBack Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB7CC61F2FBD58AF0022406A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9FM4CW4W4Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = RawBack;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttqqcc.rawback;
+				PRODUCT_NAME = RawBack;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB7CC6202FBD58AF0022406A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9FM4CW4W4Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = RawBack;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttqqcc.rawback;
+				PRODUCT_NAME = RawBack;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB7CC6222FBD58AF0022406A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9FM4CW4W4Z;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "RawBack Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttqqcc.rawback.Extension;
+				PRODUCT_NAME = "RawBack Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DB7CC6232FBD58AF0022406A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9FM4CW4W4Z;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "RawBack Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttqqcc.rawback.Extension;
+				PRODUCT_NAME = "RawBack Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		DB7CC6262FBD58AF0022406A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9FM4CW4W4Z;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = RawBack;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttqqcc.rawback;
+				PRODUCT_NAME = RawBack;
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DB7CC6272FBD58AF0022406A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9FM4CW4W4Z;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = RawBack;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttqqcc.rawback;
+				PRODUCT_NAME = RawBack;
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB7CC5CC2FBD58AE0022406A /* Build configuration list for PBXProject "RawBack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB7CC6182FBD58AF0022406A /* Debug */,
+				DB7CC6192FBD58AF0022406A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB7CC61A2FBD58AF0022406A /* Build configuration list for PBXNativeTarget "RawBack Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB7CC61B2FBD58AF0022406A /* Debug */,
+				DB7CC61C2FBD58AF0022406A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB7CC61E2FBD58AF0022406A /* Build configuration list for PBXNativeTarget "RawBack (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB7CC61F2FBD58AF0022406A /* Debug */,
+				DB7CC6202FBD58AF0022406A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB7CC6212FBD58AF0022406A /* Build configuration list for PBXNativeTarget "RawBack Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB7CC6222FBD58AF0022406A /* Debug */,
+				DB7CC6232FBD58AF0022406A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB7CC6252FBD58AF0022406A /* Build configuration list for PBXNativeTarget "RawBack (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB7CC6262FBD58AF0022406A /* Debug */,
+				DB7CC6272FBD58AF0022406A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB7CC5C92FBD58AE0022406A /* Project object */;
+}

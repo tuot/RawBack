@@ -1,0 +1,113 @@
+{
+  "extensionDescription": {
+    "message": "从 Git raw 文件页面一键回到对应仓库页面。"
+  },
+  "bannerAriaLabel": {
+    "message": "RawBack 仓库导航"
+  },
+  "openRepositoryFileAriaLabel": {
+    "message": "在仓库中查看当前文件"
+  },
+  "openInRepository": {
+    "message": "在仓库中查看"
+  },
+  "dismissThisFile": {
+    "message": "隐藏此文件"
+  },
+  "hiddenFiles": {
+    "message": "已隐藏文件"
+  },
+  "hiddenFilesEmpty": {
+    "message": "没有永久隐藏的文件。"
+  },
+  "restore": {
+    "message": "恢复"
+  },
+  "restored": {
+    "message": "已恢复"
+  },
+  "enabled": {
+    "message": "已启用"
+  },
+  "disabled": {
+    "message": "已禁用"
+  },
+  "currentPage": {
+    "message": "当前页面"
+  },
+  "rawPage": {
+    "message": "已识别 raw 文件"
+  },
+  "notRawPage": {
+    "message": "当前页面不是 raw 文件。"
+  },
+  "openRepository": {
+    "message": "打开仓库"
+  },
+  "appearance": {
+    "message": "外观"
+  },
+  "theme": {
+    "message": "主题"
+  },
+  "themeSystem": {
+    "message": "跟随系统"
+  },
+  "themeLight": {
+    "message": "亮色"
+  },
+  "themeDark": {
+    "message": "暗色"
+  },
+  "platforms": {
+    "message": "平台管理"
+  },
+  "language": {
+    "message": "语言"
+  },
+  "languageAuto": {
+    "message": "跟随系统"
+  },
+  "languageEnglish": {
+    "message": "English"
+  },
+  "languageChinese": {
+    "message": "中文"
+  },
+  "languageJapanese": {
+    "message": "日本語"
+  },
+  "languageKorean": {
+    "message": "한국어"
+  },
+  "languageSpanish": {
+    "message": "Español"
+  },
+  "languageFrench": {
+    "message": "Français"
+  },
+  "languageGerman": {
+    "message": "Deutsch"
+  },
+  "languageRussian": {
+    "message": "Русский"
+  },
+  "customDomains": {
+    "message": "自定义私有域名"
+  },
+  "customDomainsHint": {
+    "message": "输入域名或包含该域名的URL"
+  },
+  "add": {
+    "message": "添加"
+  },
+  "invalidDomain": {
+    "message": "无效的域名或URL"
+  },
+  "save": {
+    "message": "保存"
+  },
+  "settingsSaved": {
+    "message": "已保存"
+  }
+}
