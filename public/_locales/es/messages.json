@@ -1,0 +1,113 @@
+{
+  "extensionDescription": {
+    "message": "Vuelve de los archivos raw a las páginas de su repositorio."
+  },
+  "bannerAriaLabel": {
+    "message": "Navegación del repositorio RawBack"
+  },
+  "openRepositoryFileAriaLabel": {
+    "message": "Ver este archivo en el repositorio"
+  },
+  "openInRepository": {
+    "message": "Ver en el repositorio"
+  },
+  "dismissThisFile": {
+    "message": "Ocultar este archivo"
+  },
+  "hiddenFiles": {
+    "message": "Archivos ocultos"
+  },
+  "hiddenFilesEmpty": {
+    "message": "No hay archivos ocultos."
+  },
+  "restore": {
+    "message": "Restaurar"
+  },
+  "restored": {
+    "message": "Restaurado"
+  },
+  "enabled": {
+    "message": "Activado"
+  },
+  "disabled": {
+    "message": "Desactivado"
+  },
+  "currentPage": {
+    "message": "Página actual"
+  },
+  "rawPage": {
+    "message": "Archivo raw detectado"
+  },
+  "notRawPage": {
+    "message": "Esta página no es un archivo raw."
+  },
+  "openRepository": {
+    "message": "Abrir repositorio"
+  },
+  "appearance": {
+    "message": "Apariencia"
+  },
+  "theme": {
+    "message": "Tema"
+  },
+  "themeSystem": {
+    "message": "Sistema"
+  },
+  "themeLight": {
+    "message": "Claro"
+  },
+  "themeDark": {
+    "message": "Oscuro"
+  },
+  "platforms": {
+    "message": "Plataformas"
+  },
+  "language": {
+    "message": "Idioma"
+  },
+  "languageAuto": {
+    "message": "Automático"
+  },
+  "languageEnglish": {
+    "message": "English"
+  },
+  "languageChinese": {
+    "message": "中文"
+  },
+  "languageJapanese": {
+    "message": "日本語"
+  },
+  "languageKorean": {
+    "message": "한국어"
+  },
+  "languageSpanish": {
+    "message": "Español"
+  },
+  "languageFrench": {
+    "message": "Français"
+  },
+  "languageGerman": {
+    "message": "Deutsch"
+  },
+  "languageRussian": {
+    "message": "Русский"
+  },
+  "customDomains": {
+    "message": "Dominios personalizados"
+  },
+  "customDomainsHint": {
+    "message": "Introduce un dominio o URL"
+  },
+  "add": {
+    "message": "Añadir"
+  },
+  "invalidDomain": {
+    "message": "Dominio o URL no válido"
+  },
+  "save": {
+    "message": "Guardar"
+  },
+  "settingsSaved": {
+    "message": "Guardado"
+  }
+}

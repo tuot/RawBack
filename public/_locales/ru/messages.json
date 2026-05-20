@@ -1,0 +1,113 @@
+{
+  "extensionDescription": {
+    "message": "Возврат от raw-файлов к страницам их репозитория."
+  },
+  "bannerAriaLabel": {
+    "message": "Навигация по репозиторию RawBack"
+  },
+  "openRepositoryFileAriaLabel": {
+    "message": "Посмотреть этот файл в репозитории"
+  },
+  "openInRepository": {
+    "message": "Посмотреть в репозитории"
+  },
+  "dismissThisFile": {
+    "message": "Скрыть этот файл"
+  },
+  "hiddenFiles": {
+    "message": "Скрытые файлы"
+  },
+  "hiddenFilesEmpty": {
+    "message": "Нет скрытых файлов."
+  },
+  "restore": {
+    "message": "Восстановить"
+  },
+  "restored": {
+    "message": "Восстановлено"
+  },
+  "enabled": {
+    "message": "Включено"
+  },
+  "disabled": {
+    "message": "Отключено"
+  },
+  "currentPage": {
+    "message": "Текущая страница"
+  },
+  "rawPage": {
+    "message": "Обнаружен raw-файл"
+  },
+  "notRawPage": {
+    "message": "Эта страница не является raw-файлом."
+  },
+  "openRepository": {
+    "message": "Открыть репозиторий"
+  },
+  "appearance": {
+    "message": "Внешний вид"
+  },
+  "theme": {
+    "message": "Тема"
+  },
+  "themeSystem": {
+    "message": "Системная"
+  },
+  "themeLight": {
+    "message": "Светлая"
+  },
+  "themeDark": {
+    "message": "Темная"
+  },
+  "platforms": {
+    "message": "Платформы"
+  },
+  "language": {
+    "message": "Язык"
+  },
+  "languageAuto": {
+    "message": "Авто"
+  },
+  "languageEnglish": {
+    "message": "English"
+  },
+  "languageChinese": {
+    "message": "中文"
+  },
+  "languageJapanese": {
+    "message": "日本語"
+  },
+  "languageKorean": {
+    "message": "한국어"
+  },
+  "languageSpanish": {
+    "message": "Español"
+  },
+  "languageFrench": {
+    "message": "Français"
+  },
+  "languageGerman": {
+    "message": "Deutsch"
+  },
+  "languageRussian": {
+    "message": "Русский"
+  },
+  "customDomains": {
+    "message": "Свои домены"
+  },
+  "customDomainsHint": {
+    "message": "Введите домен или URL"
+  },
+  "add": {
+    "message": "Добавить"
+  },
+  "invalidDomain": {
+    "message": "Недопустимый домен или URL"
+  },
+  "save": {
+    "message": "Сохранить"
+  },
+  "settingsSaved": {
+    "message": "Сохранено"
+  }
+}

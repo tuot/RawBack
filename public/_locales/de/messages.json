@@ -1,0 +1,113 @@
+{
+  "extensionDescription": {
+    "message": "Springen Sie von Raw-Dateien zurück zu ihren Repository-Seiten."
+  },
+  "bannerAriaLabel": {
+    "message": "RawBack-Repository-Navigation"
+  },
+  "openRepositoryFileAriaLabel": {
+    "message": "Diese Datei im Repository anzeigen"
+  },
+  "openInRepository": {
+    "message": "Im Repository anzeigen"
+  },
+  "dismissThisFile": {
+    "message": "Diese Datei ausblenden"
+  },
+  "hiddenFiles": {
+    "message": "Ausgeblendete Dateien"
+  },
+  "hiddenFilesEmpty": {
+    "message": "Keine ausgeblendeten Dateien."
+  },
+  "restore": {
+    "message": "Wiederherstellen"
+  },
+  "restored": {
+    "message": "Wiederhergestellt"
+  },
+  "enabled": {
+    "message": "Aktiviert"
+  },
+  "disabled": {
+    "message": "Deaktiviert"
+  },
+  "currentPage": {
+    "message": "Aktuelle Seite"
+  },
+  "rawPage": {
+    "message": "Raw-Datei erkannt"
+  },
+  "notRawPage": {
+    "message": "Diese Seite ist keine Raw-Datei."
+  },
+  "openRepository": {
+    "message": "Repository öffnen"
+  },
+  "appearance": {
+    "message": "Erscheinungsbild"
+  },
+  "theme": {
+    "message": "Design"
+  },
+  "themeSystem": {
+    "message": "System"
+  },
+  "themeLight": {
+    "message": "Hell"
+  },
+  "themeDark": {
+    "message": "Dunkel"
+  },
+  "platforms": {
+    "message": "Plattformen"
+  },
+  "language": {
+    "message": "Sprache"
+  },
+  "languageAuto": {
+    "message": "Auto"
+  },
+  "languageEnglish": {
+    "message": "English"
+  },
+  "languageChinese": {
+    "message": "中文"
+  },
+  "languageJapanese": {
+    "message": "日本語"
+  },
+  "languageKorean": {
+    "message": "한국어"
+  },
+  "languageSpanish": {
+    "message": "Español"
+  },
+  "languageFrench": {
+    "message": "Français"
+  },
+  "languageGerman": {
+    "message": "Deutsch"
+  },
+  "languageRussian": {
+    "message": "Русский"
+  },
+  "customDomains": {
+    "message": "Benutzerdefinierte Domains"
+  },
+  "customDomainsHint": {
+    "message": "Domain oder URL eingeben"
+  },
+  "add": {
+    "message": "Hinzufügen"
+  },
+  "invalidDomain": {
+    "message": "Ungültige Domain oder URL"
+  },
+  "save": {
+    "message": "Speichern"
+  },
+  "settingsSaved": {
+    "message": "Gespeichert"
+  }
+}

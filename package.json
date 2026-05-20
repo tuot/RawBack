@@ -1,0 +1,26 @@
+{
+  "name": "rawback",
+  "description": "Jump from raw Git hosting files back to their repository pages.",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/sync-locales.cjs",
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "prebuild": "node scripts/sync-locales.cjs",
+    "build": "wxt build",
+    "build:firefox": "wxt build -b firefox",
+    "build:safari": "wxt build -b safari && ./scripts/sync-safari.sh",
+    "prezip": "node scripts/sync-locales.cjs",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip -b firefox",
+    "compile": "tsc --noEmit",
+    "test": "node_modules/.pnpm/esbuild@0.27.7/node_modules/esbuild/bin/esbuild tests/parsers.test.ts --bundle --platform=node --format=esm --outfile=.tmp/parsers.test.mjs && node .tmp/parsers.test.mjs && node_modules/.pnpm/esbuild@0.27.7/node_modules/esbuild/bin/esbuild tests/banner.test.ts --bundle --platform=node --format=esm --outfile=.tmp/banner.test.mjs && node .tmp/banner.test.mjs && node_modules/.pnpm/esbuild@0.27.7/node_modules/esbuild/bin/esbuild tests/navigationMessages.test.ts --bundle --platform=node --format=esm --outfile=.tmp/navigationMessages.test.mjs && node .tmp/navigationMessages.test.mjs",
+    "postinstall": "wxt prepare"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "wxt": "^0.20.26"
+  }
+}
