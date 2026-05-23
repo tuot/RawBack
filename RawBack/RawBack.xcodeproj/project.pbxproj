@@ -38,7 +38,6 @@
 		DB7CC6392FBD58AF0022406A /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62F2FBD58AF0022406A /* _locales */; };
 		DB7CC63A2FBD58AF0022406A /* icon in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6302FBD58AF0022406A /* icon */; };
 		DB7CC63B2FBD58AF0022406A /* assets in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6312FBD58AF0022406A /* assets */; };
-		DB7CC63C2FBD58AF0022406A /* r.png in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6322FBD58AF0022406A /* r.png */; };
 		DB7CC63D2FBD58AF0022406A /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6292FBD58AF0022406A /* background.js */; };
 		DB7CC63E2FBD58AF0022406A /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62A2FBD58AF0022406A /* popup.html */; };
 		DB7CC63F2FBD58AF0022406A /* chunks in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62B2FBD58AF0022406A /* chunks */; };
@@ -48,7 +47,6 @@
 		DB7CC6432FBD58AF0022406A /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62F2FBD58AF0022406A /* _locales */; };
 		DB7CC6442FBD58AF0022406A /* icon in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6302FBD58AF0022406A /* icon */; };
 		DB7CC6452FBD58AF0022406A /* assets in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6312FBD58AF0022406A /* assets */; };
-		DB7CC6462FBD58AF0022406A /* r.png in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6322FBD58AF0022406A /* r.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,7 +122,6 @@
 		DB7CC62F2FBD58AF0022406A /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; name = _locales; path = Resources/_locales; sourceTree = "<group>"; };
 		DB7CC6302FBD58AF0022406A /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icon; path = Resources/icon; sourceTree = "<group>"; };
 		DB7CC6312FBD58AF0022406A /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = Resources/assets; sourceTree = "<group>"; };
-		DB7CC6322FBD58AF0022406A /* r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = r.png; path = Resources/r.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,7 +260,6 @@
 				DB7CC62F2FBD58AF0022406A /* _locales */,
 				DB7CC6302FBD58AF0022406A /* icon */,
 				DB7CC6312FBD58AF0022406A /* assets */,
-				DB7CC6322FBD58AF0022406A /* r.png */,
 			);
 			name = Resources;
 			path = "Shared (Extension)";
@@ -434,7 +430,6 @@
 				DB7CC63F2FBD58AF0022406A /* chunks in Resources */,
 				DB7CC63D2FBD58AF0022406A /* background.js in Resources */,
 				DB7CC6452FBD58AF0022406A /* assets in Resources */,
-				DB7CC6462FBD58AF0022406A /* r.png in Resources */,
 				DB7CC6412FBD58AF0022406A /* manifest.json in Resources */,
 				DB7CC63E2FBD58AF0022406A /* popup.html in Resources */,
 				DB7CC6442FBD58AF0022406A /* icon in Resources */,
@@ -451,7 +446,6 @@
 				DB7CC6352FBD58AF0022406A /* chunks in Resources */,
 				DB7CC6332FBD58AF0022406A /* background.js in Resources */,
 				DB7CC63B2FBD58AF0022406A /* assets in Resources */,
-				DB7CC63C2FBD58AF0022406A /* r.png in Resources */,
 				DB7CC6372FBD58AF0022406A /* manifest.json in Resources */,
 				DB7CC6342FBD58AF0022406A /* popup.html in Resources */,
 				DB7CC63A2FBD58AF0022406A /* icon in Resources */,
@@ -894,7 +888,7 @@
 		DB7CC6262FBD58AF0022406A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = MacIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10000;
@@ -938,7 +932,7 @@
 		DB7CC6272FBD58AF0022406A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = MacIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10000;
