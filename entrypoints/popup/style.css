@@ -53,11 +53,38 @@ h2 {
 .header p,
 .muted,
 .repo span,
-.hidden-file span,
-.saved {
+.hidden-file span {
   color: #52606d;
   font-size: 12px;
   line-height: 17px;
+}
+
+.status-message {
+  align-items: center;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  color: #166534;
+  display: flex;
+  font-size: 12px;
+  gap: 8px;
+  line-height: 17px;
+  padding: 8px 10px;
+}
+
+.status-message::before {
+  align-items: center;
+  background: #22c55e;
+  border-radius: 999px;
+  color: #ffffff;
+  content: "\2713";
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 12px;
+  font-weight: 800;
+  height: 18px;
+  justify-content: center;
+  width: 18px;
 }
 
 .panel {
@@ -254,9 +281,14 @@ button,
 
   .header p,
   .muted,
-  .repo span,
-  .saved {
+  .repo span {
     color: #cbd5e1;
+  }
+
+  .status-message {
+    background: #052e16;
+    border-color: #166534;
+    color: #bbf7d0;
   }
 
   select,

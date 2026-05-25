@@ -388,7 +388,7 @@ function baseCss({ w, h, slide, device }) {
       height: ${Math.round(w * (isMac ? 0.052 : isIpad ? 0.08 : 0.11))}px;
       border-radius: ${Math.round(w * (isMac ? 0.011 : 0.024))}px;
       box-shadow: 0 18px 52px rgba(15, 23, 42, 0.18);
-      background: #0f172a;
+      background: #F4EDE6;
     }
     .name {
       font-size: ${Math.round(w * (isMac ? 0.024 : isIpad ? 0.038 : 0.047))}px;

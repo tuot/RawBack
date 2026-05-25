@@ -10,6 +10,8 @@
       </label>
     </section>
 
+    ${e?`<div class="status-message" role="status" aria-live="polite">${B(e)}</div>`:``}
+
     <section class="panel">
       <h2>${B(T(`currentPage`,O.language))}</h2>
       ${t?M(t):`<p class="muted">${B(T(`notRawPage`,O.language))}</p>`}
@@ -67,7 +69,6 @@
         <input type="text" id="new-domain-input" placeholder="${V(T(`customDomainsHint`,O.language))}" style="flex: 1; min-width: 0; padding: 4px 8px; border: 1px solid #bcccdc; border-radius: 6px; font-size: 13px;" autocomplete="off" spellcheck="false" />
         <button id="add-domain-btn" type="button">${B(T(`add`,O.language))}</button>
       </div>
-      ${e?`<p class="saved">${B(e)}</p>`:``}
     </section>
   `,j()}function j(){D.querySelector(`#enabled`)?.addEventListener(`change`,async e=>{O=await _({enabled:e.currentTarget.checked}),A()}),D.querySelector(`#theme`)?.addEventListener(`change`,async e=>{O=await _({theme:e.currentTarget.value}),A()}),D.querySelector(`#language`)?.addEventListener(`change`,async e=>{O=await _({language:e.currentTarget.value}),A()}),D.querySelectorAll(`input[data-platform]`).forEach(e=>{e.addEventListener(`change`,async()=>{O=await _({disabledPlatforms:i.map(e=>e.id).filter(e=>!D.querySelector(`input[data-platform="${e}"]`)?.checked)}),A()})}),D.querySelector(`#add-domain-btn`)?.addEventListener(`click`,async()=>{let e=D.querySelector(`#new-domain-platform`)?.value,t=I(D.querySelector(`#new-domain-input`)?.value??``);t&&(e===`gitlab`&&!O.selfHostedGitlabHosts.includes(t)?O=await _({selfHostedGitlabHosts:[...O.selfHostedGitlabHosts,t]}):e===`gitea`&&!O.selfHostedGiteaHosts.includes(t)&&(O=await _({selfHostedGiteaHosts:[...O.selfHostedGiteaHosts,t]})),A(T(`settingsSaved`,O.language)))}),D.querySelectorAll(`button[data-delete-gitlab]`).forEach(e=>{e.addEventListener(`click`,async()=>{let t=e.dataset.deleteGitlab;t&&(O=await _({selfHostedGitlabHosts:O.selfHostedGitlabHosts.filter(e=>e!==t)}),A())})}),D.querySelectorAll(`button[data-delete-gitea]`).forEach(e=>{e.addEventListener(`click`,async()=>{let t=e.dataset.deleteGitea;t&&(O=await _({selfHostedGiteaHosts:O.selfHostedGiteaHosts.filter(e=>e!==t)}),A())})}),D.querySelectorAll(`button[data-restore-file]`).forEach(e=>{e.addEventListener(`click`,async()=>{let t=e.dataset.restoreFile;t&&(O=await _({dismissedFiles:O.dismissedFiles.filter(e=>e!==t)}),A(T(`restored`,O.language)))})}),D.querySelector(`button[data-open-repo]`)?.addEventListener(`click`,async t=>{let n=t.currentTarget.dataset.openRepo;n&&(await e.tabs.create({url:n}),window.close())}),D.querySelector(`button[data-dismiss-file]`)?.addEventListener(`click`,async e=>{let t=e.currentTarget.dataset.dismissFile;t&&(await v(t),O=await g(),A(T(`settingsSaved`,O.language)))})}function M(e){let t=O.dismissedFiles.includes(e.fileUrl);return`
     <div class="repo">

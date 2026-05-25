@@ -34,6 +34,8 @@ function render(statusText = ''): void {
       </label>
     </section>
 
+    ${statusText ? `<div class="status-message" role="status" aria-live="polite">${escapeHtml(statusText)}</div>` : ''}
+
     <section class="panel">
       <h2>${escapeHtml(t('currentPage', settings.language))}</h2>
       ${info ? rawPageHtml(info) : `<p class="muted">${escapeHtml(t('notRawPage', settings.language))}</p>`}
@@ -91,7 +93,6 @@ function render(statusText = ''): void {
         <input type="text" id="new-domain-input" placeholder="${escapeAttribute(t('customDomainsHint', settings.language))}" style="flex: 1; min-width: 0; padding: 4px 8px; border: 1px solid #bcccdc; border-radius: 6px; font-size: 13px;" autocomplete="off" spellcheck="false" />
         <button id="add-domain-btn" type="button">${escapeHtml(t('add', settings.language))}</button>
       </div>
-      ${statusText ? `<p class="saved">${escapeHtml(statusText)}</p>` : ''}
     </section>
   `;
 
