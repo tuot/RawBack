@@ -34,7 +34,6 @@
 		DB7CC6352FBD58AF0022406A /* chunks in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62B2FBD58AF0022406A /* chunks */; };
 		DB7CC6362FBD58AF0022406A /* content-scripts in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62C2FBD58AF0022406A /* content-scripts */; };
 		DB7CC6372FBD58AF0022406A /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62D2FBD58AF0022406A /* manifest.json */; };
-		DB7CC6382FBD58AF0022406A /* rules in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62E2FBD58AF0022406A /* rules */; };
 		DB7CC6392FBD58AF0022406A /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62F2FBD58AF0022406A /* _locales */; };
 		DB7CC63A2FBD58AF0022406A /* icon in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6302FBD58AF0022406A /* icon */; };
 		DB7CC63B2FBD58AF0022406A /* assets in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6312FBD58AF0022406A /* assets */; };
@@ -43,7 +42,6 @@
 		DB7CC63F2FBD58AF0022406A /* chunks in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62B2FBD58AF0022406A /* chunks */; };
 		DB7CC6402FBD58AF0022406A /* content-scripts in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62C2FBD58AF0022406A /* content-scripts */; };
 		DB7CC6412FBD58AF0022406A /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62D2FBD58AF0022406A /* manifest.json */; };
-		DB7CC6422FBD58AF0022406A /* rules in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62E2FBD58AF0022406A /* rules */; };
 		DB7CC6432FBD58AF0022406A /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC62F2FBD58AF0022406A /* _locales */; };
 		DB7CC6442FBD58AF0022406A /* icon in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6302FBD58AF0022406A /* icon */; };
 		DB7CC6452FBD58AF0022406A /* assets in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC6312FBD58AF0022406A /* assets */; };
@@ -118,7 +116,6 @@
 		DB7CC62B2FBD58AF0022406A /* chunks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = chunks; path = Resources/chunks; sourceTree = "<group>"; };
 		DB7CC62C2FBD58AF0022406A /* content-scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "content-scripts"; path = "Resources/content-scripts"; sourceTree = "<group>"; };
 		DB7CC62D2FBD58AF0022406A /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
-		DB7CC62E2FBD58AF0022406A /* rules */ = {isa = PBXFileReference; lastKnownFileType = folder; name = rules; path = Resources/rules; sourceTree = "<group>"; };
 		DB7CC62F2FBD58AF0022406A /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; name = _locales; path = Resources/_locales; sourceTree = "<group>"; };
 		DB7CC6302FBD58AF0022406A /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icon; path = Resources/icon; sourceTree = "<group>"; };
 		DB7CC6312FBD58AF0022406A /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = Resources/assets; sourceTree = "<group>"; };
@@ -256,7 +253,6 @@
 				DB7CC62B2FBD58AF0022406A /* chunks */,
 				DB7CC62C2FBD58AF0022406A /* content-scripts */,
 				DB7CC62D2FBD58AF0022406A /* manifest.json */,
-				DB7CC62E2FBD58AF0022406A /* rules */,
 				DB7CC62F2FBD58AF0022406A /* _locales */,
 				DB7CC6302FBD58AF0022406A /* icon */,
 				DB7CC6312FBD58AF0022406A /* assets */,
@@ -426,7 +422,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB7CC6422FBD58AF0022406A /* rules in Resources */,
 				DB7CC63F2FBD58AF0022406A /* chunks in Resources */,
 				DB7CC63D2FBD58AF0022406A /* background.js in Resources */,
 				DB7CC6452FBD58AF0022406A /* assets in Resources */,
@@ -442,7 +437,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB7CC6382FBD58AF0022406A /* rules in Resources */,
 				DB7CC6352FBD58AF0022406A /* chunks in Resources */,
 				DB7CC6332FBD58AF0022406A /* background.js in Resources */,
 				DB7CC63B2FBD58AF0022406A /* assets in Resources */,
@@ -667,7 +661,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10003;
+				CURRENT_PROJECT_VERSION = 10004;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "RawBack Extension";
@@ -678,7 +672,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -700,7 +694,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10003;
+				CURRENT_PROJECT_VERSION = 10004;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "RawBack Extension";
@@ -711,7 +705,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -736,7 +730,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10003;
+				CURRENT_PROJECT_VERSION = 10004;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = RawBack;
@@ -752,7 +746,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -778,7 +772,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10003;
+				CURRENT_PROJECT_VERSION = 10004;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = RawBack;
@@ -794,7 +788,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -819,7 +813,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10003;
+				CURRENT_PROJECT_VERSION = 10004;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -834,7 +828,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -855,7 +849,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10003;
+				CURRENT_PROJECT_VERSION = 10004;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -870,7 +864,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -893,7 +887,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = MacIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10003;
+				CURRENT_PROJECT_VERSION = 10004;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -911,7 +905,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -937,7 +931,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = MacIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10003;
+				CURRENT_PROJECT_VERSION = 10004;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -955,7 +949,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,

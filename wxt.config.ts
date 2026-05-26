@@ -6,22 +6,8 @@ export default defineConfig({
     name: "RawBack",
     description: "__MSG_extensionDescription__",
     default_locale: "en",
-    permissions: [
-      "storage",
-      "tabs",
-      "declarativeNetRequest",
-      "declarativeNetRequestWithHostAccess",
-    ],
+    permissions: ["storage", "tabs"],
     host_permissions: ["<all_urls>"],
-    declarative_net_request: {
-      rule_resources: [
-        {
-          id: "remove_raw_csp_rules",
-          enabled: true,
-          path: "rules/remove-raw-csp.json",
-        },
-      ],
-    },
     action: {
       default_title: "RawBack",
     },
