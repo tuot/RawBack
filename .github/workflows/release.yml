@@ -1,0 +1,61 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  browser-packages:
+    name: Build browser packages
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.9
+          run_install: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run tests
+        run: pnpm test
+
+      - name: Package Chromium extension
+        run: pnpm zip
+
+      - name: Package Firefox extension
+        run: pnpm zip:firefox
+
+      - name: Collect release assets
+        shell: bash
+        run: |
+          mkdir -p release-assets
+          find .output -maxdepth 2 -type f -name "*.zip" -print -exec cp {} release-assets/ \;
+          test "$(find release-assets -type f -name '*.zip' | wc -l)" -gt 0
+          ls -lh release-assets
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: release-assets/*.zip
+          generate_release_notes: true
+          body: |
+            Safari users should install RawBack from the App Store.
+
+            Non-Safari users can download the Chromium or Firefox package below, extract it, and load it manually in their browser extension settings.
