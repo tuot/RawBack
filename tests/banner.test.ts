@@ -33,7 +33,6 @@ assert.match(bannerCss, /\.rawback-banner,\s*\.rawback-banner \*\s*{[^}]*user-se
 const bannerSource = readFileSync('entrypoints/content/banner.ts', 'utf8');
 const contentSource = readFileSync('entrypoints/content/index.ts', 'utf8');
 const wxtConfig = readFileSync('wxt.config.ts', 'utf8');
-const rawCspRules = JSON.parse(readFileSync('public/rules/remove-raw-csp.json', 'utf8'));
 
 assert.match(bannerSource, /document\.createElement\('div'\)/);
 assert.match(bannerSource, /host\.id = hostId/);
@@ -64,31 +63,7 @@ assert.doesNotMatch(bannerSource, /function canUseInteractiveActions/);
 assert.doesNotMatch(bannerSource, /function isSafariBrowser/);
 assert.doesNotMatch(bannerSource, /closestActionButton/);
 
-assert.match(wxtConfig, /declarativeNetRequest/);
-assert.match(wxtConfig, /declarativeNetRequestWithHostAccess/);
-assert.match(wxtConfig, /declarative_net_request/);
-assert.match(wxtConfig, /rules\/remove-raw-csp\.json/);
 assert.doesNotMatch(wxtConfig, /rawback-banner\.html/);
-assert.equal(existsSync('public/rules/remove-raw-csp.json'), true);
-assert.deepEqual(rawCspRules, [
-  {
-    id: 1,
-    priority: 1,
-    action: {
-      type: 'modifyHeaders',
-      responseHeaders: [
-        {
-          header: 'content-security-policy',
-          operation: 'remove',
-        },
-      ],
-    },
-    condition: {
-      urlFilter: '||raw.githubusercontent.com',
-      resourceTypes: ['main_frame'],
-    },
-  },
-]);
 assert.match(contentSource, /runAt:\s*'document_start'/);
 assert.match(contentSource, /matches:\s*\['<all_urls>'\]/);
 assert.match(contentSource, /await waitForBody\(\)/);

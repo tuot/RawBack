@@ -33,14 +33,16 @@ export default defineContentScript({
       const reason = getBlockReason(currentSettings, info);
       document.documentElement.dataset.rawbackLoaded = 'true';
       document.documentElement.dataset.rawbackReason = reason;
-      window.__RAWBACK_DEBUG__ = {
-        loaded: true,
-        url: location.href,
-        parsed: info,
-        settings: currentSettings,
-        blocked,
-        reason,
-      };
+      if (import.meta.env.DEV) {
+        window.__RAWBACK_DEBUG__ = {
+          loaded: true,
+          url: location.href,
+          parsed: info,
+          settings: currentSettings,
+          blocked,
+          reason,
+        };
+      }
 
       if (blocked) {
         controller?.remove();

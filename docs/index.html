@@ -140,35 +140,60 @@
         background: var(--moss-soft);
       }
 
-      .lang-switch {
-        display: inline-grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2px;
-        padding: 3px;
+      .lang-select-container {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
         border: 1px solid rgba(80, 89, 70, 0.16);
         border-radius: 999px;
         background: rgba(236, 226, 208, 0.58);
+        padding: 0 12px 0 14px;
+        height: 38px;
       }
 
-      .lang-switch button {
-        min-width: 52px;
-        min-height: 32px;
+      .lang-select-container select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
         border: 0;
-        border-radius: 999px;
-        padding: 0 10px;
-        color: var(--muted);
         background: transparent;
         font: inherit;
-        font-size: 0.86rem;
+        font-size: 0.88rem;
         font-weight: 800;
+        color: var(--ink-soft);
         cursor: pointer;
+        padding-right: 18px;
+        outline: none;
       }
 
-      .lang-switch button[aria-pressed="true"] {
-        color: #fffdf8;
-        background: var(--moss);
-        box-shadow: 0 6px 16px rgba(82, 106, 73, 0.2);
+      .lang-select-container select:focus {
+        color: var(--moss-deep);
       }
+
+      .lang-select-container::after {
+        content: "";
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 6px;
+        background-color: var(--muted);
+        mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center;
+        -webkit-mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center;
+        mask-size: contain;
+        -webkit-mask-size: contain;
+        pointer-events: none;
+      }
+
+      .lang-select-container:hover select {
+        color: var(--moss-deep);
+      }
+
+      .lang-select-container:hover::after {
+        background-color: var(--moss-deep);
+      }
+
 
       main {
         padding-top: 24px;
@@ -499,9 +524,9 @@
         gap: 12px;
         margin-top: 14px;
         padding: 12px;
-        border: 1px solid rgba(29, 102, 210, 0.18);
+        border: 1px solid rgba(82, 106, 73, 0.18);
         border-radius: var(--radius);
-        background: rgba(29, 102, 210, 0.08);
+        background: rgba(82, 106, 73, 0.08);
       }
 
       .repo-banner strong {
@@ -518,7 +543,7 @@
         padding: 9px 12px;
         border-radius: 999px;
         color: #fff;
-        background: var(--blue);
+        background: var(--moss);
         font-size: 0.86rem;
         font-weight: 900;
       }
@@ -579,16 +604,19 @@
         gap: 12px;
         margin: 18px 0 0;
         padding: 0;
-        list-style: none;
       }
 
-      .install-steps li {
+      .install-steps .install-step {
         display: grid;
         grid-template-columns: 30px 1fr;
         gap: 10px;
         align-items: start;
-        color: rgba(255, 253, 248, 0.88);
+        color: var(--ink-soft);
         line-height: 1.5;
+      }
+
+      .install-card.highlight .install-steps .install-step {
+        color: rgba(255, 253, 248, 0.88);
       }
 
       .step-num {
@@ -750,9 +778,11 @@
         <a class="nav-link" href="#features" data-lang="zh">功能</a>
         <a class="nav-link" href="#install" data-lang="en">Install</a>
         <a class="nav-link" href="#install" data-lang="zh">安装</a>
-        <div class="lang-switch" aria-label="Language">
-          <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
-          <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+        <div class="lang-select-container">
+          <select id="lang-select" aria-label="Language">
+            <option value="en">EN</option>
+            <option value="zh">中文</option>
+          </select>
         </div>
       </div>
     </header>
@@ -937,18 +967,18 @@
             <h3 data-lang="zh">Chrome、Edge、Brave、Firefox</h3>
             <p data-lang="en">Download the latest package from GitHub Releases.</p>
             <p data-lang="zh">从 GitHub Release 下载最新浏览器扩展包。</p>
-            <ol class="install-steps">
-              <li>
+            <div class="install-steps">
+              <div class="install-step">
                 <span class="step-num">1</span>
                 <span data-lang="en">Download the Chromium or Firefox zip.</span>
                 <span data-lang="zh">下载 Chromium 或 Firefox zip。</span>
-              </li>
-              <li>
+              </div>
+              <div class="install-step">
                 <span class="step-num">2</span>
                 <span data-lang="en">Load the unpacked extension in your browser.</span>
                 <span data-lang="zh">在浏览器中加载解压后的扩展。</span>
-              </li>
-            </ol>
+              </div>
+            </div>
             <div class="actions">
               <a class="button" id="release-link-secondary" href="#">
                 <span data-lang="en">Open Releases</span>
@@ -970,14 +1000,23 @@
       const APP_STORE_URL = "https://apps.apple.com/us/app/rawback/id6770844819";
       const REPOSITORY_URL = "https://github.com/tuot/RawBack";
 
-      const buttons = [...document.querySelectorAll("[data-set-lang]")];
+      const langSelect = document.getElementById("lang-select");
       const setLanguage = (language) => {
         document.body.classList.toggle("zh", language === "zh");
         document.documentElement.lang = language === "zh" ? "zh-Hans" : "en";
-        buttons.forEach((button) => {
-          button.setAttribute("aria-pressed", String(button.dataset.setLang === language));
-        });
+        langSelect.value = language;
         localStorage.setItem("rawback-language", language);
+      };
+
+      const getPreferredLanguage = () => {
+        const saved = localStorage.getItem("rawback-language");
+        if (saved) return saved;
+
+        const browserLang = navigator.language || (navigator.languages && navigator.languages[0]) || "";
+        if (browserLang.toLowerCase().includes("zh")) {
+          return "zh";
+        }
+        return "en";
       };
 
       document.getElementById("app-store-link").href = APP_STORE_URL;
@@ -985,10 +1024,8 @@
       document.getElementById("release-link").href = `${REPOSITORY_URL}/releases/latest`;
       document.getElementById("release-link-secondary").href = `${REPOSITORY_URL}/releases/latest`;
       document.getElementById("repository-link").href = REPOSITORY_URL;
-      buttons.forEach((button) => {
-        button.addEventListener("click", () => setLanguage(button.dataset.setLang));
-      });
-      setLanguage(localStorage.getItem("rawback-language") || "en");
+      langSelect.addEventListener("change", (e) => setLanguage(e.target.value));
+      setLanguage(getPreferredLanguage());
     </script>
   </body>
 </html>
