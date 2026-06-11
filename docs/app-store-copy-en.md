@@ -34,7 +34,7 @@ When you open a raw file from a supported Git host, RawBack adds a small, low-di
 
 Built for developers and code readers:
 - Jump from raw files to repository file pages
-- Works with GitHub, GitLab, Gitea, and Codeberg raw URLs
+- Works with GitHub, GitHub Gist, GitLab, Gitea, and Codeberg raw URLs
 - Add self-hosted GitLab and Gitea domains
 - Choose light, dark, or system appearance
 - Enable only the Git hosts you use
@@ -55,7 +55,7 @@ Marketing URL:
 What's New in This Version:
 Initial release of RawBack:
 - Jump from raw Git files back to repository pages
-- Support for GitHub, GitLab, Gitea, Codeberg, and custom GitLab/Gitea domains
+- Support for GitHub, GitHub Gist, GitLab, Gitea, Codeberg, and custom GitLab/Gitea domains
 - Light, dark, and system themes
 - Platform controls, hidden files, and localized UI
 
@@ -112,6 +112,7 @@ Testing steps:
 1. Install the app and enable the RawBack extension in Safari.
 2. Open a supported raw Git file URL, for example:
    - https://raw.githubusercontent.com/vuejs/core/main/README.md
+   - https://gist.githubusercontent.com/octocat/1182433/raw/c26b772fb22934ef42bdad13e648c697b37f40eb/git-flow-commands.txt
    - https://gitlab.com/gitlab-org/gitlab/-/raw/master/README.md
    - https://gitea.com/gitea/tea/raw/branch/main/README.md
 3. Confirm that the RawBack banner appears at the top of the raw file page.
@@ -203,7 +204,7 @@ Jump from raw file URLs to the normal repository file page, including the branch
 
 Feature 2:
 Built for real Git workflows
-Use RawBack with GitHub, GitLab, Gitea, Codeberg, and self-hosted GitLab or Gitea domains.
+Use RawBack with GitHub, GitHub Gist, GitLab, Gitea, Codeberg, and self-hosted GitLab or Gitea domains.
 
 Feature 3:
 Quiet by design

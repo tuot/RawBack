@@ -9,7 +9,7 @@ When you open a supported raw file, RawBack adds a quiet navigation banner at th
 ### Features
 
 - Jump from raw files to repository file pages
-- Supports GitHub, GitLab, Gitea, Codeberg, and self-hosted GitLab/Gitea domains
+- Supports GitHub, GitHub Gist, GitLab, Gitea, Codeberg, and self-hosted GitLab/Gitea domains
 - Light, dark, and system themes
 - Platform toggles, hidden files, and custom domains
 - Localized UI for English, Chinese, Japanese, Korean, Spanish, French, German, and Russian

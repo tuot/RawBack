@@ -9,7 +9,7 @@ RawBack 帮你从 raw Git 文件地址跳回对应的仓库文件页面。
 ### 功能
 
 - 从 raw 文件跳回仓库文件页
-- 支持 GitHub、GitLab、Gitea、Codeberg，以及自托管 GitLab/Gitea 域名
+- 支持 GitHub、GitHub Gist、GitLab、Gitea、Codeberg，以及自托管 GitLab/Gitea 域名
 - 支持浅色、深色、跟随系统主题
 - 支持平台开关、隐藏文件、自定义域名
 - UI 已本地化为英文、中文、日文、韩文、西班牙文、法文、德文、俄文
