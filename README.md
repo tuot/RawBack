@@ -19,7 +19,7 @@ When you open a supported raw file, RawBack adds a quiet navigation banner at th
 
 #### Safari
 
-Install RawBack from the [App Store](https://apps.apple.com/us/app/rawback/id6770844819).
+Install RawBack from the [App Store](https://apps.apple.com/app/id6770844819).
 
 #### Chrome, Edge, Brave, and other Chromium browsers
 

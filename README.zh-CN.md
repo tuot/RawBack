@@ -19,7 +19,7 @@ RawBack 帮你从 raw Git 文件地址跳回对应的仓库文件页面。
 
 #### Safari
 
-Safari 用户可直接从 [App Store](https://apps.apple.com/us/app/rawback/id6770844819) 安装。
+Safari 用户可直接从 [App Store](https://apps.apple.com/app/id6770844819) 安装。
 
 #### Chrome、Edge、Brave 等 Chromium 浏览器
 
