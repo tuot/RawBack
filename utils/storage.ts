@@ -77,7 +77,7 @@ function stringArray(value: unknown): string[] {
 }
 
 function platformArray(value: unknown): Platform[] {
-  const platforms = new Set<Platform>(['github', 'gitlab', 'gitea']);
+  const platforms = new Set<Platform>(['github', 'gitlab', 'gitea', 'gist']);
   return stringArray(value).filter((item): item is Platform => platforms.has(item as Platform));
 }
 

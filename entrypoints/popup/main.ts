@@ -191,13 +191,14 @@ function bindEvents(): void {
 
 function rawPageHtml(info: NonNullable<ReturnType<typeof parseRawUrl>>): string {
   const isDismissed = settings.dismissedFiles.includes(info.fileUrl);
+  const openLabel = info.platform === 'gist' ? t('openGist', settings.language) : t('openRepository', settings.language);
   return `
     <div class="repo">
       <strong>${escapeHtml(info.user)} / ${escapeHtml(info.repo)}</strong>
       <span>${escapeHtml(info.filePath)}</span>
     </div>
     <div class="page-actions">
-      <button class="primary" type="button" data-open-repo="${escapeAttribute(info.fileUrl)}">${escapeHtml(t('openRepository', settings.language))}</button>
+      <button class="primary" type="button" data-open-repo="${escapeAttribute(info.fileUrl)}">${escapeHtml(openLabel)}</button>
       ${!isDismissed ? `<button class="ghost danger-text" type="button" data-dismiss-file="${escapeAttribute(info.fileUrl)}">${escapeHtml(t('dismissThisFile', settings.language))}</button>` : ''}
     </div>
   `;

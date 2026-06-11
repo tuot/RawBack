@@ -11,6 +11,15 @@
   "openInRepository": {
     "message": "저장소에서 보기"
   },
+  "openGistFileAriaLabel": {
+    "message": "Gist에서 이 파일 보기"
+  },
+  "openInGist": {
+    "message": "Gist에서 보기"
+  },
+  "openGist": {
+    "message": "Gist 열기"
+  },
   "dismissThisFile": {
     "message": "이 파일 숨기기"
   },

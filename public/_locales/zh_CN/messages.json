@@ -11,6 +11,15 @@
   "openInRepository": {
     "message": "在仓库中查看"
   },
+  "openGistFileAriaLabel": {
+    "message": "在 Gist 中查看当前文件"
+  },
+  "openInGist": {
+    "message": "在 Gist 中查看"
+  },
+  "openGist": {
+    "message": "打开 Gist"
+  },
   "dismissThisFile": {
     "message": "隐藏此文件"
   },

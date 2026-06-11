@@ -48,4 +48,37 @@ const customGitea = parseRawUrl(
 );
 assert.equal(customGitea?.fileUrl, 'https://git.mygitea.com/user/repo/src/branch/main/index.ts');
 
+const gistWithCommitAndFile = parseRawUrl('https://gist.githubusercontent.com/octocat/1182433/raw/c26b772fb22934ef42bdad13e648c697b37f40eb/git-flow-commands.txt');
+assert.deepEqual(gistWithCommitAndFile, {
+  platform: 'gist',
+  user: 'octocat',
+  repo: '1182433',
+  branch: 'c26b772fb22934ef42bdad13e648c697b37f40eb',
+  filePath: 'git-flow-commands.txt',
+  repoUrl: 'https://gist.github.com/octocat/1182433',
+  fileUrl: 'https://gist.github.com/octocat/1182433/c26b772fb22934ef42bdad13e648c697b37f40eb#file-git-flow-commands-txt',
+});
+
+const gistWithFileOnly = parseRawUrl('https://gist.githubusercontent.com/octocat/1182433/raw/git-flow-commands.txt');
+assert.deepEqual(gistWithFileOnly, {
+  platform: 'gist',
+  user: 'octocat',
+  repo: '1182433',
+  branch: 'latest',
+  filePath: 'git-flow-commands.txt',
+  repoUrl: 'https://gist.github.com/octocat/1182433',
+  fileUrl: 'https://gist.github.com/octocat/1182433#file-git-flow-commands-txt',
+});
+
+const gistRawOnly = parseRawUrl('https://gist.githubusercontent.com/octocat/1182433/raw');
+assert.deepEqual(gistRawOnly, {
+  platform: 'gist',
+  user: 'octocat',
+  repo: '1182433',
+  branch: 'latest',
+  filePath: '',
+  repoUrl: 'https://gist.github.com/octocat/1182433',
+  fileUrl: 'https://gist.github.com/octocat/1182433',
+});
+
 assert.equal(parseRawUrl('https://example.com/not/raw'), null);

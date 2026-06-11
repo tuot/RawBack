@@ -11,6 +11,15 @@
   "openInRepository": {
     "message": "Посмотреть в репозитории"
   },
+  "openGistFileAriaLabel": {
+    "message": "Посмотреть этот файл в Gist"
+  },
+  "openInGist": {
+    "message": "Посмотреть в Gist"
+  },
+  "openGist": {
+    "message": "Открыть Gist"
+  },
   "dismissThisFile": {
     "message": "Скрыть этот файл"
   },

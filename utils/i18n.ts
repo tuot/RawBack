@@ -6,6 +6,9 @@ type MessageKey =
   | 'bannerAriaLabel'
   | 'openRepositoryFileAriaLabel'
   | 'openInRepository'
+  | 'openGistFileAriaLabel'
+  | 'openInGist'
+  | 'openGist'
   | 'dismissThisFile'
   | 'hiddenFiles'
   | 'hiddenFilesEmpty'
@@ -46,6 +49,9 @@ const messages: Record<Exclude<RawBackLanguage, 'auto'>, Record<MessageKey, stri
     bannerAriaLabel: 'RawBack repository navigation',
     openRepositoryFileAriaLabel: 'View this file in the repository',
     openInRepository: 'View in repository',
+    openGistFileAriaLabel: 'View this file in Gist',
+    openInGist: 'View in Gist',
+    openGist: 'Open Gist',
     dismissThisFile: 'Hide this file',
     hiddenFiles: 'Hidden files',
     hiddenFilesEmpty: 'No permanently hidden files.',
@@ -85,6 +91,9 @@ const messages: Record<Exclude<RawBackLanguage, 'auto'>, Record<MessageKey, stri
     bannerAriaLabel: 'RawBack 仓库导航',
     openRepositoryFileAriaLabel: '在仓库中查看当前文件',
     openInRepository: '在仓库中查看',
+    openGistFileAriaLabel: '在 Gist 中查看当前文件',
+    openInGist: '在 Gist 中查看',
+    openGist: '打开 Gist',
     dismissThisFile: '隐藏此文件',
     hiddenFiles: '已隐藏文件',
     hiddenFilesEmpty: '没有永久隐藏的文件。',
@@ -124,6 +133,9 @@ const messages: Record<Exclude<RawBackLanguage, 'auto'>, Record<MessageKey, stri
     bannerAriaLabel: 'RawBackリポジトリナビゲーション',
     openRepositoryFileAriaLabel: 'リポジトリでこのファイルを表示',
     openInRepository: 'リポジトリで表示',
+    openGistFileAriaLabel: 'Gistでこのファイルを表示',
+    openInGist: 'Gistで表示',
+    openGist: 'Gistを開く',
     dismissThisFile: 'このファイルを隠す',
     hiddenFiles: '非表示ファイル',
     hiddenFilesEmpty: '完全に非表示のファイルはありません。',
@@ -163,6 +175,9 @@ const messages: Record<Exclude<RawBackLanguage, 'auto'>, Record<MessageKey, stri
     bannerAriaLabel: 'RawBack 저장소 탐색',
     openRepositoryFileAriaLabel: '저장소에서 이 파일 보기',
     openInRepository: '저장소에서 보기',
+    openGistFileAriaLabel: 'Gist에서 이 파일 보기',
+    openInGist: 'Gist에서 보기',
+    openGist: 'Gist 열기',
     dismissThisFile: '이 파일 숨기기',
     hiddenFiles: '숨긴 파일',
     hiddenFilesEmpty: '숨긴 파일이 없습니다.',
@@ -202,6 +217,9 @@ const messages: Record<Exclude<RawBackLanguage, 'auto'>, Record<MessageKey, stri
     bannerAriaLabel: 'Navegación del repositorio RawBack',
     openRepositoryFileAriaLabel: 'Ver este archivo en el repositorio',
     openInRepository: 'Ver en el repositorio',
+    openGistFileAriaLabel: 'Ver este archivo en Gist',
+    openInGist: 'Ver en Gist',
+    openGist: 'Abrir Gist',
     dismissThisFile: 'Ocultar este archivo',
     hiddenFiles: 'Archivos ocultos',
     hiddenFilesEmpty: 'No hay archivos ocultos.',
@@ -241,6 +259,9 @@ const messages: Record<Exclude<RawBackLanguage, 'auto'>, Record<MessageKey, stri
     bannerAriaLabel: 'Navigation du dépôt RawBack',
     openRepositoryFileAriaLabel: 'Voir ce fichier dans le dépôt',
     openInRepository: 'Voir dans le dépôt',
+    openGistFileAriaLabel: 'Voir ce fichier dans Gist',
+    openInGist: 'Voir dans Gist',
+    openGist: 'Ouvrir Gist',
     dismissThisFile: 'Masquer ce fichier',
     hiddenFiles: 'Fichiers masqués',
     hiddenFilesEmpty: 'Aucun fichier masqué.',
@@ -280,6 +301,9 @@ const messages: Record<Exclude<RawBackLanguage, 'auto'>, Record<MessageKey, stri
     bannerAriaLabel: 'RawBack-Repository-Navigation',
     openRepositoryFileAriaLabel: 'Diese Datei im Repository anzeigen',
     openInRepository: 'Im Repository anzeigen',
+    openGistFileAriaLabel: 'Diese Datei in Gist anzeigen',
+    openInGist: 'In Gist anzeigen',
+    openGist: 'Gist öffnen',
     dismissThisFile: 'Diese Datei ausblenden',
     hiddenFiles: 'Ausgeblendete Dateien',
     hiddenFilesEmpty: 'Keine ausgeblendeten Dateien.',
@@ -319,6 +343,9 @@ const messages: Record<Exclude<RawBackLanguage, 'auto'>, Record<MessageKey, stri
     bannerAriaLabel: 'Навигация по репозиторию RawBack',
     openRepositoryFileAriaLabel: 'Посмотреть этот файл в репозитории',
     openInRepository: 'Посмотреть в репозитории',
+    openGistFileAriaLabel: 'Посмотреть этот файл в Gist',
+    openInGist: 'Посмотреть в Gist',
+    openGist: 'Открыть Gist',
     dismissThisFile: 'Скрыть этот файл',
     hiddenFiles: 'Скрытые файлы',
     hiddenFilesEmpty: 'Нет скрытых файлов.',

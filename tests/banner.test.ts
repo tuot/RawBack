@@ -19,6 +19,22 @@ assert.equal(viewModel.filePath, 'packages/web/src/index.ts');
 assert.equal(viewModel.primaryActionLabel, 'View in repository');
 assert.equal(viewModel.primaryActionUrl, 'https://github.com/octo-org/rawback/blob/main/packages/web/src/index.ts');
 
+const gistViewModel = createBannerViewModel({
+  platform: 'gist',
+  user: 'octocat',
+  repo: '1182433',
+  branch: 'latest',
+  filePath: 'git-flow-commands.txt',
+  repoUrl: 'https://gist.github.com/octocat/1182433',
+  fileUrl: 'https://gist.github.com/octocat/1182433#file-git-flow-commands-txt',
+}, 'en');
+
+assert.equal(gistViewModel.platformLabel, 'GitHub Gist');
+assert.equal(gistViewModel.repositoryLabel, 'octocat / 1182433');
+assert.equal(gistViewModel.filePath, 'git-flow-commands.txt');
+assert.equal(gistViewModel.primaryActionLabel, 'View in Gist');
+assert.equal(gistViewModel.primaryActionUrl, 'https://gist.github.com/octocat/1182433#file-git-flow-commands-txt');
+
 assert.match(bannerCss, /position:\s*fixed;/);
 assert.match(bannerCss, /width:\s*100vw;/);
 assert.doesNotMatch(bannerCss, /max-width:\s*1080px;/);

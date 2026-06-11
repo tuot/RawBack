@@ -1,4 +1,4 @@
-export type Platform = 'github' | 'gitlab' | 'gitea';
+export type Platform = 'github' | 'gitlab' | 'gitea' | 'gist';
 
 export interface RawFileInfo {
   platform: Platform;
@@ -24,6 +24,7 @@ export const supportedPlatforms: Array<{ id: Platform; label: string; host: stri
   { id: 'github', label: 'GitHub', host: 'raw.githubusercontent.com' },
   { id: 'gitlab', label: 'GitLab', host: 'gitlab.com' },
   { id: 'gitea', label: 'Gitea', host: 'gitea.com' },
+  { id: 'gist', label: 'GitHub Gist', host: 'gist.githubusercontent.com' },
 ];
 
 export function parseRawUrl(rawUrl: string, settings: PlatformSettings = {}): RawFileInfo | null {
@@ -37,6 +38,7 @@ export function parseRawUrl(rawUrl: string, settings: PlatformSettings = {}): Ra
 
   const parsed =
     parseGithub(url) ??
+    parseGist(url) ??
     parseGitlab(url, settings) ??
     parseGitea(url, settings);
 
@@ -68,6 +70,50 @@ function parseGithub(url: URL): RawFileInfo | null {
     filePath,
     repoUrl,
     fileUrl: `${repoUrl}/blob/${encodePath([branch, filePath])}`,
+  };
+}
+
+function parseGist(url: URL): RawFileInfo | null {
+  const rawHosts = new Set(['gist.githubusercontent.com']);
+  if (!rawHosts.has(url.hostname)) return null;
+
+  const segments = cleanSegments(url.pathname);
+  if (segments.length < 3 || segments[2] !== 'raw') return null;
+
+  const [user, repo] = segments;
+  if (!user || !repo) return null;
+
+  let commitHash = '';
+  let filePath = '';
+  if (segments.length > 3) {
+    const isHex40 = /^[0-9a-f]{40}$/i.test(segments[3]);
+    if (isHex40) {
+      commitHash = segments[3];
+      filePath = segments.slice(4).join('/');
+    } else {
+      filePath = segments.slice(3).join('/');
+    }
+  }
+
+  const host = 'gist.github.com';
+  const repoUrl = `${url.protocol}//${host}/${encodePath([user, repo])}`;
+  let fileUrl = repoUrl;
+  if (commitHash) {
+    fileUrl += `/${commitHash}`;
+  }
+  if (filePath) {
+    const anchor = 'file-' + filePath.toLowerCase().replace(/[^a-z0-9_]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+    fileUrl += `#${anchor}`;
+  }
+
+  return {
+    platform: 'gist',
+    user,
+    repo,
+    branch: commitHash || 'latest',
+    filePath,
+    repoUrl,
+    fileUrl,
   };
 }
 
