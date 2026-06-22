@@ -58,6 +58,31 @@ Safari 包装项目同步：
 pnpm build:safari
 ```
 
+Safari 包装项目的 fastlane 入口：
+
+```bash
+bundle install
+pnpm fastlane lanes
+pnpm ios:build
+pnpm macos:build
+```
+
+App Store Connect 元数据和截图按平台分目录保存：
+
+```text
+fastlane/metadata/ios
+fastlane/metadata/macos
+fastlane/screenshots/ios
+fastlane/screenshots/macos
+```
+
+从 App Store Connect 拉取当前版本到本地目录：
+
+```bash
+FASTLANE_APPLE_ID="you@example.com" APP_VERSION=1.2.0 bundle exec fastlane ios store_pull
+FASTLANE_APPLE_ID="you@example.com" APP_VERSION=1.2.0 bundle exec fastlane mac store_pull
+```
+
 ### 发布
 
 推送版本 tag 后，会自动打包浏览器扩展并创建 GitHub Release：
@@ -68,6 +93,20 @@ git push origin v1.1.1
 ```
 
 Release workflow 会上传 Chromium 和 Firefox 扩展 zip，方便非 Safari 用户下载后手动加载。Safari 用户建议从 App Store 安装。
+
+如需生成 App Store archive，请先在 Xcode 配好签名，然后执行：
+
+```bash
+pnpm ios:archive
+pnpm macos:archive
+```
+
+只上传元数据和截图，不上传二进制：
+
+```bash
+FASTLANE_APPLE_ID="you@example.com" APP_VERSION=1.2.0 bundle exec fastlane ios store_push
+FASTLANE_APPLE_ID="you@example.com" APP_VERSION=1.2.0 bundle exec fastlane mac store_push
+```
 
 ### GitHub Pages
 

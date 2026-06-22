@@ -14,6 +14,18 @@ stats.html
 stats-*.json
 .wxt
 web-ext.config.ts
+build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/test_output/
+fastlane/metadata/
+fastlane/screenshots/
+*.p8
+.env
+.env.*
+!.env.example
 
 # Editor directories and files
 .vscode/*

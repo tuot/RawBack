@@ -58,6 +58,31 @@ Safari wrapper sync:
 pnpm build:safari
 ```
 
+Fastlane for the Safari wrapper:
+
+```bash
+bundle install
+pnpm fastlane lanes
+pnpm ios:build
+pnpm macos:build
+```
+
+App Store Connect metadata and screenshots are stored separately by platform:
+
+```text
+fastlane/metadata/ios
+fastlane/metadata/macos
+fastlane/screenshots/ios
+fastlane/screenshots/macos
+```
+
+Pull the current App Store Connect version into those folders:
+
+```bash
+FASTLANE_APPLE_ID="you@example.com" APP_VERSION=1.2.0 bundle exec fastlane ios store_pull
+FASTLANE_APPLE_ID="you@example.com" APP_VERSION=1.2.0 bundle exec fastlane mac store_pull
+```
+
 ### Release
 
 Push a version tag to build browser packages and create a GitHub Release:
@@ -68,6 +93,20 @@ git push origin v1.1.1
 ```
 
 The release workflow uploads Chromium and Firefox extension zips for non-Safari users. Safari users should install from the App Store.
+
+For App Store archives, use fastlane after signing is configured in Xcode:
+
+```bash
+pnpm ios:archive
+pnpm macos:archive
+```
+
+Upload metadata and screenshots without uploading a binary:
+
+```bash
+FASTLANE_APPLE_ID="you@example.com" APP_VERSION=1.2.0 bundle exec fastlane ios store_push
+FASTLANE_APPLE_ID="you@example.com" APP_VERSION=1.2.0 bundle exec fastlane mac store_push
+```
 
 ### GitHub Pages
 

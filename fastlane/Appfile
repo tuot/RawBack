@@ -1,0 +1,5 @@
+app_identifier("com.ttqqcc.rawback")
+team_id("9FM4CW4W4Z")
+
+apple_id(ENV["FASTLANE_APPLE_ID"] || ENV["DELIVER_USERNAME"]) if ENV["FASTLANE_APPLE_ID"] || ENV["DELIVER_USERNAME"]
+itc_team_id(ENV["FASTLANE_ITC_TEAM_ID"]) if ENV["FASTLANE_ITC_TEAM_ID"]

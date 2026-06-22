@@ -1,0 +1,239 @@
+require "shellwords"
+
+default_platform(:ios)
+
+PROJECT_PATH = "RawBack/RawBack.xcodeproj"
+DERIVED_DATA_PATH = "build/DerivedData"
+IOS_SCHEME = "RawBack (iOS)"
+MACOS_SCHEME = "RawBack (macOS)"
+ROOT_PATH = File.expand_path("..", __dir__)
+IOS_METADATA_PATH = File.join(ROOT_PATH, "fastlane/metadata/ios")
+IOS_SCREENSHOTS_PATH = File.join(ROOT_PATH, "fastlane/screenshots/ios")
+MACOS_METADATA_PATH = File.join(ROOT_PATH, "fastlane/metadata/macos")
+MACOS_SCREENSHOTS_PATH = File.join(ROOT_PATH, "fastlane/screenshots/macos")
+APPLE_ID = ENV["FASTLANE_APPLE_ID"] || ENV["DELIVER_USERNAME"]
+
+def run_command(args)
+  sh(args.shelljoin)
+end
+
+def sync_safari_resources
+  sh("pnpm build:safari")
+end
+
+def run_xcodebuild(scheme:, destination:, action:, archive_path: nil)
+  args = [
+    "xcodebuild",
+    "-project", PROJECT_PATH,
+    "-scheme", scheme,
+    "-configuration", "Release",
+    "-destination", destination,
+    "-derivedDataPath", DERIVED_DATA_PATH
+  ]
+
+  args += ["-archivePath", archive_path] if archive_path
+  args << action
+
+  run_command(args)
+end
+
+def store_version_options(options)
+  app_version = options[:version] || ENV["APP_VERSION"]
+  use_live_version = options[:use_live_version] || ENV["USE_LIVE_VERSION"]
+
+  UI.user_error!("Set FASTLANE_APPLE_ID before using App Store Connect lanes.") unless APPLE_ID
+
+  args = ["--username", APPLE_ID]
+  args += ["--app_version", app_version] if app_version && !app_version.empty?
+  args += ["--use_live_version", "true"] if use_live_version.to_s == "true"
+  args
+end
+
+def download_metadata(platform:, metadata_path:, options:)
+  args = [
+    "bundle", "exec", "fastlane", "deliver", "download_metadata",
+    "--platform", platform,
+    "--metadata_path", metadata_path,
+    "--force", "true"
+  ]
+
+  run_command(args + store_version_options(options))
+end
+
+def download_screenshots(platform:, screenshots_path:, options:)
+  args = [
+    "bundle", "exec", "fastlane", "deliver", "download_screenshots",
+    "--platform", platform,
+    "--screenshots_path", screenshots_path
+  ]
+
+  run_command(args + store_version_options(options))
+end
+
+def upload_store_assets(platform:, metadata_path:, screenshots_path:, options:, skip_metadata: false, skip_screenshots: false)
+  args = [
+    "bundle", "exec", "fastlane", "deliver",
+    "--platform", platform,
+    "--metadata_path", metadata_path,
+    "--screenshots_path", screenshots_path,
+    "--skip_binary_upload", "true"
+  ]
+
+  args += ["--skip_metadata", "true"] if skip_metadata
+  args += ["--skip_screenshots", "true"] if skip_screenshots
+  args += ["--force", "true"] if options[:force].to_s == "true"
+
+  run_command(args + store_version_options(options))
+end
+
+platform :ios do
+  desc "Sync browser extension assets into the Safari wrapper"
+  lane :sync do
+    sync_safari_resources
+  end
+
+  desc "Build the iOS Safari wrapper in Release configuration"
+  lane :build do
+    sync_safari_resources
+    run_xcodebuild(
+      scheme: IOS_SCHEME,
+      destination: "generic/platform=iOS",
+      action: "build"
+    )
+  end
+
+  desc "Archive the iOS Safari wrapper for App Store distribution"
+  lane :archive do
+    sync_safari_resources
+    run_xcodebuild(
+      scheme: IOS_SCHEME,
+      destination: "generic/platform=iOS",
+      action: "archive",
+      archive_path: "build/RawBack-iOS.xcarchive"
+    )
+  end
+
+  desc "Download iOS App Store metadata into fastlane/metadata/ios"
+  lane :metadata_pull do |options|
+    download_metadata(platform: "ios", metadata_path: IOS_METADATA_PATH, options: options)
+  end
+
+  desc "Download iOS App Store screenshots into fastlane/screenshots/ios"
+  lane :screenshots_pull do |options|
+    download_screenshots(platform: "ios", screenshots_path: IOS_SCREENSHOTS_PATH, options: options)
+  end
+
+  desc "Download iOS App Store metadata and screenshots"
+  lane :store_pull do |options|
+    download_metadata(platform: "ios", metadata_path: IOS_METADATA_PATH, options: options)
+    download_screenshots(platform: "ios", screenshots_path: IOS_SCREENSHOTS_PATH, options: options)
+  end
+
+  desc "Upload iOS App Store metadata only"
+  lane :metadata_push do |options|
+    upload_store_assets(
+      platform: "ios",
+      metadata_path: IOS_METADATA_PATH,
+      screenshots_path: IOS_SCREENSHOTS_PATH,
+      options: options,
+      skip_screenshots: true
+    )
+  end
+
+  desc "Upload iOS App Store screenshots only"
+  lane :screenshots_push do |options|
+    upload_store_assets(
+      platform: "ios",
+      metadata_path: IOS_METADATA_PATH,
+      screenshots_path: IOS_SCREENSHOTS_PATH,
+      options: options,
+      skip_metadata: true
+    )
+  end
+
+  desc "Upload iOS App Store metadata and screenshots without binary"
+  lane :store_push do |options|
+    upload_store_assets(
+      platform: "ios",
+      metadata_path: IOS_METADATA_PATH,
+      screenshots_path: IOS_SCREENSHOTS_PATH,
+      options: options
+    )
+  end
+end
+
+platform :mac do
+  desc "Sync browser extension assets into the Safari wrapper"
+  lane :sync do
+    sync_safari_resources
+  end
+
+  desc "Build the macOS Safari wrapper in Release configuration"
+  lane :build do
+    sync_safari_resources
+    run_xcodebuild(
+      scheme: MACOS_SCHEME,
+      destination: "generic/platform=macOS",
+      action: "build"
+    )
+  end
+
+  desc "Archive the macOS Safari wrapper for App Store distribution"
+  lane :archive do
+    sync_safari_resources
+    run_xcodebuild(
+      scheme: MACOS_SCHEME,
+      destination: "generic/platform=macOS",
+      action: "archive",
+      archive_path: "build/RawBack-macOS.xcarchive"
+    )
+  end
+
+  desc "Download macOS App Store metadata into fastlane/metadata/macos"
+  lane :metadata_pull do |options|
+    download_metadata(platform: "osx", metadata_path: MACOS_METADATA_PATH, options: options)
+  end
+
+  desc "Download macOS App Store screenshots into fastlane/screenshots/macos"
+  lane :screenshots_pull do |options|
+    download_screenshots(platform: "osx", screenshots_path: MACOS_SCREENSHOTS_PATH, options: options)
+  end
+
+  desc "Download macOS App Store metadata and screenshots"
+  lane :store_pull do |options|
+    download_metadata(platform: "osx", metadata_path: MACOS_METADATA_PATH, options: options)
+    download_screenshots(platform: "osx", screenshots_path: MACOS_SCREENSHOTS_PATH, options: options)
+  end
+
+  desc "Upload macOS App Store metadata only"
+  lane :metadata_push do |options|
+    upload_store_assets(
+      platform: "osx",
+      metadata_path: MACOS_METADATA_PATH,
+      screenshots_path: MACOS_SCREENSHOTS_PATH,
+      options: options,
+      skip_screenshots: true
+    )
+  end
+
+  desc "Upload macOS App Store screenshots only"
+  lane :screenshots_push do |options|
+    upload_store_assets(
+      platform: "osx",
+      metadata_path: MACOS_METADATA_PATH,
+      screenshots_path: MACOS_SCREENSHOTS_PATH,
+      options: options,
+      skip_metadata: true
+    )
+  end
+
+  desc "Upload macOS App Store metadata and screenshots without binary"
+  lane :store_push do |options|
+    upload_store_assets(
+      platform: "osx",
+      metadata_path: MACOS_METADATA_PATH,
+      screenshots_path: MACOS_SCREENSHOTS_PATH,
+      options: options
+    )
+  end
+end
