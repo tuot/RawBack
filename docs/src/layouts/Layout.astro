@@ -1,0 +1,562 @@
+---
+const { frontmatter } = Astro.props;
+const title = Astro.props.title || frontmatter?.title || 'RawBack - Return from raw files to repository context';
+const lang = Astro.props.lang || frontmatter?.lang || 'en';
+const isDoc = Astro.props.isDoc || frontmatter?.isDoc || false;
+const base = import.meta.env.BASE_URL; // 通常是 '/RawBack'
+---
+
+<!doctype html>
+<html lang={lang === 'zh' ? 'zh-Hans' : 'en'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="RawBack helps you jump from raw Git file URLs back to repository pages." />
+    <meta name="theme-color" content="#f8f4ea" />
+    <link rel="icon" type="image/png" href={`${base}/icon.png`} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..800;1,8..60,400..800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script is:inline define:vars={{ base }}>
+      try {
+        const userLangPref = localStorage.getItem('rawback-lang-pref');
+        if (!userLangPref) {
+          const sysLang = navigator.language || navigator.userLanguage;
+          const isZh = sysLang && sysLang.toLowerCase().startsWith('zh');
+          const currentPath = window.location.pathname.replace(/\/$/, "");
+          const baseNormalized = base.replace(/\/$/, "");
+          
+          if (isZh && (currentPath === baseNormalized || currentPath === "" || currentPath === "/")) {
+            window.location.href = baseNormalized + '/zh/';
+          }
+        }
+      } catch (e) {
+        console.error('Language detection error:', e);
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={lang === 'zh' ? `${base}/zh` : `${base}/`} aria-label="RawBack home">
+        <img src={`${base}/assets/rawback-icon.png`} alt="" />
+        <span>RawBack</span>
+      </a>
+      <div class="nav-actions">
+        {lang === 'zh' ? (
+          <>
+            <a class="nav-link" href={`${base}/zh#features`}>功能</a>
+            <a class="nav-link" href={`${base}/zh/guide`}>指南</a>
+            <a class="nav-link" href={`${base}/zh#install`}>安装</a>
+          </>
+        ) : (
+          <>
+            <a class="nav-link" href={`${base}#features`}>Features</a>
+            <a class="nav-link" href={`${base}/guide`}>Guide</a>
+            <a class="nav-link" href={`${base}#install`}>Install</a>
+          </>
+        )}
+        <div class="lang-select-container">
+          <select id="lang-select" aria-label="Language">
+            <option value={`${base}/`} selected={lang === 'en'}>EN</option>
+            <option value={`${base}/zh/`} selected={lang === 'zh'}>中文</option>
+          </select>
+        </div>
+        <a class="nav-github-link" href="https://github.com/tuot/RawBack" target="_blank" rel="noopener" aria-label="GitHub repository">
+          <svg viewBox="0 0 98 96" width="18" height="18" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.4 46.68 2.447.453 3.337-.107 3.337-2.378 0-1.185-.04-4.304-.065-8.448-13.59 2.978-16.455-6.61-16.455-6.61-2.221-5.697-5.423-7.213-5.423-7.213-4.436-3.06.336-3 .336-3 4.908.348 7.493 5.093 7.493 5.093 4.359 7.537 11.442 5.358 14.228 4.096.444-3.187 1.706-5.36 3.1-6.6-10.849-1.25-22.256-5.476-22.256-24.39 0-5.389 1.905-9.8 5.03-13.257-.504-1.25-2.18-6.27.478-13.07 0 0 4.11-1.328 13.47 5.072 3.9-1.093 8.09-1.636 12.246-1.656 4.148.02 8.337.563 12.25 1.656 9.346-6.4 13.447-5.072 13.447-5.072 2.668 6.8 1.002 11.82.498 13.07 3.13 3.458 5.022 7.868 5.022 13.257 0 18.966-11.423 23.125-22.31 24.35 1.758 1.53 3.328 4.534 3.328 9.138 0 6.6-.06 11.91-.06 13.543 0 2.29.87 4.87 3.36 4.385C84.024 89.378 98 70.969 98 49.217 98 22 76.16 0 48.854 0z"/>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    {isDoc ? (
+      <main class="markdown-body">
+        <slot />
+      </main>
+    ) : (
+      <slot />
+    )}
+
+    <footer class="shell footer">
+      {lang === 'zh' ? (
+        <span>RawBack 在浏览器本地工作，不会把浏览数据发送到服务器。</span>
+      ) : (
+        <span>RawBack works locally in your browser and does not send browsing data to a server.</span>
+      )}
+      <a href="https://github.com/tuot/RawBack" target="_blank" rel="noopener" class="github-link">
+        <svg viewBox="0 0 98 96" width="16" height="16" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.4 46.68 2.447.453 3.337-.107 3.337-2.378 0-1.185-.04-4.304-.065-8.448-13.59 2.978-16.455-6.61-16.455-6.61-2.221-5.697-5.423-7.213-5.423-7.213-4.436-3.06.336-3 .336-3 4.908.348 7.493 5.093 7.493 5.093 4.359 7.537 11.442 5.358 14.228 4.096.444-3.187 1.706-5.36 3.1-6.6-10.849-1.25-22.256-5.476-22.256-24.39 0-5.389 1.905-9.8 5.03-13.257-.504-1.25-2.18-6.27.478-13.07 0 0 4.11-1.328 13.47 5.072 3.9-1.093 8.09-1.636 12.246-1.656 4.148.02 8.337.563 12.25 1.656 9.346-6.4 13.447-5.072 13.447-5.072 2.668 6.8 1.002 11.82.498 13.07 3.13 3.458 5.022 7.868 5.022 13.257 0 18.966-11.423 23.125-22.31 24.35 1.758 1.53 3.328 4.534 3.328 9.138 0 6.6-.06 11.91-.06 13.543 0 2.29.87 4.87 3.36 4.385C84.024 89.378 98 70.969 98 49.217 98 22 76.16 0 48.854 0z"/>
+        </svg>
+        <span>GitHub</span>
+      </a>
+    </footer>
+
+    <script>
+      const langSelect = document.getElementById("lang-select") as HTMLSelectElement;
+      if (langSelect) {
+        langSelect.addEventListener("change", (e) => {
+          const target = e.target as HTMLSelectElement;
+          const isZh = target.value.includes('/zh/');
+          try {
+            localStorage.setItem('rawback-lang-pref', isZh ? 'zh' : 'en');
+          } catch (err) {
+            console.error('Failed to save language preference:', err);
+          }
+          window.location.href = target.value;
+        });
+      }
+
+      // Fetch GitHub stars for the footer link
+      const githubLink = document.querySelector('.github-link');
+      if (githubLink) {
+        fetch('https://api.github.com/repos/tuot/RawBack')
+          .then(res => res.json())
+          .then(data => {
+            if (data && typeof data.stargazers_count === 'number') {
+              const divider = document.createElement('span');
+              divider.className = 'star-divider';
+              
+              const starCount = document.createElement('span');
+              starCount.className = 'star-count';
+              starCount.textContent = String(data.stargazers_count);
+
+              githubLink.appendChild(divider);
+              githubLink.appendChild(starCount);
+            }
+          })
+          .catch(err => console.error('Failed to fetch GitHub stars:', err));
+      }
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    color-scheme: light;
+    --paper: #f9f5eb;
+    --paper-deep: #ebdfc8;
+    --surface: #ffffff;
+    --ink: #1c1f18;
+    --ink-soft: #42473c;
+    --muted: #6e7566;
+    --line: rgba(62, 90, 54, 0.12);
+    --moss: #3e5a36;
+    --moss-deep: #1e3319;
+    --moss-soft: rgba(62, 90, 54, 0.08);
+    --moss-glow: rgba(62, 90, 54, 0.16);
+    --clay: #a65e32;
+    --clay-soft: rgba(166, 94, 50, 0.1);
+    --blue: #1a56db;
+    --shadow-soft: 0 20px 50px rgba(50, 60, 45, 0.08), 0 4px 12px rgba(50, 60, 45, 0.04);
+    --shadow-tight: 0 8px 24px rgba(50, 60, 45, 0.08), 0 2px 6px rgba(50, 60, 45, 0.04);
+    --radius: 12px;
+    --radius-sm: 8px;
+    --radius-lg: 20px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    color: var(--ink);
+    background:
+      radial-gradient(circle at 8% 5%, rgba(62, 90, 54, 0.12), transparent 32rem),
+      radial-gradient(circle at 92% 12%, rgba(166, 94, 50, 0.12), transparent 35rem),
+      linear-gradient(180deg, #fffdfa 0%, var(--paper) 40rem, #f5efe2 100%);
+    font-family:
+      "Inter", Avenir Next, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      sans-serif;
+  }
+
+  body::before {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    content: "";
+    opacity: 0.28;
+    background-image:
+      linear-gradient(rgba(28, 31, 24, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(28, 31, 24, 0.022) 1px, transparent 1px),
+      radial-gradient(circle at 30% 20%, rgba(28, 31, 24, 0.035) 0 1px, transparent 1px);
+    background-size: 42px 42px, 42px 42px, 13px 13px;
+    mix-blend-mode: multiply;
+  }
+
+  a {
+    color: inherit;
+    transition: color 200ms ease, background-color 200ms ease, opacity 200ms ease;
+  }
+
+  .site-header {
+    position: sticky;
+    top: 14px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: min(1180px, calc(100% - 32px));
+    margin: 14px auto 0;
+    padding: 8px 12px 8px 16px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: var(--shadow-tight);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+  }
+
+  .brand img {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(62, 90, 54, 0.15);
+    transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .brand:hover img {
+    transform: scale(1.08) rotate(4deg);
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding: 0 14px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .nav-link:hover {
+    color: var(--moss-deep);
+    background: var(--moss-soft);
+  }
+
+  .lang-select-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(235, 223, 200, 0.45);
+    padding: 0 12px 0 14px;
+    height: 36px;
+    transition: border-color 200ms ease, background-color 200ms ease;
+  }
+
+  .lang-select-container select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--ink-soft);
+    cursor: pointer;
+    padding-right: 18px;
+    outline: none;
+  }
+
+  .lang-select-container select:focus {
+    color: var(--moss-deep);
+  }
+
+  .lang-select-container::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 5px;
+    background-color: var(--muted);
+    mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center;
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    pointer-events: none;
+    transition: background-color 200ms ease;
+  }
+
+  .lang-select-container:hover {
+    background-color: rgba(235, 223, 200, 0.7);
+    border-color: rgba(62, 90, 54, 0.3);
+  }
+
+  .lang-select-container:hover select {
+    color: var(--moss-deep);
+  }
+
+  .lang-select-container:hover::after {
+    background-color: var(--moss-deep);
+  }
+
+  .nav-github-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--ink-soft);
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 2px 5px rgba(62, 90, 54, 0.03);
+    transition: all 200ms ease;
+  }
+
+  .nav-github-link:hover {
+    color: var(--moss-deep);
+    border-color: rgba(62, 90, 54, 0.3);
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: translateY(-1px) scale(1.05);
+    box-shadow: 0 4px 10px rgba(62, 90, 54, 0.08);
+  }
+
+  .nav-github-link svg {
+    transition: transform 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .nav-github-link:hover svg {
+    transform: rotate(8deg);
+  }
+
+  /* Global Selection & Scrollbar styles */
+  ::selection {
+    background-color: var(--moss-glow);
+    color: var(--moss-deep);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--paper);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--paper-deep);
+    border-radius: 999px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--moss);
+  }
+
+  /* Global Shell for layouts */
+  .shell {
+    width: min(1180px, calc(100% - 32px));
+    margin: 0 auto;
+  }
+
+  /* Common Footer Styles */
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 36px 0 48px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    font-size: 0.88rem;
+    margin-top: 60px;
+  }
+
+  .footer .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: var(--ink-soft);
+    padding: 6px 14px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 2px 5px rgba(62, 90, 54, 0.03);
+    text-decoration: none;
+    transition:
+      color 200ms ease,
+      border-color 200ms ease,
+      background-color 200ms ease,
+      transform 200ms ease,
+      box-shadow 200ms ease;
+  }
+
+  .footer .github-link:hover {
+    color: var(--moss-deep);
+    border-color: rgba(62, 90, 54, 0.3);
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(62, 90, 54, 0.08);
+  }
+
+  .footer .github-link svg {
+    transition: transform 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .footer .github-link:hover svg {
+    transform: scale(1.12) rotate(8deg);
+  }
+
+  .footer .github-link .star-divider {
+    width: 1px;
+    height: 12px;
+    background-color: var(--line);
+    margin: 0 4px;
+    display: inline-block;
+  }
+
+  .footer .github-link .star-count {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--ink-soft);
+    background: var(--moss-soft);
+    padding: 1px 6px;
+    border-radius: 4px;
+    transition: all 200ms ease;
+  }
+
+  .footer .github-link:hover .star-count {
+    color: var(--moss-deep);
+    background: var(--moss-glow);
+  }
+
+  /* Markdown Body Styles */
+  .markdown-body {
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding: 0 16px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+
+  .markdown-body h1,
+  .markdown-body h2,
+  .markdown-body h3 {
+    color: var(--ink);
+    font-family: "Source Serif 4", ui-serif, Georgia, Cambria, serif;
+    margin-top: 1.8em;
+    margin-bottom: 0.6em;
+    font-weight: 800;
+  }
+
+  .markdown-body h1 {
+    font-size: 2.4rem;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.3em;
+    margin-top: 1em;
+  }
+
+  .markdown-body h2 {
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.2em;
+  }
+
+  .markdown-body h3 {
+    font-size: 1.3rem;
+  }
+
+  .markdown-body p {
+    margin: 1em 0;
+  }
+
+  .markdown-body a {
+    color: var(--moss);
+    text-decoration: underline;
+    text-decoration-color: rgba(62, 90, 54, 0.3);
+    text-underline-offset: 4px;
+    font-weight: 600;
+  }
+
+  .markdown-body a:hover {
+    color: var(--moss-deep);
+    text-decoration-color: var(--moss-deep);
+  }
+
+  .markdown-body code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    background: rgba(235, 223, 200, 0.4);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    color: #1a1a1a;
+  }
+
+  .markdown-body pre {
+    background: rgba(28, 31, 24, 0.03);
+    border: 1px solid var(--line);
+    padding: 16px;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    margin: 1.5em 0;
+  }
+
+  .markdown-body pre code {
+    background: none;
+    padding: 0;
+    font-size: 0.88em;
+    color: inherit;
+  }
+
+  .markdown-body ul,
+  .markdown-body ol {
+    padding-left: 1.5em;
+    margin: 1em 0;
+  }
+
+  .markdown-body li {
+    margin: 0.5em 0;
+  }
+
+  .markdown-body hr {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin: 2em 0;
+  }
+
+  @media (max-width: 640px) {
+    .brand span {
+      display: none;
+    }
+
+    .footer {
+      align-items: flex-start;
+      flex-direction: column;
+      margin-top: 40px;
+    }
+  }
+</style>

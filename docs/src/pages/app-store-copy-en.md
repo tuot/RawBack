@@ -1,3 +1,10 @@
+---
+layout: ../layouts/Layout.astro
+title: RawBack - App Store Copy (English)
+lang: en
+isDoc: true
+---
+
 # RawBack App Store Copy (English)
 
 ## App Store Connect Metadata
@@ -39,7 +46,7 @@ Built for developers and code readers:
 - Choose light, dark, or system appearance
 - Enable only the Git hosts you use
 - Hide individual files when you do not want the banner there
-- Use RawBack in English, Chinese, Japanese, Korean, Spanish, French, German, and Russian
+- Use RawBack in 20 interface languages
 
 RawBack stays focused on one job: restoring context when a raw file leaves you outside the repository interface. It does not require an account, does not include ads, and does not send your browsing data to a server.
 
