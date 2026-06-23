@@ -1,39 +1,116 @@
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 
-const launchScreen = readFileSync('RawBack/iOS (App)/Base.lproj/LaunchScreen.storyboard', 'utf8');
-const mainHtml = readFileSync('RawBack/Shared (App)/Resources/Base.lproj/Main.html', 'utf8');
-const script = readFileSync('RawBack/Shared (App)/Resources/Script.js', 'utf8');
-const style = readFileSync('RawBack/Shared (App)/Resources/Style.css', 'utf8');
-const viewController = readFileSync('RawBack/Shared (App)/ViewController.swift', 'utf8');
+const project = readFileSync('RawBack/RawBack.xcodeproj/project.pbxproj', 'utf8');
+const iosInfo = readFileSync('RawBack/iOS (App)/Info.plist', 'utf8');
+const rawBackApp = readFileSync('RawBack/Shared (App)/RawBackApp.swift', 'utf8');
+const appIconImage = readFileSync('RawBack/Shared (App)/AppIconImage.swift', 'utf8');
+const setupGuideView = readFileSync('RawBack/Shared (App)/SetupGuideView.swift', 'utf8');
+const setupGuideModel = readFileSync('RawBack/Shared (App)/SetupGuideModel.swift', 'utf8');
+const setupGuideStep = readFileSync('RawBack/Shared (App)/SetupGuideStep.swift', 'utf8');
+const setupGuideStepCard = readFileSync('RawBack/Shared (App)/SetupGuideStepCard.swift', 'utf8');
+const localizable = readFileSync('RawBack/Shared (App)/Localizable.xcstrings', 'utf8');
 
-assert.doesNotMatch(launchScreen, /LargeIcon/);
-assert.doesNotMatch(launchScreen, /imageView/);
-assert.match(launchScreen, /systemGroupedBackgroundColor/);
-
-assert.doesNotMatch(mainHtml, /\uFFFD/);
-assert.equal((mainHtml.match(/class="container"/g) ?? []).length, 1);
-assert.equal((mainHtml.match(/<footer class="app-footer">/g) ?? []).length, 1);
-assert.match(mainHtml, /data-i18n="app-subtitle"/);
-assert.match(mainHtml, /data-i18n="step-1-title"/);
-assert.match(mainHtml, /data-i18n="btn-open-settings"/);
-
-for (const language of ['en', 'zh_CN', 'ja', 'ko', 'es', 'fr', 'de', 'ru']) {
-  assert.match(script, new RegExp(`${language}: \\{`));
+for (const deletedPath of [
+  'RawBack/iOS (App)/Base.lproj',
+  'RawBack/iOS (App)/Base.lproj/LaunchScreen.storyboard',
+  'RawBack/iOS (App)/Base.lproj/Main.storyboard',
+  'RawBack/macOS (App)/Base.lproj/Main.storyboard',
+  'RawBack/iOS (App)/AppDelegate.swift',
+  'RawBack/iOS (App)/SceneDelegate.swift',
+  'RawBack/macOS (App)/AppDelegate.swift',
+  'RawBack/Shared (App)/ViewController.swift',
+  'RawBack/Shared (App)/Resources/Base.lproj/Main.html',
+  'RawBack/Shared (App)/Resources/Script.js',
+  'RawBack/Shared (App)/Resources/Style.css',
+  'RawBack/Shared (App)/LocalizedStringKey+RawBack.swift',
+]) {
+  assert.equal(existsSync(deletedPath), false, `${deletedPath} should be removed`);
 }
 
-assert.match(script, /navigator\.languages/);
-assert.match(script, /document\.documentElement\.lang = language\.replace\('_', '-'\)/);
-assert.doesNotMatch(script, /classList\.add\('completed'\)/);
-assert.match(script, /requestAnimationFrame/);
-assert.doesNotMatch(style, /\.step-card\.completed/);
-assert.doesNotMatch(style, /status-dot/);
-assert.doesNotMatch(style, /translateY/);
-assert.match(style, /body\s*\{[^}]*align-items:\s*flex-start;/s);
-assert.match(style, /visibility:\s*hidden;/);
-assert.match(style, /env\(safe-area-inset-top,\s*0px\)/);
-assert.match(style, /env\(safe-area-inset-bottom,\s*0px\)/);
+assert.match(rawBackApp, /@main\s+struct RawBackApp: App/);
+assert.match(rawBackApp, /WindowGroup\s*\{\s*SetupGuideView\(\)/);
+assert.match(rawBackApp, /@NSApplicationDelegateAdaptor\(MacLifecycleDelegate\.self\)/);
 
-assert.match(viewController, /webView\.isOpaque = false/);
-assert.match(viewController, /webView\.backgroundColor = \.systemGroupedBackground/);
-assert.match(viewController, /webView\.scrollView\.contentInsetAdjustmentBehavior = \.never/);
+assert.match(project, /AppIconImage\.swift/);
+assert.doesNotMatch(setupGuideView, /Image\("Icon"\)/);
+assert.match(setupGuideView, /AppIconImage\(\)/);
+assert.match(appIconImage, /Bundle\.main\.url\(forResource: "Icon", withExtension: "png"\)/);
+assert.match(appIconImage, /UIImage\(contentsOfFile: url\.path\)/);
+assert.match(appIconImage, /NSImage\(contentsOf: url\)/);
+
+assert.ok(setupGuideView.includes('Text("Jump from raw files back to their repositories.")'));
+assert.ok(setupGuideView.includes('Text("You can manage RawBack from Settings > Safari > Extensions.")'));
+assert.match(setupGuideView, /Button\(settingsButtonTitle, action: model\.openSafariSettings\)/);
+assert.match(setupGuideStep, /title: "Open Safari settings"/);
+assert.match(setupGuideStep, /message: firstStepMessage/);
+assert.match(setupGuideStepCard, /Text\(step\.title\)/);
+assert.match(setupGuideStepCard, /Text\(step\.message\)/);
+
+assert.match(setupGuideModel, /SFSafariExtensionManager\.getStateOfSafariExtension/);
+assert.match(setupGuideModel, /SFSafariApplication\.showPreferencesForExtension/);
+assert.match(setupGuideModel, /NSApp\.terminate/);
+
+assert.doesNotMatch(iosInfo, /UIApplicationSceneManifest/);
+assert.doesNotMatch(project, /ViewController\.swift/);
+assert.doesNotMatch(project, /AppDelegate\.swift/);
+assert.doesNotMatch(project, /SceneDelegate\.swift/);
+assert.doesNotMatch(project, /Main\.html/);
+assert.doesNotMatch(project, /Script\.js/);
+assert.doesNotMatch(project, /Style\.css/);
+assert.doesNotMatch(project, /INFOPLIST_KEY_UIMainStoryboardFile/);
+assert.doesNotMatch(project, /INFOPLIST_KEY_NSMainStoryboardFile/);
+assert.doesNotMatch(project, /INFOPLIST_KEY_UILaunchStoryboardName/);
+assert.doesNotMatch(project, /LaunchScreen\.storyboard/);
+assert.match(project, /INFOPLIST_KEY_UILaunchScreen_Generation = YES;/);
+assert.doesNotMatch(project, /Base,/);
+assert.doesNotMatch(project, /WebKit/);
+assert.doesNotMatch(project, /LocalizedStringKey\+RawBack\.swift/);
+
+for (const key of [
+  'Jump from raw files back to their repositories.',
+  'Open Safari settings',
+  'Open Safari Extensions from the button below.',
+  'Open Settings and choose Safari.',
+  'Enable RawBack',
+  'Find RawBack in the extension list and turn it on.',
+  'Allow website access',
+  'Allow RawBack to access GitHub, GitLab, and other supported sites.',
+  'RawBack is enabled',
+  'You can close this app and use RawBack in Safari.',
+  'RawBack is not enabled',
+  'Follow the steps above to enable the Safari extension.',
+  'Check Safari extension settings',
+  'Open Safari settings to confirm RawBack is enabled.',
+  'Quit and Open Safari Settings...',
+  'Quit and Open Safari Preferences...',
+  'You can manage RawBack from Settings > Safari > Extensions.',
+]) {
+  assert.match(localizable, new RegExp(`${JSON.stringify(key)}\\s*:`));
+}
+
+for (const dedicatedKey of [
+  'appSubtitle',
+  'step1Title',
+  'step1DescMac',
+  'step1DescIOS',
+  'step2Title',
+  'step2Desc',
+  'step3Title',
+  'step3Desc',
+  'statusSuccessTitle',
+  'statusSuccessDesc',
+  'statusWarningTitle',
+  'statusWarningDesc',
+  'statusUnknownTitle',
+  'statusUnknownDesc',
+  'quitAndOpenSafariSettings',
+  'quitAndOpenSafariPreferences',
+  'iosInstruction',
+]) {
+  assert.doesNotMatch(localizable, new RegExp(`${JSON.stringify(dedicatedKey)}\\s*:`));
+}
+
+for (const language of ['en', 'zh-Hans', 'ja', 'ko', 'es', 'fr', 'de', 'ru']) {
+  assert.match(localizable, new RegExp(`"${language}"\\s*:`));
+}

@@ -7,24 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB7CC5E02FBD58AF0022406A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CC5DF2FBD58AF0022406A /* AppDelegate.swift */; };
-		DB7CC5E22FBD58AF0022406A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CC5E12FBD58AF0022406A /* SceneDelegate.swift */; };
-		DB7CC5E52FBD58AF0022406A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5E32FBD58AF0022406A /* LaunchScreen.storyboard */; };
-		DB7CC5E82FBD58AF0022406A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5E62FBD58AF0022406A /* Main.storyboard */; };
-		DB7CC5F12FBD58AF0022406A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CC5F02FBD58AF0022406A /* AppDelegate.swift */; };
-		DB7CC5F42FBD58AF0022406A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5F22FBD58AF0022406A /* Main.storyboard */; };
+		DB0001010000000000000001 /* RawBackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000010000000000000001 /* RawBackApp.swift */; };
+		DB0001020000000000000001 /* RawBackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000010000000000000001 /* RawBackApp.swift */; };
+		DB0001030000000000000001 /* MacLifecycleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000020000000000000001 /* MacLifecycleDelegate.swift */; };
+		DB0001040000000000000001 /* SetupGuideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000030000000000000001 /* SetupGuideModel.swift */; };
+		DB0001050000000000000001 /* SetupGuideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000030000000000000001 /* SetupGuideModel.swift */; };
+		DB0001060000000000000001 /* SetupGuideStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000040000000000000001 /* SetupGuideStatus.swift */; };
+		DB0001070000000000000001 /* SetupGuideStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000040000000000000001 /* SetupGuideStatus.swift */; };
+		DB0001080000000000000001 /* SetupGuideStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000050000000000000001 /* SetupGuideStep.swift */; };
+		DB0001090000000000000001 /* SetupGuideStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000050000000000000001 /* SetupGuideStep.swift */; };
+		DB00010A0000000000000001 /* SetupGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000060000000000000001 /* SetupGuideView.swift */; };
+		DB00010B0000000000000001 /* SetupGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000060000000000000001 /* SetupGuideView.swift */; };
+		DB00010C0000000000000001 /* SetupGuideStepCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000070000000000000001 /* SetupGuideStepCard.swift */; };
+		DB00010D0000000000000001 /* SetupGuideStepCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000070000000000000001 /* SetupGuideStepCard.swift */; };
+		DB00010E0000000000000001 /* SetupGuideStatusCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000080000000000000001 /* SetupGuideStatusCard.swift */; };
+		DB00010F0000000000000001 /* SetupGuideStatusCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000080000000000000001 /* SetupGuideStatusCard.swift */; };
+		DB0001100000000000000001 /* Color+RawBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000090000000000000001 /* Color+RawBack.swift */; };
+		DB0001110000000000000001 /* Color+RawBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000090000000000000001 /* Color+RawBack.swift */; };
+		DB0001180000000000000001 /* AppIconImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00000D0000000000000001 /* AppIconImage.swift */; };
+		DB0001190000000000000001 /* AppIconImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00000D0000000000000001 /* AppIconImage.swift */; };
+		DB0001140000000000000001 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = DB00000B0000000000000001 /* Localizable.xcstrings */; };
+		DB0001150000000000000001 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = DB00000B0000000000000001 /* Localizable.xcstrings */; };
+		DB0001160000000000000001 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = DB00000C0000000000000001 /* InfoPlist.xcstrings */; };
+		DB0001170000000000000001 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = DB00000C0000000000000001 /* InfoPlist.xcstrings */; };
 		DB7CC5FB2FBD58AF0022406A /* RawBack Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DB7CC5FA2FBD58AF0022406A /* RawBack Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DB7CC6052FBD58AF0022406A /* RawBack Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DB7CC6042FBD58AF0022406A /* RawBack Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		DB7CC60A2FBD58AF0022406A /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5CF2FBD58AE0022406A /* Main.html */; };
-		DB7CC60B2FBD58AF0022406A /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5CF2FBD58AE0022406A /* Main.html */; };
 		DB7CC60C2FBD58AF0022406A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5D12FBD58AE0022406A /* Icon.png */; };
 		DB7CC60D2FBD58AF0022406A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5D12FBD58AE0022406A /* Icon.png */; };
-		DB7CC60E2FBD58AF0022406A /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5D22FBD58AE0022406A /* Style.css */; };
-		DB7CC60F2FBD58AF0022406A /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5D22FBD58AE0022406A /* Style.css */; };
-		DB7CC6102FBD58AF0022406A /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5D32FBD58AE0022406A /* Script.js */; };
-		DB7CC6112FBD58AF0022406A /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5D32FBD58AE0022406A /* Script.js */; };
-		DB7CC6122FBD58AF0022406A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CC5D42FBD58AE0022406A /* ViewController.swift */; };
-		DB7CC6132FBD58AF0022406A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CC5D42FBD58AE0022406A /* ViewController.swift */; };
 		DB7CC6142FBD58AF0022406A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5D52FBD58AF0022406A /* Assets.xcassets */; };
 		DB7CC6152FBD58AF0022406A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5D52FBD58AF0022406A /* Assets.xcassets */; };
 		DB7CC6162FBD58AF0022406A /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CC5D72FBD58AF0022406A /* SafariWebExtensionHandler.swift */; };
@@ -90,22 +99,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DB7CC5D02FBD58AE0022406A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		DB0000010000000000000001 /* RawBackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawBackApp.swift; sourceTree = "<group>"; };
+		DB0000020000000000000001 /* MacLifecycleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacLifecycleDelegate.swift; sourceTree = "<group>"; };
+		DB0000030000000000000001 /* SetupGuideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupGuideModel.swift; sourceTree = "<group>"; };
+		DB0000040000000000000001 /* SetupGuideStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupGuideStatus.swift; sourceTree = "<group>"; };
+		DB0000050000000000000001 /* SetupGuideStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupGuideStep.swift; sourceTree = "<group>"; };
+		DB0000060000000000000001 /* SetupGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupGuideView.swift; sourceTree = "<group>"; };
+		DB0000070000000000000001 /* SetupGuideStepCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupGuideStepCard.swift; sourceTree = "<group>"; };
+		DB0000080000000000000001 /* SetupGuideStatusCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupGuideStatusCard.swift; sourceTree = "<group>"; };
+		DB0000090000000000000001 /* Color+RawBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+RawBack.swift"; sourceTree = "<group>"; };
+		DB00000B0000000000000001 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		DB00000C0000000000000001 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		DB00000D0000000000000001 /* AppIconImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconImage.swift; sourceTree = "<group>"; };
 		DB7CC5D12FBD58AE0022406A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		DB7CC5D22FBD58AE0022406A /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
-		DB7CC5D32FBD58AE0022406A /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
-		DB7CC5D42FBD58AE0022406A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB7CC5D52FBD58AF0022406A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB7CC5D72FBD58AF0022406A /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		DB7CC5DC2FBD58AF0022406A /* RawBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RawBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB7CC5DF2FBD58AF0022406A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB7CC5E12FBD58AF0022406A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DB7CC5E42FBD58AF0022406A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DB7CC5E72FBD58AF0022406A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB7CC5E92FBD58AF0022406A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB7CC5EE2FBD58AF0022406A /* RawBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RawBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB7CC5F02FBD58AF0022406A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB7CC5F32FBD58AF0022406A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB7CC5F52FBD58AF0022406A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB7CC5FA2FBD58AF0022406A /* RawBack Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "RawBack Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB7CC5FF2FBD58AF0022406A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -169,7 +180,18 @@
 		DB7CC5CD2FBD58AE0022406A /* Shared (App) */ = {
 			isa = PBXGroup;
 			children = (
-				DB7CC5D42FBD58AE0022406A /* ViewController.swift */,
+				DB0000010000000000000001 /* RawBackApp.swift */,
+				DB0000020000000000000001 /* MacLifecycleDelegate.swift */,
+				DB0000030000000000000001 /* SetupGuideModel.swift */,
+				DB0000040000000000000001 /* SetupGuideStatus.swift */,
+				DB0000050000000000000001 /* SetupGuideStep.swift */,
+				DB0000060000000000000001 /* SetupGuideView.swift */,
+				DB0000070000000000000001 /* SetupGuideStepCard.swift */,
+				DB0000080000000000000001 /* SetupGuideStatusCard.swift */,
+				DB0000090000000000000001 /* Color+RawBack.swift */,
+				DB00000D0000000000000001 /* AppIconImage.swift */,
+				DB00000B0000000000000001 /* Localizable.xcstrings */,
+				DB00000C0000000000000001 /* InfoPlist.xcstrings */,
 				DB7CC5D52FBD58AF0022406A /* Assets.xcassets */,
 				DB7CC5CE2FBD58AE0022406A /* Resources */,
 			);
@@ -179,10 +201,7 @@
 		DB7CC5CE2FBD58AE0022406A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DB7CC5CF2FBD58AE0022406A /* Main.html */,
 				DB7CC5D12FBD58AE0022406A /* Icon.png */,
-				DB7CC5D22FBD58AE0022406A /* Style.css */,
-				DB7CC5D32FBD58AE0022406A /* Script.js */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -210,10 +229,6 @@
 		DB7CC5DE2FBD58AF0022406A /* iOS (App) */ = {
 			isa = PBXGroup;
 			children = (
-				DB7CC5DF2FBD58AF0022406A /* AppDelegate.swift */,
-				DB7CC5E12FBD58AF0022406A /* SceneDelegate.swift */,
-				DB7CC5E32FBD58AF0022406A /* LaunchScreen.storyboard */,
-				DB7CC5E62FBD58AF0022406A /* Main.storyboard */,
 				DB7CC5E92FBD58AF0022406A /* Info.plist */,
 			);
 			path = "iOS (App)";
@@ -222,8 +237,6 @@
 		DB7CC5EF2FBD58AF0022406A /* macOS (App) */ = {
 			isa = PBXGroup;
 			children = (
-				DB7CC5F02FBD58AF0022406A /* AppDelegate.swift */,
-				DB7CC5F22FBD58AF0022406A /* Main.storyboard */,
 				DB7CC5F52FBD58AF0022406A /* Info.plist */,
 			);
 			path = "macOS (App)";
@@ -373,13 +386,13 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 				"zh-Hans",
 				ja,
 				ko,
 				es,
 				fr,
 				ru,
+				de,
 			);
 			mainGroup = DB7CC5C82FBD58AE0022406A;
 			minimizedProjectReferenceProxies = 1;
@@ -402,12 +415,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB7CC60C2FBD58AF0022406A /* Icon.png in Resources */,
-				DB7CC5E52FBD58AF0022406A /* LaunchScreen.storyboard in Resources */,
-				DB7CC60A2FBD58AF0022406A /* Main.html in Resources */,
-				DB7CC6102FBD58AF0022406A /* Script.js in Resources */,
 				DB7CC6142FBD58AF0022406A /* Assets.xcassets in Resources */,
-				DB7CC5E82FBD58AF0022406A /* Main.storyboard in Resources */,
-				DB7CC60E2FBD58AF0022406A /* Style.css in Resources */,
+				DB0001140000000000000001 /* Localizable.xcstrings in Resources */,
+				DB0001160000000000000001 /* InfoPlist.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,11 +426,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB7CC60D2FBD58AF0022406A /* Icon.png in Resources */,
-				DB7CC60F2FBD58AF0022406A /* Style.css in Resources */,
-				DB7CC5F42FBD58AF0022406A /* Main.storyboard in Resources */,
-				DB7CC6112FBD58AF0022406A /* Script.js in Resources */,
 				DB7CC6152FBD58AF0022406A /* Assets.xcassets in Resources */,
-				DB7CC60B2FBD58AF0022406A /* Main.html in Resources */,
+				DB0001150000000000000001 /* Localizable.xcstrings in Resources */,
+				DB0001170000000000000001 /* InfoPlist.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,9 +469,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB7CC6122FBD58AF0022406A /* ViewController.swift in Sources */,
-				DB7CC5E02FBD58AF0022406A /* AppDelegate.swift in Sources */,
-				DB7CC5E22FBD58AF0022406A /* SceneDelegate.swift in Sources */,
+				DB0001010000000000000001 /* RawBackApp.swift in Sources */,
+				DB0001040000000000000001 /* SetupGuideModel.swift in Sources */,
+				DB0001060000000000000001 /* SetupGuideStatus.swift in Sources */,
+				DB0001080000000000000001 /* SetupGuideStep.swift in Sources */,
+				DB00010A0000000000000001 /* SetupGuideView.swift in Sources */,
+				DB00010C0000000000000001 /* SetupGuideStepCard.swift in Sources */,
+				DB00010E0000000000000001 /* SetupGuideStatusCard.swift in Sources */,
+				DB0001100000000000000001 /* Color+RawBack.swift in Sources */,
+				DB0001180000000000000001 /* AppIconImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,8 +485,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB7CC6132FBD58AF0022406A /* ViewController.swift in Sources */,
-				DB7CC5F12FBD58AF0022406A /* AppDelegate.swift in Sources */,
+				DB0001020000000000000001 /* RawBackApp.swift in Sources */,
+				DB0001030000000000000001 /* MacLifecycleDelegate.swift in Sources */,
+				DB0001050000000000000001 /* SetupGuideModel.swift in Sources */,
+				DB0001070000000000000001 /* SetupGuideStatus.swift in Sources */,
+				DB0001090000000000000001 /* SetupGuideStep.swift in Sources */,
+				DB00010B0000000000000001 /* SetupGuideView.swift in Sources */,
+				DB00010D0000000000000001 /* SetupGuideStepCard.swift in Sources */,
+				DB00010F0000000000000001 /* SetupGuideStatusCard.swift in Sources */,
+				DB0001110000000000000001 /* Color+RawBack.swift in Sources */,
+				DB0001190000000000000001 /* AppIconImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,41 +528,6 @@
 			targetProxy = DB7CC6062FBD58AF0022406A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		DB7CC5CF2FBD58AE0022406A /* Main.html */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB7CC5D02FBD58AE0022406A /* Base */,
-			);
-			name = Main.html;
-			sourceTree = "<group>";
-		};
-		DB7CC5E32FBD58AF0022406A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB7CC5E42FBD58AF0022406A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		DB7CC5E62FBD58AF0022406A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB7CC5E72FBD58AF0022406A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DB7CC5F22FBD58AF0022406A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB7CC5F32FBD58AF0022406A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DB7CC6182FBD58AF0022406A /* Debug */ = {
@@ -743,8 +730,7 @@
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -753,12 +739,6 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2.0;
-				OTHER_LDFLAGS = (
-					"-framework",
-					SafariServices,
-					"-framework",
-					WebKit,
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttqqcc.rawback;
 				PRODUCT_NAME = RawBack;
 				SDKROOT = iphoneos;
@@ -785,8 +765,7 @@
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -795,12 +774,6 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2.0;
-				OTHER_LDFLAGS = (
-					"-framework",
-					SafariServices,
-					"-framework",
-					WebKit,
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttqqcc.rawback;
 				PRODUCT_NAME = RawBack;
 				SDKROOT = iphoneos;
@@ -904,7 +877,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = RawBack;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -915,8 +887,6 @@
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
-					"-framework",
-					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttqqcc.rawback;
 				PRODUCT_NAME = RawBack;
@@ -948,7 +918,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = RawBack;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -959,8 +928,6 @@
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
-					"-framework",
-					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttqqcc.rawback;
 				PRODUCT_NAME = RawBack;
