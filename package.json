@@ -11,7 +11,7 @@
     "prebuild": "node scripts/sync-locales.cjs",
     "build": "wxt build",
     "build:firefox": "wxt build -b firefox",
-    "build:safari": "wxt build -b safari && ./scripts/sync-safari.sh",
+    "build:safari": "wxt build -b safari",
     "fastlane": "bundle exec fastlane",
     "ios:build": "bundle exec fastlane ios build",
     "ios:archive": "bundle exec fastlane ios archive",
