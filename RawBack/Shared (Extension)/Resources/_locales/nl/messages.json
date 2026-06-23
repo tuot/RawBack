@@ -1,0 +1,158 @@
+{
+  "extensionDescription": {
+    "message": "Ga van raw-bestanden op Git-hosts terug naar hun repositorypagina's."
+  },
+  "bannerAriaLabel": {
+    "message": "RawBack-repositorynavigatie"
+  },
+  "openRepositoryFileAriaLabel": {
+    "message": "Bekijk dit bestand in de repository"
+  },
+  "openInRepository": {
+    "message": "Bekijk in repository"
+  },
+  "openGistFileAriaLabel": {
+    "message": "Bekijk dit bestand in Gist"
+  },
+  "openInGist": {
+    "message": "Bekijk in Gist"
+  },
+  "openGist": {
+    "message": "Gist openen"
+  },
+  "dismissThisFile": {
+    "message": "Dit bestand verbergen"
+  },
+  "hiddenFiles": {
+    "message": "Verborgen bestanden"
+  },
+  "hiddenFilesEmpty": {
+    "message": "Geen permanent verborgen bestanden."
+  },
+  "restore": {
+    "message": "Herstellen"
+  },
+  "restored": {
+    "message": "Hersteld"
+  },
+  "enabled": {
+    "message": "Ingeschakeld"
+  },
+  "disabled": {
+    "message": "Uitgeschakeld"
+  },
+  "currentPage": {
+    "message": "Huidige pagina"
+  },
+  "rawPage": {
+    "message": "Raw-bestand gedetecteerd"
+  },
+  "notRawPage": {
+    "message": "Deze pagina is geen raw-bestand."
+  },
+  "openRepository": {
+    "message": "Repository openen"
+  },
+  "appearance": {
+    "message": "Weergave"
+  },
+  "theme": {
+    "message": "Thema"
+  },
+  "themeSystem": {
+    "message": "Systeem"
+  },
+  "themeLight": {
+    "message": "Licht"
+  },
+  "themeDark": {
+    "message": "Donker"
+  },
+  "platforms": {
+    "message": "Platformen"
+  },
+  "language": {
+    "message": "Taal"
+  },
+  "languageAuto": {
+    "message": "Automatisch"
+  },
+  "languageEnglish": {
+    "message": "English"
+  },
+  "languageChinese": {
+    "message": "简体中文"
+  },
+  "languageTraditionalChinese": {
+    "message": "繁體中文"
+  },
+  "languageJapanese": {
+    "message": "日本語"
+  },
+  "languageKorean": {
+    "message": "한국어"
+  },
+  "languageSpanish": {
+    "message": "Español"
+  },
+  "languageFrench": {
+    "message": "Français"
+  },
+  "languageGerman": {
+    "message": "Deutsch"
+  },
+  "languageRussian": {
+    "message": "Русский"
+  },
+  "languagePortugueseBrazil": {
+    "message": "Português (Brasil)"
+  },
+  "languagePortuguesePortugal": {
+    "message": "Português (Portugal)"
+  },
+  "languageItalian": {
+    "message": "Italiano"
+  },
+  "languageDutch": {
+    "message": "Nederlands"
+  },
+  "languagePolish": {
+    "message": "Polski"
+  },
+  "languageTurkish": {
+    "message": "Türkçe"
+  },
+  "languageUkrainian": {
+    "message": "Українська"
+  },
+  "languageIndonesian": {
+    "message": "Bahasa Indonesia"
+  },
+  "languageVietnamese": {
+    "message": "Tiếng Việt"
+  },
+  "languageSwedish": {
+    "message": "Svenska"
+  },
+  "languageCzech": {
+    "message": "Čeština"
+  },
+  "customDomains": {
+    "message": "Aangepaste domeinen"
+  },
+  "customDomainsHint": {
+    "message": "Voer domein of URL in"
+  },
+  "add": {
+    "message": "Toevoegen"
+  },
+  "invalidDomain": {
+    "message": "Ongeldig domein of URL"
+  },
+  "save": {
+    "message": "Opslaan"
+  },
+  "settingsSaved": {
+    "message": "Opgeslagen"
+  }
+}

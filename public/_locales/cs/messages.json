@@ -1,0 +1,158 @@
+{
+  "extensionDescription": {
+    "message": "Vraťte se ze souborů raw hostingu Git zpět na stránky jejich repozitářů."
+  },
+  "bannerAriaLabel": {
+    "message": "Navigace repozitáře RawBack"
+  },
+  "openRepositoryFileAriaLabel": {
+    "message": "Zobrazit tento soubor v repozitáři"
+  },
+  "openInRepository": {
+    "message": "Zobrazit v repozitáři"
+  },
+  "openGistFileAriaLabel": {
+    "message": "Zobrazit tento soubor v Gist"
+  },
+  "openInGist": {
+    "message": "Zobrazit v Gist"
+  },
+  "openGist": {
+    "message": "Otevřít Gist"
+  },
+  "dismissThisFile": {
+    "message": "Skrýt tento soubor"
+  },
+  "hiddenFiles": {
+    "message": "Skryté soubory"
+  },
+  "hiddenFilesEmpty": {
+    "message": "Žádné trvale skryté soubory."
+  },
+  "restore": {
+    "message": "Obnovit"
+  },
+  "restored": {
+    "message": "Obnoveno"
+  },
+  "enabled": {
+    "message": "Zapnuto"
+  },
+  "disabled": {
+    "message": "Vypnuto"
+  },
+  "currentPage": {
+    "message": "Aktuální stránka"
+  },
+  "rawPage": {
+    "message": "Zjištěn soubor raw"
+  },
+  "notRawPage": {
+    "message": "Tato stránka není soubor raw."
+  },
+  "openRepository": {
+    "message": "Otevřít repozitář"
+  },
+  "appearance": {
+    "message": "Vzhled"
+  },
+  "theme": {
+    "message": "Motiv"
+  },
+  "themeSystem": {
+    "message": "Systém"
+  },
+  "themeLight": {
+    "message": "Světlý"
+  },
+  "themeDark": {
+    "message": "Tmavý"
+  },
+  "platforms": {
+    "message": "Platformy"
+  },
+  "language": {
+    "message": "Jazyk"
+  },
+  "languageAuto": {
+    "message": "Automaticky"
+  },
+  "languageEnglish": {
+    "message": "English"
+  },
+  "languageChinese": {
+    "message": "简体中文"
+  },
+  "languageTraditionalChinese": {
+    "message": "繁體中文"
+  },
+  "languageJapanese": {
+    "message": "日本語"
+  },
+  "languageKorean": {
+    "message": "한국어"
+  },
+  "languageSpanish": {
+    "message": "Español"
+  },
+  "languageFrench": {
+    "message": "Français"
+  },
+  "languageGerman": {
+    "message": "Deutsch"
+  },
+  "languageRussian": {
+    "message": "Русский"
+  },
+  "languagePortugueseBrazil": {
+    "message": "Português (Brasil)"
+  },
+  "languagePortuguesePortugal": {
+    "message": "Português (Portugal)"
+  },
+  "languageItalian": {
+    "message": "Italiano"
+  },
+  "languageDutch": {
+    "message": "Nederlands"
+  },
+  "languagePolish": {
+    "message": "Polski"
+  },
+  "languageTurkish": {
+    "message": "Türkçe"
+  },
+  "languageUkrainian": {
+    "message": "Українська"
+  },
+  "languageIndonesian": {
+    "message": "Bahasa Indonesia"
+  },
+  "languageVietnamese": {
+    "message": "Tiếng Việt"
+  },
+  "languageSwedish": {
+    "message": "Svenska"
+  },
+  "languageCzech": {
+    "message": "Čeština"
+  },
+  "customDomains": {
+    "message": "Vlastní domény"
+  },
+  "customDomainsHint": {
+    "message": "Zadejte doménu nebo URL"
+  },
+  "add": {
+    "message": "Přidat"
+  },
+  "invalidDomain": {
+    "message": "Neplatná doména nebo URL"
+  },
+  "save": {
+    "message": "Uložit"
+  },
+  "settingsSaved": {
+    "message": "Uloženo"
+  }
+}

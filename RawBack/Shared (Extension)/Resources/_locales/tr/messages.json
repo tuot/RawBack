@@ -1,0 +1,158 @@
+{
+  "extensionDescription": {
+    "message": "Git barındırma raw dosyalarından ilgili depo sayfalarına dönün."
+  },
+  "bannerAriaLabel": {
+    "message": "RawBack depo gezinmesi"
+  },
+  "openRepositoryFileAriaLabel": {
+    "message": "Bu dosyayı depoda görüntüle"
+  },
+  "openInRepository": {
+    "message": "Depoda görüntüle"
+  },
+  "openGistFileAriaLabel": {
+    "message": "Bu dosyayı Gist içinde görüntüle"
+  },
+  "openInGist": {
+    "message": "Gist içinde görüntüle"
+  },
+  "openGist": {
+    "message": "Gist aç"
+  },
+  "dismissThisFile": {
+    "message": "Bu dosyayı gizle"
+  },
+  "hiddenFiles": {
+    "message": "Gizli dosyalar"
+  },
+  "hiddenFilesEmpty": {
+    "message": "Kalıcı olarak gizlenmiş dosya yok."
+  },
+  "restore": {
+    "message": "Geri yükle"
+  },
+  "restored": {
+    "message": "Geri yüklendi"
+  },
+  "enabled": {
+    "message": "Etkin"
+  },
+  "disabled": {
+    "message": "Devre dışı"
+  },
+  "currentPage": {
+    "message": "Geçerli sayfa"
+  },
+  "rawPage": {
+    "message": "Raw dosya algılandı"
+  },
+  "notRawPage": {
+    "message": "Bu sayfa raw dosya değil."
+  },
+  "openRepository": {
+    "message": "Depoyu aç"
+  },
+  "appearance": {
+    "message": "Görünüm"
+  },
+  "theme": {
+    "message": "Tema"
+  },
+  "themeSystem": {
+    "message": "Sistem"
+  },
+  "themeLight": {
+    "message": "Açık"
+  },
+  "themeDark": {
+    "message": "Koyu"
+  },
+  "platforms": {
+    "message": "Platformlar"
+  },
+  "language": {
+    "message": "Dil"
+  },
+  "languageAuto": {
+    "message": "Otomatik"
+  },
+  "languageEnglish": {
+    "message": "English"
+  },
+  "languageChinese": {
+    "message": "简体中文"
+  },
+  "languageTraditionalChinese": {
+    "message": "繁體中文"
+  },
+  "languageJapanese": {
+    "message": "日本語"
+  },
+  "languageKorean": {
+    "message": "한국어"
+  },
+  "languageSpanish": {
+    "message": "Español"
+  },
+  "languageFrench": {
+    "message": "Français"
+  },
+  "languageGerman": {
+    "message": "Deutsch"
+  },
+  "languageRussian": {
+    "message": "Русский"
+  },
+  "languagePortugueseBrazil": {
+    "message": "Português (Brasil)"
+  },
+  "languagePortuguesePortugal": {
+    "message": "Português (Portugal)"
+  },
+  "languageItalian": {
+    "message": "Italiano"
+  },
+  "languageDutch": {
+    "message": "Nederlands"
+  },
+  "languagePolish": {
+    "message": "Polski"
+  },
+  "languageTurkish": {
+    "message": "Türkçe"
+  },
+  "languageUkrainian": {
+    "message": "Українська"
+  },
+  "languageIndonesian": {
+    "message": "Bahasa Indonesia"
+  },
+  "languageVietnamese": {
+    "message": "Tiếng Việt"
+  },
+  "languageSwedish": {
+    "message": "Svenska"
+  },
+  "languageCzech": {
+    "message": "Čeština"
+  },
+  "customDomains": {
+    "message": "Özel alan adları"
+  },
+  "customDomainsHint": {
+    "message": "Alan adı veya URL girin"
+  },
+  "add": {
+    "message": "Ekle"
+  },
+  "invalidDomain": {
+    "message": "Geçersiz alan adı veya URL"
+  },
+  "save": {
+    "message": "Kaydet"
+  },
+  "settingsSaved": {
+    "message": "Kaydedildi"
+  }
+}

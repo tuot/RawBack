@@ -2,7 +2,7 @@
   "name": "rawback",
   "description": "Jump from raw Git hosting files back to their repository pages.",
   "private": true,
-  "version": "1.2.0",
+  "version": "1.2.1",
   "type": "module",
   "scripts": {
     "predev": "node scripts/sync-locales.cjs",

@@ -2,7 +2,29 @@ import { browser } from 'wxt/browser';
 import type { Platform } from './platforms';
 
 export type RawBackTheme = 'system' | 'light' | 'dark';
-export type RawBackLanguage = 'auto' | 'en' | 'zh_CN' | 'ja' | 'ko' | 'es' | 'fr' | 'de' | 'ru';
+export const rawBackLanguages = [
+  'en',
+  'zh_CN',
+  'zh_TW',
+  'ja',
+  'ko',
+  'es',
+  'fr',
+  'de',
+  'ru',
+  'pt_BR',
+  'pt_PT',
+  'it',
+  'nl',
+  'pl',
+  'tr',
+  'uk',
+  'id',
+  'vi',
+  'sv',
+  'cs',
+] as const;
+export type RawBackLanguage = 'auto' | (typeof rawBackLanguages)[number];
 
 export interface RawBackStorage {
   enabled: boolean;
@@ -86,5 +108,5 @@ function isTheme(value: unknown): value is RawBackTheme {
 }
 
 function isLanguage(value: unknown): value is RawBackLanguage {
-  return typeof value === 'string' && ['auto', 'en', 'zh_CN', 'ja', 'ko', 'es', 'fr', 'de', 'ru'].includes(value);
+  return typeof value === 'string' && (value === 'auto' || rawBackLanguages.includes(value as (typeof rawBackLanguages)[number]));
 }

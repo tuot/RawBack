@@ -24,12 +24,12 @@
 		DB00010F0000000000000001 /* SetupGuideStatusCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000080000000000000001 /* SetupGuideStatusCard.swift */; };
 		DB0001100000000000000001 /* Color+RawBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000090000000000000001 /* Color+RawBack.swift */; };
 		DB0001110000000000000001 /* Color+RawBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0000090000000000000001 /* Color+RawBack.swift */; };
-		DB0001180000000000000001 /* AppIconImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00000D0000000000000001 /* AppIconImage.swift */; };
-		DB0001190000000000000001 /* AppIconImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00000D0000000000000001 /* AppIconImage.swift */; };
 		DB0001140000000000000001 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = DB00000B0000000000000001 /* Localizable.xcstrings */; };
 		DB0001150000000000000001 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = DB00000B0000000000000001 /* Localizable.xcstrings */; };
 		DB0001160000000000000001 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = DB00000C0000000000000001 /* InfoPlist.xcstrings */; };
 		DB0001170000000000000001 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = DB00000C0000000000000001 /* InfoPlist.xcstrings */; };
+		DB0001180000000000000001 /* AppIconImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00000D0000000000000001 /* AppIconImage.swift */; };
+		DB0001190000000000000001 /* AppIconImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00000D0000000000000001 /* AppIconImage.swift */; };
 		DB7CC5FB2FBD58AF0022406A /* RawBack Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DB7CC5FA2FBD58AF0022406A /* RawBack Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DB7CC6052FBD58AF0022406A /* RawBack Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DB7CC6042FBD58AF0022406A /* RawBack Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DB7CC60C2FBD58AF0022406A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DB7CC5D12FBD58AE0022406A /* Icon.png */; };
@@ -665,7 +665,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -698,7 +698,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -738,7 +738,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttqqcc.rawback;
 				PRODUCT_NAME = RawBack;
 				SDKROOT = iphoneos;
@@ -773,7 +773,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttqqcc.rawback;
 				PRODUCT_NAME = RawBack;
 				SDKROOT = iphoneos;
@@ -807,7 +807,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -843,7 +843,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -883,7 +883,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -924,7 +924,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,

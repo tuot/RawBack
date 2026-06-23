@@ -8,6 +8,30 @@ const root = document.querySelector<HTMLElement>('#app');
 if (!root) throw new Error('Popup root is missing');
 const app = root;
 
+const languageOptions = [
+  { value: 'auto', labelKey: 'languageAuto' },
+  { value: 'zh_CN', labelKey: 'languageChinese' },
+  { value: 'zh_TW', labelKey: 'languageTraditionalChinese' },
+  { value: 'en', labelKey: 'languageEnglish' },
+  { value: 'ja', labelKey: 'languageJapanese' },
+  { value: 'ko', labelKey: 'languageKorean' },
+  { value: 'es', labelKey: 'languageSpanish' },
+  { value: 'fr', labelKey: 'languageFrench' },
+  { value: 'de', labelKey: 'languageGerman' },
+  { value: 'ru', labelKey: 'languageRussian' },
+  { value: 'pt_BR', labelKey: 'languagePortugueseBrazil' },
+  { value: 'pt_PT', labelKey: 'languagePortuguesePortugal' },
+  { value: 'it', labelKey: 'languageItalian' },
+  { value: 'nl', labelKey: 'languageDutch' },
+  { value: 'pl', labelKey: 'languagePolish' },
+  { value: 'tr', labelKey: 'languageTurkish' },
+  { value: 'uk', labelKey: 'languageUkrainian' },
+  { value: 'id', labelKey: 'languageIndonesian' },
+  { value: 'vi', labelKey: 'languageVietnamese' },
+  { value: 'sv', labelKey: 'languageSwedish' },
+  { value: 'cs', labelKey: 'languageCzech' },
+] as const satisfies ReadonlyArray<{ value: RawBackStorage['language']; labelKey: Parameters<typeof t>[0] }>;
+
 let settings = await getSettings();
 let activeUrl = await getActiveTabUrl();
 
@@ -54,15 +78,7 @@ function render(statusText = ''): void {
       <label class="field">
         <span>${escapeHtml(t('language', settings.language))}</span>
         <select id="language">
-          ${option('auto', t('languageAuto', settings.language), settings.language)}
-          ${option('zh_CN', t('languageChinese', settings.language), settings.language)}
-          ${option('en', t('languageEnglish', settings.language), settings.language)}
-          ${option('ja', t('languageJapanese', settings.language), settings.language)}
-          ${option('ko', t('languageKorean', settings.language), settings.language)}
-          ${option('es', t('languageSpanish', settings.language), settings.language)}
-          ${option('fr', t('languageFrench', settings.language), settings.language)}
-          ${option('de', t('languageGerman', settings.language), settings.language)}
-          ${option('ru', t('languageRussian', settings.language), settings.language)}
+          ${languageOptions.map(({ value, labelKey }) => option(value, t(labelKey, settings.language), settings.language)).join('')}
         </select>
       </label>
     </section>

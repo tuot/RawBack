@@ -1,0 +1,158 @@
+{
+  "extensionDescription": {
+    "message": "Переходьте з raw-файлів Git-хостингу назад до сторінок їхніх репозиторіїв."
+  },
+  "bannerAriaLabel": {
+    "message": "Навігація репозиторієм RawBack"
+  },
+  "openRepositoryFileAriaLabel": {
+    "message": "Переглянути цей файл у репозиторії"
+  },
+  "openInRepository": {
+    "message": "Переглянути в репозиторії"
+  },
+  "openGistFileAriaLabel": {
+    "message": "Переглянути цей файл у Gist"
+  },
+  "openInGist": {
+    "message": "Переглянути в Gist"
+  },
+  "openGist": {
+    "message": "Відкрити Gist"
+  },
+  "dismissThisFile": {
+    "message": "Приховати цей файл"
+  },
+  "hiddenFiles": {
+    "message": "Приховані файли"
+  },
+  "hiddenFilesEmpty": {
+    "message": "Немає постійно прихованих файлів."
+  },
+  "restore": {
+    "message": "Відновити"
+  },
+  "restored": {
+    "message": "Відновлено"
+  },
+  "enabled": {
+    "message": "Увімкнено"
+  },
+  "disabled": {
+    "message": "Вимкнено"
+  },
+  "currentPage": {
+    "message": "Поточна сторінка"
+  },
+  "rawPage": {
+    "message": "Виявлено raw-файл"
+  },
+  "notRawPage": {
+    "message": "Ця сторінка не є raw-файлом."
+  },
+  "openRepository": {
+    "message": "Відкрити репозиторій"
+  },
+  "appearance": {
+    "message": "Вигляд"
+  },
+  "theme": {
+    "message": "Тема"
+  },
+  "themeSystem": {
+    "message": "Системна"
+  },
+  "themeLight": {
+    "message": "Світла"
+  },
+  "themeDark": {
+    "message": "Темна"
+  },
+  "platforms": {
+    "message": "Платформи"
+  },
+  "language": {
+    "message": "Мова"
+  },
+  "languageAuto": {
+    "message": "Автоматично"
+  },
+  "languageEnglish": {
+    "message": "English"
+  },
+  "languageChinese": {
+    "message": "简体中文"
+  },
+  "languageTraditionalChinese": {
+    "message": "繁體中文"
+  },
+  "languageJapanese": {
+    "message": "日本語"
+  },
+  "languageKorean": {
+    "message": "한국어"
+  },
+  "languageSpanish": {
+    "message": "Español"
+  },
+  "languageFrench": {
+    "message": "Français"
+  },
+  "languageGerman": {
+    "message": "Deutsch"
+  },
+  "languageRussian": {
+    "message": "Русский"
+  },
+  "languagePortugueseBrazil": {
+    "message": "Português (Brasil)"
+  },
+  "languagePortuguesePortugal": {
+    "message": "Português (Portugal)"
+  },
+  "languageItalian": {
+    "message": "Italiano"
+  },
+  "languageDutch": {
+    "message": "Nederlands"
+  },
+  "languagePolish": {
+    "message": "Polski"
+  },
+  "languageTurkish": {
+    "message": "Türkçe"
+  },
+  "languageUkrainian": {
+    "message": "Українська"
+  },
+  "languageIndonesian": {
+    "message": "Bahasa Indonesia"
+  },
+  "languageVietnamese": {
+    "message": "Tiếng Việt"
+  },
+  "languageSwedish": {
+    "message": "Svenska"
+  },
+  "languageCzech": {
+    "message": "Čeština"
+  },
+  "customDomains": {
+    "message": "Користувацькі домени"
+  },
+  "customDomainsHint": {
+    "message": "Введіть домен або URL"
+  },
+  "add": {
+    "message": "Додати"
+  },
+  "invalidDomain": {
+    "message": "Недійсний домен або URL"
+  },
+  "save": {
+    "message": "Зберегти"
+  },
+  "settingsSaved": {
+    "message": "Збережено"
+  }
+}

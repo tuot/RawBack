@@ -81,7 +81,10 @@
     "message": "English"
   },
   "languageChinese": {
-    "message": "中文"
+    "message": "简体中文"
+  },
+  "languageTraditionalChinese": {
+    "message": "繁體中文"
   },
   "languageJapanese": {
     "message": "日本語"
@@ -100,6 +103,39 @@
   },
   "languageRussian": {
     "message": "Русский"
+  },
+  "languagePortugueseBrazil": {
+    "message": "Português (Brasil)"
+  },
+  "languagePortuguesePortugal": {
+    "message": "Português (Portugal)"
+  },
+  "languageItalian": {
+    "message": "Italiano"
+  },
+  "languageDutch": {
+    "message": "Nederlands"
+  },
+  "languagePolish": {
+    "message": "Polski"
+  },
+  "languageTurkish": {
+    "message": "Türkçe"
+  },
+  "languageUkrainian": {
+    "message": "Українська"
+  },
+  "languageIndonesian": {
+    "message": "Bahasa Indonesia"
+  },
+  "languageVietnamese": {
+    "message": "Tiếng Việt"
+  },
+  "languageSwedish": {
+    "message": "Svenska"
+  },
+  "languageCzech": {
+    "message": "Čeština"
   },
   "customDomains": {
     "message": "Domaines personnalisés"

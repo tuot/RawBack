@@ -1,0 +1,158 @@
+{
+  "extensionDescription": {
+    "message": "Gå från raw-filer hos Git-värdar tillbaka till deras repositorysidor."
+  },
+  "bannerAriaLabel": {
+    "message": "RawBack-repositorynavigering"
+  },
+  "openRepositoryFileAriaLabel": {
+    "message": "Visa den här filen i repositoryt"
+  },
+  "openInRepository": {
+    "message": "Visa i repository"
+  },
+  "openGistFileAriaLabel": {
+    "message": "Visa den här filen i Gist"
+  },
+  "openInGist": {
+    "message": "Visa i Gist"
+  },
+  "openGist": {
+    "message": "Öppna Gist"
+  },
+  "dismissThisFile": {
+    "message": "Dölj den här filen"
+  },
+  "hiddenFiles": {
+    "message": "Dolda filer"
+  },
+  "hiddenFilesEmpty": {
+    "message": "Inga permanent dolda filer."
+  },
+  "restore": {
+    "message": "Återställ"
+  },
+  "restored": {
+    "message": "Återställd"
+  },
+  "enabled": {
+    "message": "Aktiverad"
+  },
+  "disabled": {
+    "message": "Inaktiverad"
+  },
+  "currentPage": {
+    "message": "Aktuell sida"
+  },
+  "rawPage": {
+    "message": "Raw-fil upptäckt"
+  },
+  "notRawPage": {
+    "message": "Den här sidan är inte en raw-fil."
+  },
+  "openRepository": {
+    "message": "Öppna repository"
+  },
+  "appearance": {
+    "message": "Utseende"
+  },
+  "theme": {
+    "message": "Tema"
+  },
+  "themeSystem": {
+    "message": "System"
+  },
+  "themeLight": {
+    "message": "Ljust"
+  },
+  "themeDark": {
+    "message": "Mörkt"
+  },
+  "platforms": {
+    "message": "Plattformar"
+  },
+  "language": {
+    "message": "Språk"
+  },
+  "languageAuto": {
+    "message": "Automatiskt"
+  },
+  "languageEnglish": {
+    "message": "English"
+  },
+  "languageChinese": {
+    "message": "简体中文"
+  },
+  "languageTraditionalChinese": {
+    "message": "繁體中文"
+  },
+  "languageJapanese": {
+    "message": "日本語"
+  },
+  "languageKorean": {
+    "message": "한국어"
+  },
+  "languageSpanish": {
+    "message": "Español"
+  },
+  "languageFrench": {
+    "message": "Français"
+  },
+  "languageGerman": {
+    "message": "Deutsch"
+  },
+  "languageRussian": {
+    "message": "Русский"
+  },
+  "languagePortugueseBrazil": {
+    "message": "Português (Brasil)"
+  },
+  "languagePortuguesePortugal": {
+    "message": "Português (Portugal)"
+  },
+  "languageItalian": {
+    "message": "Italiano"
+  },
+  "languageDutch": {
+    "message": "Nederlands"
+  },
+  "languagePolish": {
+    "message": "Polski"
+  },
+  "languageTurkish": {
+    "message": "Türkçe"
+  },
+  "languageUkrainian": {
+    "message": "Українська"
+  },
+  "languageIndonesian": {
+    "message": "Bahasa Indonesia"
+  },
+  "languageVietnamese": {
+    "message": "Tiếng Việt"
+  },
+  "languageSwedish": {
+    "message": "Svenska"
+  },
+  "languageCzech": {
+    "message": "Čeština"
+  },
+  "customDomains": {
+    "message": "Anpassade domäner"
+  },
+  "customDomainsHint": {
+    "message": "Ange domän eller URL"
+  },
+  "add": {
+    "message": "Lägg till"
+  },
+  "invalidDomain": {
+    "message": "Ogiltig domän eller URL"
+  },
+  "save": {
+    "message": "Spara"
+  },
+  "settingsSaved": {
+    "message": "Sparat"
+  }
+}

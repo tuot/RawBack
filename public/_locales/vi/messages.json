@@ -1,0 +1,158 @@
+{
+  "extensionDescription": {
+    "message": "Đi từ các tệp raw trên dịch vụ Git về trang kho chứa tương ứng."
+  },
+  "bannerAriaLabel": {
+    "message": "Điều hướng kho chứa RawBack"
+  },
+  "openRepositoryFileAriaLabel": {
+    "message": "Xem tệp này trong kho chứa"
+  },
+  "openInRepository": {
+    "message": "Xem trong kho chứa"
+  },
+  "openGistFileAriaLabel": {
+    "message": "Xem tệp này trong Gist"
+  },
+  "openInGist": {
+    "message": "Xem trong Gist"
+  },
+  "openGist": {
+    "message": "Mở Gist"
+  },
+  "dismissThisFile": {
+    "message": "Ẩn tệp này"
+  },
+  "hiddenFiles": {
+    "message": "Tệp đã ẩn"
+  },
+  "hiddenFilesEmpty": {
+    "message": "Không có tệp nào bị ẩn vĩnh viễn."
+  },
+  "restore": {
+    "message": "Khôi phục"
+  },
+  "restored": {
+    "message": "Đã khôi phục"
+  },
+  "enabled": {
+    "message": "Đã bật"
+  },
+  "disabled": {
+    "message": "Đã tắt"
+  },
+  "currentPage": {
+    "message": "Trang hiện tại"
+  },
+  "rawPage": {
+    "message": "Đã phát hiện tệp raw"
+  },
+  "notRawPage": {
+    "message": "Trang này không phải là tệp raw."
+  },
+  "openRepository": {
+    "message": "Mở kho chứa"
+  },
+  "appearance": {
+    "message": "Giao diện"
+  },
+  "theme": {
+    "message": "Chủ đề"
+  },
+  "themeSystem": {
+    "message": "Hệ thống"
+  },
+  "themeLight": {
+    "message": "Sáng"
+  },
+  "themeDark": {
+    "message": "Tối"
+  },
+  "platforms": {
+    "message": "Nền tảng"
+  },
+  "language": {
+    "message": "Ngôn ngữ"
+  },
+  "languageAuto": {
+    "message": "Tự động"
+  },
+  "languageEnglish": {
+    "message": "English"
+  },
+  "languageChinese": {
+    "message": "简体中文"
+  },
+  "languageTraditionalChinese": {
+    "message": "繁體中文"
+  },
+  "languageJapanese": {
+    "message": "日本語"
+  },
+  "languageKorean": {
+    "message": "한국어"
+  },
+  "languageSpanish": {
+    "message": "Español"
+  },
+  "languageFrench": {
+    "message": "Français"
+  },
+  "languageGerman": {
+    "message": "Deutsch"
+  },
+  "languageRussian": {
+    "message": "Русский"
+  },
+  "languagePortugueseBrazil": {
+    "message": "Português (Brasil)"
+  },
+  "languagePortuguesePortugal": {
+    "message": "Português (Portugal)"
+  },
+  "languageItalian": {
+    "message": "Italiano"
+  },
+  "languageDutch": {
+    "message": "Nederlands"
+  },
+  "languagePolish": {
+    "message": "Polski"
+  },
+  "languageTurkish": {
+    "message": "Türkçe"
+  },
+  "languageUkrainian": {
+    "message": "Українська"
+  },
+  "languageIndonesian": {
+    "message": "Bahasa Indonesia"
+  },
+  "languageVietnamese": {
+    "message": "Tiếng Việt"
+  },
+  "languageSwedish": {
+    "message": "Svenska"
+  },
+  "languageCzech": {
+    "message": "Čeština"
+  },
+  "customDomains": {
+    "message": "Miền tùy chỉnh"
+  },
+  "customDomainsHint": {
+    "message": "Nhập miền hoặc URL"
+  },
+  "add": {
+    "message": "Thêm"
+  },
+  "invalidDomain": {
+    "message": "Miền hoặc URL không hợp lệ"
+  },
+  "save": {
+    "message": "Lưu"
+  },
+  "settingsSaved": {
+    "message": "Đã lưu"
+  }
+}

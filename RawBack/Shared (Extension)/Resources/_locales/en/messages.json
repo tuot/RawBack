@@ -81,7 +81,10 @@
     "message": "English"
   },
   "languageChinese": {
-    "message": "Chinese"
+    "message": "Simplified Chinese"
+  },
+  "languageTraditionalChinese": {
+    "message": "Traditional Chinese"
   },
   "languageJapanese": {
     "message": "Japanese"
@@ -100,6 +103,39 @@
   },
   "languageRussian": {
     "message": "Russian"
+  },
+  "languagePortugueseBrazil": {
+    "message": "Portuguese (Brazil)"
+  },
+  "languagePortuguesePortugal": {
+    "message": "Portuguese (Portugal)"
+  },
+  "languageItalian": {
+    "message": "Italian"
+  },
+  "languageDutch": {
+    "message": "Dutch"
+  },
+  "languagePolish": {
+    "message": "Polish"
+  },
+  "languageTurkish": {
+    "message": "Turkish"
+  },
+  "languageUkrainian": {
+    "message": "Ukrainian"
+  },
+  "languageIndonesian": {
+    "message": "Indonesian"
+  },
+  "languageVietnamese": {
+    "message": "Vietnamese"
+  },
+  "languageSwedish": {
+    "message": "Swedish"
+  },
+  "languageCzech": {
+    "message": "Czech"
   },
   "customDomains": {
     "message": "Custom Domains"

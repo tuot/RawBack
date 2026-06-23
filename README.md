@@ -12,7 +12,7 @@ When you open a supported raw file, RawBack adds a quiet navigation banner at th
 - Supports GitHub, GitHub Gist, GitLab, Gitea, Codeberg, and self-hosted GitLab/Gitea domains
 - Light, dark, and system themes
 - Platform toggles, hidden files, and custom domains
-- Localized UI for English, Chinese, Japanese, Korean, Spanish, French, German, and Russian
+- Localized UI in 20 languages, including English, Simplified/Traditional Chinese, Japanese, Korean, Spanish, French, German, Russian, Portuguese, Italian, Dutch, Polish, Turkish, Ukrainian, Indonesian, Vietnamese, Swedish, and Czech
 - No account, no ads, no analytics
 
 ### Install

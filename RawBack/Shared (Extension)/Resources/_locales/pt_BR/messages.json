@@ -1,0 +1,158 @@
+{
+  "extensionDescription": {
+    "message": "Volte dos arquivos raw de hosts Git para suas páginas de repositório."
+  },
+  "bannerAriaLabel": {
+    "message": "Navegação de repositório RawBack"
+  },
+  "openRepositoryFileAriaLabel": {
+    "message": "Ver este arquivo no repositório"
+  },
+  "openInRepository": {
+    "message": "Ver no repositório"
+  },
+  "openGistFileAriaLabel": {
+    "message": "Ver este arquivo no Gist"
+  },
+  "openInGist": {
+    "message": "Ver no Gist"
+  },
+  "openGist": {
+    "message": "Abrir Gist"
+  },
+  "dismissThisFile": {
+    "message": "Ocultar este arquivo"
+  },
+  "hiddenFiles": {
+    "message": "Arquivos ocultos"
+  },
+  "hiddenFilesEmpty": {
+    "message": "Não há arquivos ocultos permanentemente."
+  },
+  "restore": {
+    "message": "Restaurar"
+  },
+  "restored": {
+    "message": "Restaurado"
+  },
+  "enabled": {
+    "message": "Ativado"
+  },
+  "disabled": {
+    "message": "Desativado"
+  },
+  "currentPage": {
+    "message": "Página atual"
+  },
+  "rawPage": {
+    "message": "Arquivo raw detectado"
+  },
+  "notRawPage": {
+    "message": "Esta página não é um arquivo raw."
+  },
+  "openRepository": {
+    "message": "Abrir repositório"
+  },
+  "appearance": {
+    "message": "Aparência"
+  },
+  "theme": {
+    "message": "Tema"
+  },
+  "themeSystem": {
+    "message": "Sistema"
+  },
+  "themeLight": {
+    "message": "Claro"
+  },
+  "themeDark": {
+    "message": "Escuro"
+  },
+  "platforms": {
+    "message": "Plataformas"
+  },
+  "language": {
+    "message": "Idioma"
+  },
+  "languageAuto": {
+    "message": "Automático"
+  },
+  "languageEnglish": {
+    "message": "English"
+  },
+  "languageChinese": {
+    "message": "简体中文"
+  },
+  "languageTraditionalChinese": {
+    "message": "繁體中文"
+  },
+  "languageJapanese": {
+    "message": "日本語"
+  },
+  "languageKorean": {
+    "message": "한국어"
+  },
+  "languageSpanish": {
+    "message": "Español"
+  },
+  "languageFrench": {
+    "message": "Français"
+  },
+  "languageGerman": {
+    "message": "Deutsch"
+  },
+  "languageRussian": {
+    "message": "Русский"
+  },
+  "languagePortugueseBrazil": {
+    "message": "Português (Brasil)"
+  },
+  "languagePortuguesePortugal": {
+    "message": "Português (Portugal)"
+  },
+  "languageItalian": {
+    "message": "Italiano"
+  },
+  "languageDutch": {
+    "message": "Nederlands"
+  },
+  "languagePolish": {
+    "message": "Polski"
+  },
+  "languageTurkish": {
+    "message": "Türkçe"
+  },
+  "languageUkrainian": {
+    "message": "Українська"
+  },
+  "languageIndonesian": {
+    "message": "Bahasa Indonesia"
+  },
+  "languageVietnamese": {
+    "message": "Tiếng Việt"
+  },
+  "languageSwedish": {
+    "message": "Svenska"
+  },
+  "languageCzech": {
+    "message": "Čeština"
+  },
+  "customDomains": {
+    "message": "Domínios personalizados"
+  },
+  "customDomainsHint": {
+    "message": "Digite um domínio ou URL"
+  },
+  "add": {
+    "message": "Adicionar"
+  },
+  "invalidDomain": {
+    "message": "Domínio ou URL inválido"
+  },
+  "save": {
+    "message": "Salvar"
+  },
+  "settingsSaved": {
+    "message": "Salvo"
+  }
+}
