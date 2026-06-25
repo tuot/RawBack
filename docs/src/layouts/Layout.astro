@@ -3,7 +3,7 @@ const { frontmatter } = Astro.props;
 const title =
 	Astro.props.title ||
 	frontmatter?.title ||
-	"RawBack - Return from raw files to repository context";
+	"RawBack - One-click from raw files back to repository context";
 const lang = Astro.props.lang || frontmatter?.lang || "en";
 const isDoc = Astro.props.isDoc || frontmatter?.isDoc || false;
 const base = import.meta.env.BASE_URL;
@@ -39,7 +39,7 @@ if (lang === "zh") {
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta
 			name="description"
-			content="RawBack helps you jump from raw Git file URLs back to repository pages."
+			content="A lightweight browser extension to return to the full repository context from any raw Git file view in a single click."
 		/>
 		<meta name="theme-color" content="#fbfcfb" />
 		<link rel="icon" type="image/png" href={`${base}/icon.png`} />
@@ -69,43 +69,45 @@ if (lang === "zh") {
 	</head>
 	<body>
 		<header class="site-header">
-			<a class="brand" href={homeHref} aria-label="RawBack home">
-				<img src={`${base}/assets/rawback-icon.png`} alt="" />
-				<span>RawBack</span>
-			</a>
-
-			<nav class="nav-actions" aria-label={lang === "zh" ? "页面导航" : "Page navigation"}>
-				{
-					lang === "zh" ? (
-						<>
-							<a class="nav-link" href={`${anchorBase}#features`}>
-								功能特性
-							</a>
-							<a class="nav-link" href={`${anchorBase}guide`}>
-								常见问题
-							</a>
-						</>
-					) : (
-						<>
-							<a class="nav-link" href={`${anchorBase}#features`}>
-								Features
-							</a>
-							<a class="nav-link" href={`${anchorBase}guide`}>
-								Guide
-							</a>
-						</>
-					)
-				}
-				<a
-					class="nav-button"
-					href="https://github.com/tuot/RawBack"
-					target="_blank"
-					rel="noopener">GitHub</a
-				>
-				<a class="nav-button nav-button-primary" href={`${anchorBase}#install`}>
-					{lang === "zh" ? "立即安装" : "Install"}
+			<div class="site-header-inner">
+				<a class="brand" href={homeHref} aria-label="RawBack home">
+					<img src={`${base}/assets/rawback-icon.png`} alt="" />
+					<span>RawBack</span>
 				</a>
-			</nav>
+
+				<nav class="nav-actions" aria-label={lang === "zh" ? "页面导航" : "Page navigation"}>
+					{
+						lang === "zh" ? (
+							<>
+								<a class="nav-link" href={`${anchorBase}#features`}>
+									功能特性
+								</a>
+								<a class="nav-link" href={`${anchorBase}guide`}>
+									常见问题
+								</a>
+							</>
+						) : (
+							<>
+								<a class="nav-link" href={`${anchorBase}#features`}>
+									Features
+								</a>
+								<a class="nav-link" href={`${anchorBase}guide`}>
+									Guide
+								</a>
+							</>
+						)
+					}
+					<a
+						class="nav-button"
+						href="https://github.com/tuot/RawBack"
+						target="_blank"
+						rel="noopener">GitHub</a
+					>
+					<a class="nav-button nav-button-primary" href={`${anchorBase}#install`}>
+						{lang === "zh" ? "立即安装" : "Install"}
+					</a>
+				</nav>
+			</div>
 		</header>
 
 		{
@@ -168,6 +170,7 @@ if (lang === "zh") {
 		--green-deep: #1f7f46;
 		--green-soft: #eef7f1;
 		--shadow: 0 18px 38px rgba(17, 24, 39, 0.08);
+		--anchor-offset: 92px;
 	}
 
 	* {
@@ -176,6 +179,11 @@ if (lang === "zh") {
 
 	html {
 		scroll-behavior: smooth;
+		scroll-padding-top: var(--anchor-offset);
+	}
+
+	[id] {
+		scroll-margin-top: var(--anchor-offset);
 	}
 
 	body {
@@ -209,6 +217,13 @@ if (lang === "zh") {
 		position: sticky;
 		top: 0;
 		z-index: 20;
+		width: 100%;
+		background: rgba(255, 255, 255, 0.86);
+		backdrop-filter: blur(18px);
+		-webkit-backdrop-filter: blur(18px);
+	}
+
+	.site-header-inner {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -216,9 +231,6 @@ if (lang === "zh") {
 		width: min(1120px, calc(100% - 56px));
 		margin: 0 auto;
 		padding: 18px 0;
-		background: rgba(255, 255, 255, 0.86);
-		backdrop-filter: blur(18px);
-		-webkit-backdrop-filter: blur(18px);
 	}
 
 	.brand {
@@ -419,7 +431,11 @@ if (lang === "zh") {
 	}
 
 	@media (max-width: 940px) {
-		.site-header {
+		:root {
+			--anchor-offset: 146px;
+		}
+
+		.site-header-inner {
 			align-items: flex-start;
 			flex-direction: column;
 			width: min(100% - 36px, 1120px);
@@ -442,7 +458,11 @@ if (lang === "zh") {
 	}
 
 	@media (max-width: 640px) {
-		.site-header {
+		:root {
+			--anchor-offset: 138px;
+		}
+
+		.site-header-inner {
 			width: min(100% - 28px, 1120px);
 			padding: 14px 0;
 		}

@@ -4,14 +4,14 @@ const isZh = lang === "zh";
 
 const copy = isZh
 	? {
-			heroTitle: "一键从 Raw 文件\n回到仓库页面。",
+			heroTitle: "一键从 Raw 文件\n回到仓库页面",
 			heroLead:
 				"打开 GitHub、GitLab、Gitea 等平台的 raw 文件时，RawBack 会自动显示返回入口。无需修改 URL，一次点击即可回到对应仓库上下文。",
 			appStore: "App Store 安装",
 			releases: "GitHub Releases",
 			trust: ["本地运行", "无账号", "无广告", "无分析"],
 			whyTitle: "为什么需要 RawBack？",
-			whyLead: "查看 Raw 文件时，丢失了仓库的全部上下文",
+			whyLead: "查看 Raw 文件时却丢失了仓库的全部上下文",
 			rawTitle: "Raw 页面",
 			repoTitle: "仓库页面",
 			rawProblems: [
@@ -21,7 +21,7 @@ const copy = isZh
 				"想看其他文件？只能手动改 URL",
 			],
 			repoBenefits: ["浏览目录", "查看历史记录", "切换分支", "访问其他文件"],
-			whyFoot: "RawBack 将回到仓库的繁琐过程变成一键点击",
+			whyFoot: "RawBack 将回到仓库的繁琐过程变成一键点击 👆",
 			traitsTitle: "简单、轻量、值得信赖",
 			platformTitle: "支持所有主流 Git 平台",
 			platformText: "在这些平台的 raw 页面都能使用，无需额外配置。",
@@ -45,51 +45,51 @@ const copy = isZh
 			releasesCta: "打开 Release",
 		}
 	: {
-			heroTitle: "One click\nfrom raw files\nback to the repo.",
+			heroTitle: "From raw files\nto repository\nin one click",
 			heroLead:
-				"When you open raw files on GitHub, GitLab, Gitea, and more, RawBack automatically adds a shortcut back. No manual URL editing required, one click restores the repository context.",
+				"No more manual URL editing. RawBack automatically adds a one-click shortcut to return to the repository page from any raw file view on GitHub, GitLab, and more.",
 			appStore: "App Store",
 			releases: "GitHub Releases",
-			trust: ["Locally", "No accounts", "No ads", "No tracking"],
+			trust: ["Runs locally", "No accounts", "No ads", "No analytics"],
 			whyTitle: "Why RawBack?",
-			whyLead: "Raw pages are useful, but they strip away all repository context.",
+			whyLead: "Viewing raw files strips away all repository context.",
 			rawTitle: "Raw Page",
 			repoTitle: "Repository Page",
 			rawProblems: [
-				"No directory structure",
+				"No directory tree",
 				"No commit history",
 				"No branch context",
-				"Want other files? You must edit the URL manually",
+				"Manually editing the URL to view other files",
 			],
 			repoBenefits: [
-				"Browse directory structure",
-				"View commit history",
-				"Switch branches",
-				"Access other files easily",
+				"Browse the directory tree",
+				"Access full commit history",
+				"Switch branches easily",
+				"Navigate to other files instantly",
 			],
-			whyFoot: "RawBack turns that detour into a single click.",
+			whyFoot: "RawBack turns a tedious URL detour into a single click. 👆",
 			traitsTitle: "Simple, Lightweight, and Trustworthy",
 			platformTitle: "Supports All Major Git Platforms",
 			platformText:
-				"Works seamlessly on raw pages across the platforms you already use. Zero setup required.",
+				"Works seamlessly on raw pages across these platforms with zero configuration.",
 			browserTitle: "Supports All Major Browsers",
 			browserText:
-				"Available as a native Safari app, plus extensions for Chrome, Firefox, Edge, Brave, and more.",
-			localTitle: "Runs Locally in Your Browser",
-			localText: "All URL conversions happen locally in your browser. No accounts, ads, or tracking.",
-			focusTitle: "Does One Thing",
+				"Available as a native Safari app and as an extension for Chrome, Firefox, Edge, Brave, and more.",
+			localTitle: "Runs locally in your browser",
+			localText: "All URL conversions happen locally in your browser. No accounts, no ads, and no tracking.",
+			focusTitle: "Does one thing",
 			focusText:
-				"Focused entirely on getting you back to the repository. It never alters the page or disrupts your reading.",
-			localTags: ["No Account", "No Ads", "No Tracking"],
+				"Focused entirely on getting you back to the repository. It won't alter page content or disrupt your reading.",
+			localTags: ["No accounts", "No ads", "No tracking"],
 			focusTags: ["Lightweight", "Fast", "Clean"],
 			installTitle: "Install in Under a Minute",
 			installLead: "Choose your browser to get started",
 			safariTitle: "Safari",
-			safariText: "Install RawBack from the App Store on iPhone, iPad, and Mac.",
+			safariText: "Get RawBack from the App Store for iPhone, iPad, and Mac.",
 			safariCta: "App Store",
 			chromeTitle: "Chrome, Edge, Brave, Firefox",
-			chromeText: "Download the latest extension package from GitHub Releases.",
-			chromeStep1: "Download the Chromium or Firefox zip file.",
+			chromeText: "Download the latest extension package directly from GitHub Releases.",
+			chromeStep1: "Download the Chromium or Firefox ZIP file.",
 			chromeStep2: "Load the unpacked extension in your browser.",
 			releasesCta: "Open Releases",
 		};
@@ -452,7 +452,7 @@ const repoItems = [
 
 	.hero {
 		display: grid;
-		grid-template-columns: 430px minmax(0, 1fr);
+		grid-template-columns: 470px minmax(0, 1fr);
 		align-items: center;
 		gap: 62px;
 		min-height: 560px;
@@ -527,7 +527,7 @@ const repoItems = [
 	.trust-list {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 22px;
+		gap: 16px;
 		margin: 34px 0 0;
 		padding: 0;
 		list-style: none;
