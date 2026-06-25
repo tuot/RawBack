@@ -105,8 +105,19 @@ export const bannerCss = `
   justify-content: center;
 }
 
-.rawback-mark-icon-wrapper svg {
+.rawback-mark-icon-wrapper img {
   display: block;
+}
+
+.rawback-platform-icon,
+.rawback-button-icon {
+  flex: 0 0 auto;
+  height: 14px;
+  width: 14px;
+}
+
+.rawback-button-icon {
+  border-radius: 2px;
 }
 
 .rawback-meta {

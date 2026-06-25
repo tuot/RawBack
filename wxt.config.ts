@@ -17,5 +17,11 @@ export default defineConfig({
       "48": "icon/icon48.png",
       "128": "icon/icon128.png",
     },
+    web_accessible_resources: [
+      {
+        resources: ["assets/third-party-icons/*.svg"],
+        matches: ["<all_urls>"],
+      },
+    ],
   },
 });

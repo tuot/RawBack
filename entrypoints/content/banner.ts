@@ -33,13 +33,12 @@ export function mountBanner(info: RawFileInfo, settings: RawBackStorage): Banner
     banner.setAttribute('role', 'region');
     banner.setAttribute('aria-label', t('bannerAriaLabel', currentSettings.language));
     
-    const resolvedTheme = resolveTheme(currentSettings.theme);
-    const iconSvg = getPlatformIcon(info.platform, resolvedTheme);
-    const buttonIconSvg = getButtonIcon(info.platform);
+    const iconMarkup = getPlatformIcon(info.platform);
+    const buttonIconMarkup = getButtonIcon(info.platform);
 
     banner.innerHTML = `
       <div class="rawback-mark" aria-hidden="true">
-        <span class="rawback-mark-icon-wrapper">${iconSvg}</span>
+        <span class="rawback-mark-icon-wrapper">${iconMarkup}</span>
         <span class="rawback-mark-fallback" style="display:none;">${escapeHtml(viewModel.platformInitials)}</span>
       </div>
       <div class="rawback-meta">
@@ -49,7 +48,7 @@ export function mountBanner(info: RawFileInfo, settings: RawBackStorage): Banner
       <div class="rawback-actions">
         <div class="rawback-open-actions">
           <a class="rawback-button primary" href="${escapeAttribute(viewModel.primaryActionUrl)}" aria-label="${escapeAttribute(viewModel.primaryActionAriaLabel)}">
-            ${buttonIconSvg}
+            ${buttonIconMarkup}
             ${escapeHtml(viewModel.primaryActionLabel)}
           </a>
         </div>
