@@ -74,29 +74,6 @@ pnpm zip:firefox
 pnpm build:safari
 ```
 
-### Fastlane (Safari 包装项目的元数据)
-```bash
-bundle install
-pnpm fastlane lanes
-pnpm ios:build
-pnpm macos:build
-```
-
-App Store Connect 元数据和截图按平台分目录保存：
-```text
-fastlane/metadata/ios
-fastlane/metadata/macos
-fastlane/screenshots/ios
-fastlane/screenshots/macos
-```
-
-从 App Store Connect 拉取当前版本到本地目录：
-```bash
-FASTLANE_APPLE_ID="you@example.com" APP_VERSION=1.2.0 bundle exec fastlane ios store_pull
-FASTLANE_APPLE_ID="you@example.com" APP_VERSION=1.2.0 bundle exec fastlane mac store_pull
-```
-
----
 
 ## 发布流程
 
@@ -108,9 +85,3 @@ git push origin v1.1.1
 ```
 
 Release 工作流会上传 Chromium 和 Firefox 扩展 zip，方便非 Safari 用户下载后手动加载。Safari 用户建议从 App Store 安装。
-
-如需生成 App Store archive 提交审核，请先在 Xcode 中配好证书与签名，然后执行：
-```bash
-pnpm ios:archive
-pnpm macos:archive
-```

@@ -17,12 +17,6 @@ stats-*.json
 web-ext.config.ts
 build/
 
-# fastlane
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/test_output/
-fastlane/metadata/
-fastlane/screenshots/
 *.p8
 .env
 .env.*
